@@ -21,3 +21,14 @@
 - Desktop adaptation
   - keyboard mapping
   - add two more animations
+
+### Timeline
+| Date | ... |
+| --- | --- | 
+| **July 15**      | Initial meeting |
+| **July 27**     | Followup Questions |
+| **Aug 11**      | Progress Report |
+| **Aug 18**      | Demo CMS        |   
+| **Aug 19 - 25** | Testing/ Performance         |
+| **Aug 26 - 27** | Soft Launch     |
+| **Aug 28 - ..** | 🥳 |
