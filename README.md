@@ -4,8 +4,8 @@
 - [Figma doc](https://www.figma.com/file/PuNKFsynpnOjKsdFWbtLB0Eq/Asoh-Black!?node-id=0%3A1)
 - [Notion doc](https://www.notion.so/seancaat/Asoh-Black-Website-bad7280621b743a8b688096ab0d414b5)
 
-**Big To Do's**
-~~1. Move to GitHub~~
+**Due August 11**
+1. ~~Move to GitHub~~
 2. Rig up a Figma prototype
 3. Pared down interactive 
 
