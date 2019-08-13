@@ -8,9 +8,9 @@
 
 **Due August 11**
 1. ~~Move to GitHub~~
-2. Rig up a Figma prototype
-3. Pared down interactive 
-4. Got a domain besides https://www.freeallminds.com/asohblack?
+2. ~~Rig up a Figma prototype~~
+3. ~~Pared down interactive ~~
+4. ~~Got a domain besides https://www.freeallminds.com/asohblack?~~
 
 **Next up**
 - Jekyll setup
