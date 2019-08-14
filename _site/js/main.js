@@ -50,80 +50,12 @@ function showButton(button) {
 function animate(id) {
   var shiftedId = id - 4;
   console.log('run animation ' + shiftedId);
-
-  switch (id - 4) {
-    case 0:
-      drawNeon();
-      break;
-    case 1:
-      rise();
-      break;
-    case 2:
-      slide(imgSymbol);
-      break;
-    case 3:
-      drawNeon();
-      break;
-    case 4:
-      rise();
-      break;
-    case 5:
-      slide(imgSymbol);
-      break;
-    case 6:
-      drawNeon();
-      break;
-    case 7:
-      rise();
-      break;
-    case 8:
-      slide(imgSymbol);
-      break;
-    case 9:
-      drawNeon();
-      break;
-    case 10:
-      rise();
-      break;
-    case 11:
-      slide(imgSymbol);
-      break;
-    case 12:
-      drawNeon();
-      break;
-    case 13:
-      rise();
-      break;
-    case 14:
-      slide(imgSymbol);
-      break;
-    case 15:
-      drawNeon();
-      break;
-    case 16:
-      rise();
-      break;
-    case 17:
-      slide(imgSymbol);
-      break;
-    case 18:
-      drawNeon();
-      break;
-    case 19:
-      rise();
-      break;
-    case 20:
-      slide(imgSymbol);
-      break;
-    case 21:
-      drawNeon();
-      break;
-    case 22:
-      rise();
-      break;
-    case 23:
-      slide(imgSymbol);
-      break;
+  if (shiftedId % 3) {
+    drawNeon();
+  } else if ((shiftedId - 1) % 3) {
+    rise();
+  } else if ((shiftedId - 2) % 3) {
+    slide(imgSymbol);
   }
 }
 
