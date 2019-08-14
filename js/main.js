@@ -19,7 +19,7 @@ var previousItem = 0;
 const mouseDragHandler = function onMouseDrag(event) {
   // make sure event.item isn't an animated asset
   var item = event.item;
-  var itemId = item.id;
+  var itemId = item ? item.id : null;
   if (item && itemId !== previousItem.id && itemId < 28) {
     showButton(item);
     animate(itemId);
@@ -31,7 +31,7 @@ const mouseDragHandler = function onMouseDrag(event) {
 const mouseDownHandler = function onMouseDown(event) {
   // make sure event.item isn't an animated asset
   var item = event.item;
-  var itemId = item.id;
+  var itemId = item ? item.id : null;
   if (item && itemId < 28) {
     showButton(item);
     animate(itemId);
