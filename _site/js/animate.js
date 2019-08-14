@@ -10,7 +10,7 @@ function drawControls() {
   container.fillColor = 'blue';
   var rect = new Path.Rectangle(container);
 
-  rect.selected = true;
+  // rect.selected = true;
 
   var button = new Path.Rectangle(
     container.topLeft.x,
