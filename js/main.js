@@ -1,6 +1,9 @@
 'use strict';
 //2
 var img, imgSymbol;
+var sounds = [].slice.call(
+  document.querySelector('.sounds').querySelectorAll('audio')
+);
 
 function setUpRasters() {
   img = new Raster(
@@ -15,6 +18,16 @@ function setUpRasters() {
   };
 }
 
+function playSound(id) {
+  var shiftedId = id - 4; // because id's are indexed 4-27. id's go down then to the right.
+  var sound = sounds[shiftedId];
+  if (sound.paused) {
+    sound.play();
+  } else {
+    sound.currentTime = 0;
+  }
+}
+
 var previousItem = 0;
 const mouseDragHandler = function onMouseDrag(event) {
   // make sure event.item isn't an animated asset
@@ -23,6 +36,7 @@ const mouseDragHandler = function onMouseDrag(event) {
   if (item && itemId !== previousItem.id && itemId < 28) {
     showButton(item);
     animate(itemId);
+    playSound(itemId);
 
     previousItem = item;
   }
@@ -35,6 +49,7 @@ const mouseDownHandler = function onMouseDown(event) {
   if (item && itemId < 28) {
     showButton(item);
     animate(itemId);
+    playSound(itemId);
   }
 };
 
