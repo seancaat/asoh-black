@@ -1,6 +1,6 @@
 ---
 title: Info
-permalink: '/info/'
+permalink: "/info/"
 layout: page
 ---
 
