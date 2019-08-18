@@ -8,3 +8,5 @@ collections:
   uploads:
     title: Uploads
     output: true
+
+destination: ./docs
