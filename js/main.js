@@ -21,6 +21,7 @@ function setUpRasters() {
 function playSound(id) {
   var shiftedId = id - 4; // because id's are indexed 4-27. id's go down then to the right.
   var sound = sounds[shiftedId];
+  if (!sound) return;
   if (sound.paused) {
     sound.play();
   } else {
