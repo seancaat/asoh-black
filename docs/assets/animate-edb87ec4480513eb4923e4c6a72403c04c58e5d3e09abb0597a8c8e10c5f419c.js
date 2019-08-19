@@ -151,3 +151,4 @@ function slide(symbol) {
     }, offset * 100 + numRasters * 100);
   }
 }
+;

@@ -8,4 +8,8 @@ collections:
   uploads:
     title: Uploads
     output: true
-destination: "./docs"
+destination: './docs'
+gems:
+  - jekyll-assets
+assets:
+  digest: true
