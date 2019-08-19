@@ -24,10 +24,14 @@ function playSound(id) {
   var shiftedId = id - 4; // because id's are indexed 4-27. id's go down then to the right.
   var sound = sounds[shiftedId];
   if (!sound) return;
-  if (sound.paused) {
-    sound.play();
-  } else {
-    sound.currentTime = 0;
+  try {
+    if (sound.paused) {
+      sound.play();
+    } else {
+      sound.currentTime = 0;
+    }
+  } catch (e) {
+    console.log(e);
   }
 }
 
@@ -79,6 +83,15 @@ function animate(id) {
   }
 }
 
+function triggerRandomAnimations() {
+  for (var i = 0; i < 5; i++) {
+    var itemId = Math.floor(Math.random() * 27);
+    console.log('id', itemId);
+    animate(itemId);
+    playSound(itemId);
+  }
+}
+
 paper.install(window);
 
 window.onload = function() {
@@ -88,12 +101,12 @@ window.onload = function() {
   controlLayer = new paper.Layer();
   animationLayer = new paper.Layer();
   controlLayer.moveAbove(animationLayer);
-
-  drawControls();
-  setUpRasters();
   controlLayer.setName('Controls');
   animationLayer.setName('Animations');
 
+  drawControls();
+  setUpRasters();
+  triggerRandomAnimations();
   tool.onMouseDrag = mouseDragHandler;
   tool.onMouseDown = mouseDownHandler;
 };

@@ -93,6 +93,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  jekyll
   jekyll-assets
 
 BUNDLED WITH
