@@ -1,6 +1,7 @@
 'use strict';
 //2
 var img, imgSymbol;
+var controlLayer, animationLayer;
 var sounds = [].slice.call(
   document.querySelector('.sounds').querySelectorAll('audio')
 );
@@ -32,6 +33,7 @@ function playSound(id) {
 
 var previousItem = 0;
 const mouseDragHandler = function onMouseDrag(event) {
+  animationLayer.activate();
   // make sure event.item isn't an animated asset
   var item = event.item;
   var itemId = item ? item.id : null;
@@ -45,6 +47,7 @@ const mouseDragHandler = function onMouseDrag(event) {
 };
 
 const mouseDownHandler = function onMouseDown(event) {
+  animationLayer.activate();
   // make sure event.item isn't an animated asset
   var item = event.item;
   var itemId = item ? item.id : null;
@@ -81,9 +84,15 @@ paper.install(window);
 window.onload = function() {
   paper.setup('myCanvas');
 
+  var tool = new Tool();
+  controlLayer = new paper.Layer();
+  animationLayer = new paper.Layer();
+  controlLayer.moveAbove(animationLayer);
+
   drawControls();
   setUpRasters();
-  var tool = new Tool();
+  controlLayer.setName('Controls');
+  animationLayer.setName('Animations');
 
   tool.onMouseDrag = mouseDragHandler;
   tool.onMouseDown = mouseDownHandler;

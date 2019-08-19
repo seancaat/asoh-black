@@ -4,6 +4,8 @@ var vertical = width < height ? true : false;
 var mid = { x: width / 2, y: height / 2 };
 
 function drawControls() {
+  controlLayer.activate();
+
   var container = new Rectangle(0, 0, width, 0.8375 * height);
   container.y += 45; // magic number, need to generalize // figure out how to consolidate with typography
   container.strokeColor = '#ff0000';
