@@ -108,7 +108,6 @@ function rise() {
     c.shadowBlur = '4';
     c.shadowOffset = new Point(0, 4);
     // c = riseCircles[i]
-
     enterExit(c, i + c.bounds.width / 5);
 
     function enterExit(path, offset) {
@@ -152,3 +151,4 @@ function slide(symbol) {
     }, offset * 100 + numRasters * 100);
   }
 }
+;

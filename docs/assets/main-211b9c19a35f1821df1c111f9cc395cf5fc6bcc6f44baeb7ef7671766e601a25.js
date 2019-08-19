@@ -4,6 +4,7 @@ var img, imgSymbol;
 var sounds = [].slice.call(
   document.querySelector('.sounds').querySelectorAll('audio')
 );
+var numberSounds = sounds.length;
 
 function setUpRasters() {
   img = new Raster(

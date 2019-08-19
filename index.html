@@ -7,15 +7,12 @@ layout: default
 </div>
 
 <section class="sounds">
-  {% for audio in site.data.audio %}
-  <audio crossorigin="anonymous" src="{{ audio }}" type="audio/mpeg"></audio>
+  {% for k in assets %}
+    {% if k[1].filename contains 'audio/' %}
+      {% asset {{'k[0]'}} type="audio/mpeg" crossorigin="anonymous" !controls %}
+    {% endif %}
   {% endfor %}
 </section>
-<script src="/js/paper.js" type="text/javascript" defer></script>
-<script src="/js/animate.js" type="text/javascript" defer></script>
-<script
-  src="/js/main.js"
-  type="text/javascript"
-  canvas="myCanvas"
-  defer
-></script>
+{% asset paper.js defer %}
+{% asset animate.js defer %}
+{% asset main.js canvas="myCanvas" defer %}
