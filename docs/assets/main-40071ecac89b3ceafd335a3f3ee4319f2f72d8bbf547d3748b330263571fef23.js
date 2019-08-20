@@ -113,5 +113,7 @@ window.onload = function() {
 
 document.querySelector('.toggle-menu').addEventListener('click', toggleMenu);
 
-function toggleMenu() {}
+function toggleMenu() {
+  document.querySelector('.menu').classList.toggle('hidden');
+}
 ;
