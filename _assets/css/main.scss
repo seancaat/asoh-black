@@ -106,15 +106,23 @@ canvas {
   }
 
   ul {
-    width: 80%;
+    padding: 0;
+    width: 100%;
   }
 
   img {
-    width: 32px;
+    width: 24px;
   }
 }
 
-.music-icons li,
-.social-icons li {
-  display: inline-block;
+.music-icons,
+.social-icons {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.site-nav button {
+  font-size: 24px;
+  width: 100%;
 }
