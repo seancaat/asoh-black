@@ -110,3 +110,8 @@ window.onload = function() {
   tool.onMouseDrag = mouseDragHandler;
   tool.onMouseDown = mouseDownHandler;
 };
+
+document.querySelector('.toggle-menu').addEventListener('click', toggleMenu);
+
+function toggleMenu() {}
+;
