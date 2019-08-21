@@ -29,7 +29,16 @@ ul li {
 /* blinking text on large */
 marquee {
   position: fixed;
-  white-space: nowrap; }
+  white-space: nowrap;
+  width: 65%; }
+
+header {
+  display: inline-flex;
+  width: 100%;
+  align-items: flex-start;
+  height: 68px;
+  justify-content: center;
+  align-items: center; }
 
 .logo,
 .announcement {
@@ -58,14 +67,27 @@ canvas {
   grid-template-columns: repeat(5, 1fr); }
 
 .hidden {
-  display: none; }
+  display: none;
+  /* can't animate with this */
+  opacity: 0;
+  visibility: hidden; }
+
+header .menu-controls {
+  align-self: center;
+  margin-left: auto; }
+
+.menu {
+  transition: visibility 0s linear 0.7s, opacity 0.7s ease-in-out; }
 
 .menu:not(.hidden) {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  transition-delay: 0s;
+  visibility: visible;
+  opacity: 1; }
   .menu:not(.hidden) div {
     display: inline-flex;
     flex-direction: row; }

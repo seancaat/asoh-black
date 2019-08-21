@@ -56,6 +56,16 @@ ul li {
 marquee {
   position: fixed;
   white-space: nowrap;
+  width: 65%;
+}
+
+header {
+  display: inline-flex;
+  width: 100%;
+  align-items: flex-start;
+  height: 68px;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo,
@@ -88,7 +98,18 @@ canvas {
 }
 
 .hidden {
-  display: none;
+  display: none; /* can't animate with this */
+  opacity: 0;
+  visibility: hidden;
+}
+
+header .menu-controls {
+  align-self: center;
+  margin-left: auto;
+}
+
+.menu {
+  transition: visibility 0s linear 0.7s, opacity 0.7s ease-in-out;
 }
 
 .menu:not(.hidden) {
@@ -97,6 +118,9 @@ canvas {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition-delay: 0s;
+  visibility: visible;
+  opacity: 1;
 
   div {
     display: inline-flex;
