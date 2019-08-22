@@ -110,3 +110,4 @@ window.onload = function() {
   tool.onMouseDrag = mouseDragHandler;
   tool.onMouseDown = mouseDownHandler;
 };
+
