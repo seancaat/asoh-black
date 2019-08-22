@@ -40,10 +40,13 @@ header {
   justify-content: center;
   align-items: center; }
 
-.logo,
-.announcement {
-  font-size: 24px;
-  font-family: 'Chicago'; }
+button {
+  background: transparent;
+  border: none; }
+
+button,
+a {
+  cursor: pointer; }
 
 canvas {
   z-index: 0;
@@ -52,6 +55,11 @@ canvas {
   padding: 0;
   width: 100vw;
   height: 100vh; }
+
+.logo,
+.announcement {
+  font-size: 24px;
+  font-family: 'Chicago'; }
 
 .social-media-list {
   z-index: 1;
@@ -95,7 +103,11 @@ header .menu-controls {
     padding: 0;
     width: 100%; }
   .menu:not(.hidden) img {
-    width: 24px; }
+    width: 28px; }
+  .menu:not(.hidden) button {
+    text-transform: uppercase; }
+  .menu:not(.hidden) button:last-child {
+    text-decoration: underline; }
 
 .music-icons,
 .social-icons {
@@ -103,6 +115,14 @@ header .menu-controls {
   flex-direction: row;
   justify-content: space-evenly; }
 
-.site-nav button {
-  font-size: 24px;
-  width: 100%; }
+.site-nav li {
+  padding: 1.5em; }
+  .site-nav li a {
+    font-size: 24px;
+    width: 100%;
+    background: #c4c4c4;
+    line-height: 68px;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: system-ui; }
