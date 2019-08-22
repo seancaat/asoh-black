@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Chicago';
-  src: url("https://cdn.glitch.com/a50c17f4-890f-4f72-989b-3633080ca551%2FpixChicago.eot?v=1565331575789");
-  src: url("https://cdn.glitch.com/a50c17f4-890f-4f72-989b-3633080ca551%2FpixChicago.eot?v=1565331575789?#iefix") format("embedded-opentype"), url("https://cdn.glitch.com/a50c17f4-890f-4f72-989b-3633080ca551%2FpixChicago.woff2?v=1565331636831") format("woff2"), url("https://cdn.glitch.com/a50c17f4-890f-4f72-989b-3633080ca551%2FpixChicago.woff?v=1565331630872") format("woff"), url("https://cdn.glitch.com/a50c17f4-890f-4f72-989b-3633080ca551%2FpixChicago.ttf?v=1565331622752") format("truetype"), url("https://cdn.glitch.com/a50c17f4-890f-4f72-989b-3633080ca551%2FpixChicago.svg?v=1565331613562") format("svg");
+  src: url(/assets/pixChicago-5f66f58bfa1641321381d6ad580b01bd060f0f6f389d6ccf33d67837e7995568.eot);
+  src: url(/assets/pixChicago-5f66f58bfa1641321381d6ad580b01bd060f0f6f389d6ccf33d67837e7995568.eot#iefix) format("embedded-opentype"), url(/assets/pixChicago-3e0f07157d8a080206663580e1b9657f4ca7b5aa7a156ba9b96d6356be74a5dc.woff2) format("woff2"), url(/assets/pixChicago-46478322398af80911b45a472164f04ac754a99048055b45ac4535889e5bfd41.woff) format("woff"), url(/assets/pixChicago-0eab28f3fab405527a3eaa38e63f78793f995c61bc83fa19e1c164132a60b977.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 html {
