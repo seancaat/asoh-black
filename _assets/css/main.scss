@@ -134,10 +134,6 @@ header .menu-controls {
   button {
     text-transform: uppercase;
   }
-
-  button:last-child {
-    text-decoration: underline;
-  }
 }
 
 .music-icons,
@@ -165,5 +161,6 @@ header .menu-controls {
 .get-updates {
   text-align: center;
   text-transform: uppercase;
+  text-decoration: underline;
   width: 100%;
 }

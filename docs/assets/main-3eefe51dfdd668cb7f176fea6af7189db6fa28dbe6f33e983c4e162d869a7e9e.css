@@ -105,8 +105,6 @@ header .menu-controls {
     width: 28px; }
   .menu:not(.hidden) button {
     text-transform: uppercase; }
-  .menu:not(.hidden) button:last-child {
-    text-decoration: underline; }
 
 .music-icons,
 .social-icons {
@@ -129,4 +127,5 @@ header .menu-controls {
 .get-updates {
   text-align: center;
   text-transform: uppercase;
+  text-decoration: underline;
   width: 100%; }
