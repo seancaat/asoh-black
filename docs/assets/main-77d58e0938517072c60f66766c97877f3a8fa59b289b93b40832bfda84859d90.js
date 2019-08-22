@@ -111,11 +111,3 @@ window.onload = function() {
   tool.onMouseDown = mouseDownHandler;
 };
 
-document.querySelector('.menu-controls').addEventListener('click', toggleMenu);
-
-function toggleMenu() {
-  document.querySelector('.menu').classList.toggle('hidden');
-  document.querySelector('.menu-button.close').classList.toggle('hidden');
-  document.querySelector('.menu-button.open').classList.toggle('hidden');
-}
-;

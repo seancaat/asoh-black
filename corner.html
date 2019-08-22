@@ -6,10 +6,6 @@ layout: default
   <canvas id="myCanvas" resize></canvas>
 </div>
 
-<script src="/js/paper.js" type="text/javascript" defer></script>
-<script
-  src="/js/drawing.js"
-  type="text/javascript"
-  canvas="myCanvas"
-  defer
-></script>
+{% asset paper.js defer %}
+{% asset drawing.js defer %}
+
