@@ -28,11 +28,12 @@ marquee {
   width: 65%; }
 
 header {
-  display: inline-flex;
   width: 100%;
-  align-items: flex-start;
-  height: 68px;
-  justify-content: center;
+  height: 68px; }
+
+.menu-container {
+  height: inherit;
+  display: flex;
   align-items: center; }
 
 button {
@@ -51,14 +52,17 @@ canvas {
   width: 100vw;
   height: 100vh; }
 
+article {
+  width: 80%; }
+
+article,
+.menu-container {
+  margin: 0 auto; }
+
 .logo,
 .announcement {
   font-size: 24px;
   font-family: 'Chicago'; }
-
-.page-content {
-  margin: 0 auto;
-  width: 80%; }
 
 .social-media-list {
   z-index: 1;
@@ -79,9 +83,16 @@ canvas {
   opacity: 0;
   visibility: hidden; }
 
-header .menu-controls {
+.menu-container {
+  width: 85%; }
+
+.menu-controls {
   align-self: center;
   margin-left: auto; }
+  .menu-controls .menu-button {
+    height: 100%; }
+  .menu-controls .menu-button img {
+    width: 22px; }
 
 .menu {
   transition: visibility 0s linear 0.7s, opacity 0.7s ease-in-out; }
@@ -89,6 +100,7 @@ header .menu-controls {
 .menu:not(.hidden) {
   width: 100%;
   height: 100vh;
+  background: #fcfcfc;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,7 +110,8 @@ header .menu-controls {
   .menu:not(.hidden) div {
     display: inline-flex;
     flex-direction: row; }
-  .menu:not(.hidden) ul {
+  .menu:not(.hidden) ul,
+  .menu:not(.hidden) section {
     padding: 0;
     width: 100%; }
   .menu:not(.hidden) img {
@@ -107,7 +120,8 @@ header .menu-controls {
     text-transform: uppercase; }
 
 .music-icons,
-.social-icons {
+.social-icons,
+.bottom {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-evenly; }
@@ -117,12 +131,20 @@ header .menu-controls {
   .site-nav li a {
     font-size: 24px;
     width: 100%;
-    background: #c4c4c4;
+    background: #fcfcfc;
+    border: 1px solid black;
+    border-radius: 3px;
     line-height: 68px;
     display: inline-block;
     text-align: center;
     text-transform: uppercase;
     font-family: system-ui; }
+  .site-nav li a:after {
+    content: ' ';
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 3px;
+    transform: translate(5px); }
 
 .get-updates {
   text-align: center;
