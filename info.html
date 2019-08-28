@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
-
-<article>
+<section class="intro">
+  {% asset about-main.jpeg %}
+</section>
+<article class="info">
   <p>
     Asoh Black! is one of F.A.M\$' prominent musical artists. He's had a passion
     for hip-hop since high school when he discovered artists like Kanye West,
@@ -13,6 +15,10 @@ layout: default
     Despite living in a household that didn't celebrate this music, Asoh
     developed a knack for writing lyrics and crafting feel-good records.
   </p>
+  <div class="img-container">
+    {% asset about-1.jpeg %}
+    {% asset about-2.jpeg %}
+  </div>
 
   <p>
     In June 2015, he released his debut EP "20 | 20,” and has since been
@@ -21,5 +27,5 @@ layout: default
     featured in publications like Lyrical Lemonade. Look out for this hungry
     hitmaker.
   </p>
-  {% include get-updates.html %}
 </article>
+{% include get-updates.html %}
