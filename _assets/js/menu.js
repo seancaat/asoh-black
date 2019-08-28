@@ -4,6 +4,6 @@ function toggleMenu() {
   document.querySelector('.menu-button.open').classList.toggle('hidden');
 }
 
-window.onload = function() {
+window.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.menu-controls').addEventListener('click', toggleMenu);
-}
+});

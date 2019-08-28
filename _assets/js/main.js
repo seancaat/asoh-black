@@ -74,11 +74,11 @@ function showButton(button) {
 function animate(id) {
   var shiftedId = id - 4;
   console.log('run animation ' + shiftedId);
-  if (shiftedId % 3) {
+  if (shiftedId % 3 === 0) {
     drawNeon();
-  } else if ((shiftedId - 1) % 3) {
+  } else if ((shiftedId - 1) % 3 === 0) {
     rise();
-  } else if ((shiftedId - 2) % 3) {
+  } else if ((shiftedId - 2) % 3 === 0) {
     slide(imgSymbol);
   }
 }

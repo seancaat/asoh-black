@@ -140,6 +140,7 @@ function slide(symbol) {
   }
 
   function enterExit(symbol, offset) {
+    if (!symbol) return;
     var copy;
 
     setTimeout(function() {
