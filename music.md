@@ -10,7 +10,7 @@ albums:
   image: 
 - name: 
   image: 
-layout: page
+layout: default
 ---
 
 Listen to the music!
