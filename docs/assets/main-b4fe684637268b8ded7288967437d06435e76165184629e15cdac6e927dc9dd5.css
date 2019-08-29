@@ -11,7 +11,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow: auto; }
 
 a {
   color: black;
@@ -44,12 +45,13 @@ canvas {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url(/assets/bg-dac863c5c36e742890cde33ce15eb1a298b7068afd53f043ee4066f8ac53c407.gif); }
+  background-image: url(/assets/bg-dac863c5c36e742890cde33ce15eb1a298b7068afd53f043ee4066f8ac53c407.gif);
+  overflow: hidden; }
 
 /* blinking text on large */
 marquee {
   white-space: nowrap;
-  width: 65%; }
+  width: 80%; }
 
 .logo,
 .announcement {
@@ -70,14 +72,14 @@ marquee {
   text-transform: uppercase;
   text-decoration: underline;
   width: 100%;
-  padding-bottom: 15px; }
+  height: 100%; }
 
 .header-container {
   margin: 0 auto;
   height: inherit;
   display: flex;
   align-items: center;
-  width: 85%; }
+  width: inherit; }
 
 article {
   margin: 0 auto;
@@ -118,22 +120,29 @@ article {
 
 .menu:not(.hidden) {
   position: fixed;
-  width: 100%;
-  height: 100vh;
+  height: calc(100vh - 68px);
+  width: 50%;
   background: #fcfcfc;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition-delay: 0s;
   visibility: visible;
-  opacity: 1; }
+  opacity: 1;
+  right: 0;
+  overflow: auto;
+  justify-content: space-evenly; }
   .menu:not(.hidden) div {
     display: inline-flex;
     flex-direction: row; }
   .menu:not(.hidden) ul,
   .menu:not(.hidden) section {
-    padding: 0;
-    width: 100%; }
+    width: 65%;
+    padding: 0; }
+  .menu:not(.hidden) ul li {
+    align-self: center; }
+  .menu:not(.hidden) .bottom {
+    padding-bottom: 15px; }
   .menu:not(.hidden) img {
     width: 28px; }
   .menu:not(.hidden) button {
@@ -157,13 +166,20 @@ article {
     line-height: 68px;
     display: inline-block;
     text-align: center;
-    text-transform: uppercase;
-    font-family: system-ui; }
+    text-transform: uppercase; }
 
 .menu-controls {
   align-self: center;
   margin-left: auto; }
   .menu-controls .menu-button {
+    padding: 0 15px;
     height: 100%; }
   .menu-controls .menu-button img {
     width: 22px; }
+
+@media screen and (max-width: 600px) {
+  .menu:not(.hidden) {
+    width: 100%; }
+    .menu:not(.hidden) ul,
+    .menu:not(.hidden) section {
+      width: 100%; } }

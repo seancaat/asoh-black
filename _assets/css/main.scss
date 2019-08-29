@@ -20,6 +20,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow: auto;
 }
 
 a {
@@ -59,12 +60,13 @@ canvas {
   width: 100vw;
   height: 100vh;
   background-image: asset_url('bg.gif');
+  overflow: hidden;
 }
 
 /* blinking text on large */
 marquee {
   white-space: nowrap;
-  width: 65%;
+  width: 80%;
 }
 
 .logo,
@@ -88,7 +90,7 @@ marquee {
   text-transform: uppercase;
   text-decoration: underline;
   width: 100%;
-  padding-bottom: 15px;
+  height: 100%;
 }
 
 .header-container {
@@ -96,7 +98,7 @@ marquee {
   height: inherit;
   display: flex;
   align-items: center;
-  width: 85%;
+  width: inherit;
 }
 
 @import 'info.scss';
