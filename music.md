@@ -18,6 +18,6 @@ layout: default
 ---
 
 {% for album in page.albums %}
-  {{ album.name }}
-  <img src="{{ album.image }}" />
+{{ album.name }}
+<img src="{{ album.image }}" />
 {% endfor %}
