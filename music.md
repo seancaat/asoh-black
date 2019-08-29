@@ -13,7 +13,9 @@ albums:
 layout: default
 ---
 
-Listen to the music!
+---
+layout: default
+---
 
 {% for album in page.albums %}
   {{ album.name }}
