@@ -2,9 +2,6 @@
 title: Asoh Black
 timezone: UTC
 collections:
-  music:
-    title: Music
-    output: true
   posts:
     title: Posts
     output: true
