@@ -42,13 +42,13 @@ header {
   z-index: 999;
 }
 
-button {
+button, input {
   background: transparent;
   border: none;
 }
 
 button,
-a {
+a, input {
   cursor: pointer;
 }
 
@@ -103,3 +103,4 @@ marquee {
 
 @import 'info.scss';
 @import 'menu.scss';
+@import 'email-signup.scss';

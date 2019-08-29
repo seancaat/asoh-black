@@ -30,12 +30,12 @@ header {
   border-bottom: 1px solid black;
   z-index: 999; }
 
-button {
+button, input {
   background: transparent;
   border: none; }
 
 button,
-a {
+a, input {
   cursor: pointer; }
 
 canvas {
@@ -132,9 +132,6 @@ article {
   right: 0;
   overflow: auto;
   justify-content: space-evenly; }
-  .menu:not(.hidden) div {
-    display: inline-flex;
-    flex-direction: row; }
   .menu:not(.hidden) ul,
   .menu:not(.hidden) section {
     width: 65%;
@@ -183,3 +180,5 @@ article {
     .menu:not(.hidden) ul,
     .menu:not(.hidden) section {
       width: 100%; } }
+.email-modal input {
+  border-bottom: 1px solid black; }
