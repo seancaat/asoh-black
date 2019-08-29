@@ -1,7 +1,7 @@
 ---
 title: Music
 permalink: "/music/"
-music:
+albums:
 - name: Sleepwalking Through Reality
   image: "/uploads/artworks-000178840342-vlq6ls-t500x500-85e30b.jpg"
 - name: Listen To This Instead
@@ -15,7 +15,7 @@ layout: page
 
 Listen to the music!
 
-{% for album in page.music %}
+{% for album in page.albums %}
   {{ album.name }}
   <img src="{{ album.image }}" />
 {% endfor %}
