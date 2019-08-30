@@ -3,13 +3,16 @@ article {
   width: 80%;
 }
 
+.img-container, .intro {
+  display: flex;
+}
+
 .info {
   display: grid;
   grid-template-areas:
     'p1 p2'
     'image-container image-container'
     'p3 p3';
-  align-items: center;
   justify-items: center;
 
   p {
@@ -30,7 +33,6 @@ article {
 
   .img-container {
     grid-area: image-container;
-    display: flex;
     justify-content: space-around;
 
     img {
@@ -40,8 +42,11 @@ article {
 }
 
 .intro {
+  justify-content: center;
+  margin-top: 8%;
+
   img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 

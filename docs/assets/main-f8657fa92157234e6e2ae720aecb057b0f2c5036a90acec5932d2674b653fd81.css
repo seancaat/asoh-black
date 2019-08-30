@@ -43,10 +43,10 @@ canvas {
   position: absolute;
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-image: url(/assets/bg-dac863c5c36e742890cde33ce15eb1a298b7068afd53f043ee4066f8ac53c407.gif);
-  overflow: hidden; }
+  background-repeat: repeat no-repeat; }
 
 /* blinking text on large */
 marquee {
@@ -85,10 +85,12 @@ article {
   margin: 0 auto;
   width: 80%; }
 
+.img-container, .intro {
+  display: flex; }
+
 .info {
   display: grid;
   grid-template-areas: 'p1 p2' 'image-container image-container' 'p3 p3';
-  align-items: center;
   justify-items: center; }
   .info p {
     margin: 40px 0;
@@ -101,13 +103,15 @@ article {
     grid-area: p3; }
   .info .img-container {
     grid-area: image-container;
-    display: flex;
     justify-content: space-around; }
     .info .img-container img {
       max-width: 40%; }
 
-.intro img {
-  width: 100%; }
+.intro {
+  justify-content: center;
+  margin-top: 8%; }
+  .intro img {
+    max-width: 100%; }
 
 @media screen and (max-width: 600px) {
   .info {

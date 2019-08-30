@@ -18,7 +18,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  overflow: auto;
 }
 
 a {
@@ -55,10 +54,10 @@ canvas {
   position: absolute;
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-image: asset_url('bg.gif');
-  overflow: hidden;
+  background-repeat: repeat no-repeat;
 }
 
 /* blinking text on large */
