@@ -1,12 +1,8 @@
-var width = window.innerWidth;
-var height = window.innerHeight;
-var vertical = width < height ? true : false;
-var mid = { x: width / 2, y: height / 2 };
-
-function drawControls() {
+var container;
+function drawControls(width, height) {
   controlLayer.activate();
 
-  var container = new Rectangle(0, 0, width, 0.8375 * height);
+  container = new Rectangle(0, 0, width, 0.8375 * height);
   container.y += 45; // magic number, need to generalize // figure out how to consolidate with typography
   container.strokeColor = '#ff0000';
   container.fillColor = 'blue';
@@ -44,7 +40,6 @@ function drawControls() {
         container.topLeft.y +
         (j * container.height) / 8 +
         button.bounds.height / 2;
-
       copy.position = new Point(x, y);
       //id's start at 4 and go to 27.
       buttons[i].push(copy);
@@ -53,7 +48,7 @@ function drawControls() {
 }
 
 // 0
-function drawNeon() {
+function drawNeon(width, height) {
   for (var i = 0; i < 12; i++) {
     var c = new Path.Line(
       new Point(width * 0.25 - 12, ((i + 3) * height) / 20),
@@ -95,7 +90,7 @@ function drawNeon() {
 
 //1 to preserve memory, should maybe do 2, three sets of symbols and cycle through
 // or if press during
-function rise() {
+function rise(width, height) {
   var minRadius = width / 20;
   var maxRadius = width / 4;
   var colors = ['#2AD4BD', '#F9F04D', '#FF6F55', '#2A40D4']; // teal, yellow, red, purple
@@ -134,7 +129,7 @@ function rise() {
 }
 var numRasters = 5;
 
-function slide(symbol) {
+function slide(symbol, mid, height) {
   for (var i = 0; i < numRasters; i++) {
     enterExit(symbol, i);
   }

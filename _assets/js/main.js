@@ -6,6 +6,9 @@ var sounds = [].slice.call(
   document.querySelector('.sounds').querySelectorAll('audio')
 );
 var numberSounds = sounds.length;
+var width;
+var height;
+var mid;
 
 function setUpRasters() {
   img = new Raster(
@@ -41,7 +44,7 @@ const mouseDragHandler = function onMouseDrag(event) {
   // make sure event.item isn't an animated asset
   var item = event.item;
   var itemId = item ? item.id : null;
-  if (item && itemId !== previousItem.id && itemId < 28) {
+  if (item && itemId !== previousItem.id && controlLayer.isChild(item)) {
     showButton(item);
     animate(itemId);
     playSound(itemId);
@@ -55,7 +58,7 @@ const mouseDownHandler = function onMouseDown(event) {
   // make sure event.item isn't an animated asset
   var item = event.item;
   var itemId = item ? item.id : null;
-  if (item && itemId < 28) {
+  if (item && controlLayer.isChild(item)) {
     showButton(item);
     animate(itemId);
     playSound(itemId);
@@ -75,28 +78,35 @@ function animate(id) {
   var shiftedId = id - 4;
   console.log('run animation ' + shiftedId);
   if (shiftedId % 3 === 0) {
-    drawNeon();
+    drawNeon(width, height);
   } else if ((shiftedId - 1) % 3 === 0) {
-    rise();
+    rise(width, height);
   } else if ((shiftedId - 2) % 3 === 0) {
-    slide(imgSymbol);
+    slide(imgSymbol, mid, height);
   }
 }
 
 function triggerRandomAnimations() {
   for (var i = 0; i < 5; i++) {
-    var itemId = Math.floor(Math.random() * 27);
+    var itemId = Math.abs(Math.floor(Math.random() * 27));
     console.log('id', itemId);
     animate(itemId);
     playSound(itemId);
   }
 }
 
+function resizeHandler() {
+  controlLayer.removeChildren();
+  width = window.innerWidth;
+  height = window.innerHeight;
+  drawControls(width, height);
+  img.position = new Point(mid.x * 1.25, height - img.bounds.height / 2);
+}
+
 paper.install(window);
 
 window.onload = function() {
   paper.setup('myCanvas');
-
   var tool = new Tool();
   controlLayer = new paper.Layer();
   animationLayer = new paper.Layer();
@@ -104,10 +114,15 @@ window.onload = function() {
   controlLayer.setName('Controls');
   animationLayer.setName('Animations');
 
-  drawControls();
+  width = window.innerWidth;
+  height = window.innerHeight;
+  mid = { x: width / 2, y: height / 2 };
+  drawControls(width, height);
   setUpRasters();
+
   triggerRandomAnimations();
+
+  paper.view.onResize = resizeHandler;
   tool.onMouseDrag = mouseDragHandler;
   tool.onMouseDown = mouseDownHandler;
 };
-

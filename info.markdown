@@ -1,8 +1,9 @@
 ---
 title: Info
-permalink: "/info/"
+permalink: '/info/'
 layout: default
 ---
+
 <div class="container info">
 <section class="intro">
   {% asset about-main.jpeg %}
