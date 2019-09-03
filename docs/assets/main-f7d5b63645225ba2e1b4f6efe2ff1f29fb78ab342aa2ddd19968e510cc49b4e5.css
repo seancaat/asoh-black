@@ -194,6 +194,7 @@ article {
   right: 0;
   overflow: auto;
   justify-content: space-evenly;
+  flex-flow: wrap;
   top: 68px; }
   .menu:not(.hidden) ul,
   .menu:not(.hidden) section {
@@ -220,7 +221,7 @@ article {
   width: 100%;
   display: inline-block; }
   .site-nav li a {
-    font-size: 24px;
+    font-size: 1.2em;
     width: 100%;
     background: #fcfcfc;
     border: 1px solid black;
@@ -261,6 +262,7 @@ article {
 
 .albums {
   display: flex;
+  padding: 0;
   justify-content: space-around;
   flex-wrap: wrap; }
 
