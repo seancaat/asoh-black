@@ -11,13 +11,14 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  font-family: sans-serif;
+  background-color: white; }
 
 ::-webkit-scrollbar {
-  width: 1.2vmin; }
+  width: 2vmin; }
 
 ::-webkit-scrollbar-thumb {
-  background: #F9F04; }
+  background: #F9F04D; }
 
 ::-webkit-scrollbar-track {
   background: #000; }
@@ -117,7 +118,8 @@ article {
   margin: 0 auto;
   width: 80%; }
 
-.img-container, .intro {
+.img-container,
+.intro {
   display: flex; }
 
 .bio {
@@ -145,10 +147,26 @@ article {
   .intro img {
     max-width: 100%; }
 
+.container.info {
+  position: relative; }
+
+.container.info .get-updates {
+  width: fit-content;
+  margin: 0 auto 1.5em;
+  display: flex; }
+
+.container.info .email-modal {
+  width: fit-content;
+  margin: 0 auto;
+  position: absolute; }
+
 @media screen and (max-width: 600px) {
-  .info {
+  article {
+    width: 100%; }
+
+  .bio {
     grid-template-areas: 'p1 p1' 'p2 p2' 'image-container image-container' 'p3 p3'; }
-    .info p {
+    .bio p {
       margin: 20px 0; } }
 .menu {
   z-index: 999;
