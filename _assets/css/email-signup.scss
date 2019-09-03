@@ -1,5 +1,20 @@
 .email-modal {
+  border: 1px solid black;
+  border-radius: 3px;
+
+  form {
+    padding: 2em;
+  }
+
   input {
     border-bottom: 1px solid black;
+    margin: 1em;
+    font-size: 1em;
+  }
+
+  input[type="submit"] {
+    background: black;
+    color: white;
+    padding: 1em;
   }
 }

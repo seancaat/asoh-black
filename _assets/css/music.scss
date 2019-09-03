@@ -1,0 +1,16 @@
+.albums {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+
+  img {
+    width: fit-content;
+    max-width: 100%;
+  }
+}

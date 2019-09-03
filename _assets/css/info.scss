@@ -3,11 +3,12 @@ article {
   width: 80%;
 }
 
-.img-container, .intro {
+.img-container,
+.intro {
   display: flex;
 }
 
-.info {
+.bio {
   display: grid;
   grid-template-areas:
     'p1 p2'
@@ -50,8 +51,28 @@ article {
   }
 }
 
+.container.info {
+  position: relative;
+}
+
+.container.info .get-updates {
+  width: fit-content;
+  margin: 0 auto 1.5em;
+  display: flex;
+}
+
+.container.info .email-modal {
+  width: fit-content;
+  margin: 0 auto;
+  position: absolute;
+}
+
 @media screen and (max-width: 600px) {
-  .info {
+  article {
+    width: 100%;
+  }
+
+  .bio {
     grid-template-areas:
       'p1 p1'
       'p2 p2'

@@ -14,11 +14,13 @@ function toggleEmailModal(e) {
     document.querySelector('.menu > .site-nav').classList.toggle('hidden');
   }
   else {
-    // open up modal that's not in the menu i.e in the info page
+    document.querySelector('.container.info .email-modal').classList.toggle('hidden');
   }
 }
 
 window.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.menu-controls').addEventListener('click', toggleMenu);
-  document.querySelector('.get-updates').addEventListener('click', toggleEmailModal);
+  document.querySelectorAll('.get-updates').forEach(element => {
+    element.addEventListener('click', toggleEmailModal);
+  });
 });

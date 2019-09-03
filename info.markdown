@@ -1,13 +1,14 @@
 ---
 title: Info
-permalink: "/info/"
+permalink: '/info/'
 layout: default
 ---
 
+<div class="container info">
 <section class="intro">
   {% asset about-main.jpeg %}
 </section>
-<article class="info">
+<article class="bio">
   <p>
     Asoh Black! is one of F.A.M\$' prominent musical artists. He's had a passion
     for hip-hop since high school when he discovered artists like Kanye West,
@@ -31,4 +32,6 @@ layout: default
     hitmaker.
   </p>
 </article>
-{% include get-updates-link.html %}
+  {% include get-updates-link.html %}
+  {% include get-updates.html %}
+</div>
