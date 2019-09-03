@@ -12,6 +12,7 @@ albums:
   image: "/uploads/artworks-000434053146-l97zrf-t500x500.jpg"
 layout: default
 ---
+
 <div class="container music">
 <ul class="albums">
   {% for album in page.albums %}
