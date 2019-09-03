@@ -20,6 +20,18 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 1.2vmin;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F9F04D;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
 a {
   color: black;
   text-decoration: none;
