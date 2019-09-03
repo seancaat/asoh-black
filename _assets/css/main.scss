@@ -78,7 +78,7 @@ marquee {
   visibility: hidden;
 }
 
-.page-content {
+.container {
   margin-top: 69px;
 }
 
@@ -97,7 +97,8 @@ marquee {
   align-items: center;
   width: inherit;
 }
-
+@import '_mixins.scss';
 @import 'info.scss';
 @import 'menu.scss';
 @import 'email-signup.scss';
+@import 'music.scss';

@@ -12,8 +12,13 @@ albums:
   image: "/uploads/artworks-000434053146-l97zrf-t500x500.jpg"
 layout: default
 ---
-
-{% for album in page.albums %}
-{{ album.name }}
-<img src="{{ album.image }}" />
-{% endfor %}
+<div class="container music">
+<ul class="albums">
+  {% for album in page.albums %}
+  <li class="album">
+    {{ album.name }}
+    <img src="{{ album.image }}" />
+  </li>
+  {% endfor %}
+</ul>
+</div>

@@ -6,7 +6,7 @@
 .menu:not(.hidden) {
   position: fixed;
   height: calc(100vh - 68px);
-  width: 50%;
+  width: 40%;
   background: #fcfcfc;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,7 @@
   right: 0;
   overflow: auto;
   justify-content: space-evenly;
+  top: 68px;
 
   ul,
   section {
@@ -50,7 +51,9 @@
 }
 
 .site-nav li {
-  padding: 1.5em;
+  margin: 1.5em 0;
+  width: 100%;
+  display: inline-block;
 
   a {
     font-size: 24px;
@@ -78,13 +81,14 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .menu:not(.hidden) {
+    width: 50%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .menu:not(.hidden) {
     width: 100%;
-
-    ul,
-    section {
-      width: 100%;
-    }
   }
 }
