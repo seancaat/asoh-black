@@ -1,6 +1,6 @@
 ---
 title: Info
-permalink: "/info/"
+permalink: '/info/'
 layout: default
 ---
 
@@ -33,5 +33,7 @@ layout: default
   </p>
 </article>
   {% include get-updates-link.html %}
-  {% include get-updates.html %}
+  <div class="modal-container">
+    {% include get-updates.html %}
+  </div>
 </div>

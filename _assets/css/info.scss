@@ -37,7 +37,10 @@ article {
     justify-content: space-around;
 
     img {
+      height: auto;
+      width: auto;
       max-width: 40%;
+      max-height: 40em;
     }
   }
 }
@@ -45,10 +48,8 @@ article {
 .intro {
   justify-content: center;
   margin-top: 8%;
-
-  img {
-    max-width: 100%;
-  }
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .container.info {
@@ -61,15 +62,28 @@ article {
   display: flex;
 }
 
-.container.info .email-modal {
+.container.info .modal-container {
+  max-width: 80%;
   width: fit-content;
-  margin: 0 auto;
-  position: absolute;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 600px) {
   article {
     width: 100%;
+  }
+
+  .bio {
+    .img-container {
+      img {
+        max-height: 20em;
+      }
+    }
   }
 
   .bio {
