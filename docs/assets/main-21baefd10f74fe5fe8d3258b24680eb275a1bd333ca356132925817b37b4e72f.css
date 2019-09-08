@@ -63,12 +63,13 @@ canvas {
   width: 100%;
   height: 100%;
   background-image: url(/assets/bg-dac863c5c36e742890cde33ce15eb1a298b7068afd53f043ee4066f8ac53c407.gif);
+  opacity: 0.8;
   background-repeat: repeat no-repeat; }
 
 /* blinking text on large */
 marquee {
   white-space: nowrap;
-  width: 80%; }
+  width: 90%; }
 
 .logo,
 .announcement {
@@ -187,7 +188,6 @@ article {
   background: #ffffff;
   display: flex;
   flex-direction: column;
-  align-items: center;
   transition-delay: 0s;
   visibility: visible;
   opacity: 1;
@@ -198,12 +198,12 @@ article {
   top: 68px; }
   .menu:not(.hidden) ul,
   .menu:not(.hidden) section {
-    width: 65%;
-    padding: 0; }
+    width: 70%;
+    margin: 0; }
   .menu:not(.hidden) ul li {
     align-self: center; }
   .menu:not(.hidden) .bottom {
-    padding-bottom: 15px; }
+    height: fit-content; }
   .menu:not(.hidden) img {
     width: 28px; }
   .menu:not(.hidden) button {
@@ -214,14 +214,22 @@ article {
 .bottom {
   display: inline-flex;
   flex-direction: row;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0; }
+
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  padding-bottom: 1em; }
 
 .site-nav li {
-  margin: 1.5em 0;
   width: 100%;
   display: inline-block; }
   .site-nav li a {
-    font-size: 24px;
+    font-size: 1.2em;
     width: 100%;
     background: #fcfcfc;
     border: 1px solid black;
