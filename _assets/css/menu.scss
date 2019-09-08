@@ -16,7 +16,7 @@
   right: 0;
   overflow: auto;
   justify-content: space-evenly;
-  flex-flow: wrap;
+  align-items: center;
   top: 68px;
 
   ul,
@@ -52,12 +52,13 @@
   padding: 0;
 }
 
-.site-nav {
+.site-nav:not(.hidden) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0;
   padding-bottom: 1em;
+  height: 40%;
 }
 
 .site-nav li {

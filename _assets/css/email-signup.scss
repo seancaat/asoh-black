@@ -1,9 +1,11 @@
 .email-modal {
   border: 1px solid black;
   border-radius: 3px;
+  padding: 0.5em;
 
   form {
     padding: 2em;
+    text-align: center;
   }
 
   input {
@@ -12,7 +14,7 @@
     font-size: 1em;
   }
 
-  input[type="submit"] {
+  input[type='submit'] {
     background: black;
     color: white;
     padding: 1em;
