@@ -174,7 +174,7 @@ article {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%); }
+  transform: translate(-50%, -50%); }
 
 @media screen and (max-width: 600px) {
   article {
@@ -281,16 +281,74 @@ article {
     color: white;
     padding: 1em; }
 
+.container.music {
+  width: 80%;
+  margin: 100px auto;
+  max-width: 800px; }
+
 .albums {
   display: flex;
+  flex-direction: column;
   padding: 0;
   justify-content: space-around;
-  flex-wrap: wrap; }
+  align-items: center; }
 
 .album {
   display: flex;
   flex-direction: column;
-  margin: 2em; }
+  margin: 3em;
+  position: relative;
+  height: 25vh;
+  transition: 0.75s ease-out;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%; }
   .album img {
-    width: fit-content;
-    max-width: 100%; }
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0, -50%); }
+  .album span {
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    z-index: 2;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: inline-block;
+    text-transform: uppercase;
+    color: #f9f04d;
+    font-size: 3.5em;
+    width: 96%;
+    text-align: center;
+    padding: 2%;
+    opacity: 0.5;
+    transition: 0.75s ease-out; }
+
+.album:hover {
+  height: 40vh;
+  opacity: 1; }
+
+.video-overlay:not(.hidden) {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99998;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #dea92c; }
