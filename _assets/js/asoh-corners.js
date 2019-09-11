@@ -1,7 +1,5 @@
 var square;
 var smokeSymbol1, smokeSymbol2;
-//= require smoke-top.jpg
-//= require smoke-bottom.jpg
 
 function setupSmokeAnim() {
   square = new Path.Rectangle(0, 0, (width * 3) / 5, (width * 3) / 5);

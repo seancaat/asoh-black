@@ -363,7 +363,7 @@ function drawNeon(width, height) {
 }
 ;
 function setUpRasters() {
-  img = new Raster('img-temp/asoh-slide.png');
+  img = new Raster(javascript_path('asoh-slide.png'));
 
   img.onLoad = function() {
     img.visible = true;
@@ -509,8 +509,8 @@ var smokeSymbol1, smokeSymbol2;
 function setupSmokeAnim() {
   square = new Path.Rectangle(0, 0, (width * 3) / 5, (width * 3) / 5);
 
-  var smoke1 = new Raster('img-temp/smoke-top.jpg');
-  var smoke2 = new Raster('img-temp/smoke-bottom.jpg');
+  var smoke1 = new Raster('smoke-top.jpg');
+  var smoke2 = new Raster('smoke-bottom.jpg');
 
   smoke1.crossOrigin = 'anonymous';
   smoke2.crossOrigin = 'anonymous';

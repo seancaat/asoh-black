@@ -1,7 +1,5 @@
-//= require asoh-slide.png
-
 function setUpRasters() {
-  img = new Raster('asoh-slide.png');
+  img = new Raster(javascript_path('asoh-slide.png'));
 
   img.onLoad = function() {
     img.visible = true;
