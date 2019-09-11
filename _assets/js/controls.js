@@ -45,10 +45,4 @@ function drawControls(width, height) {
       buttons[i].push(copy);
     }
   }
-  console.log(buttons);
-  setControlRange();
-}
-
-function setControlRange() {
-  console.log(controlLayer.children);
 }
