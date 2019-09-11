@@ -363,7 +363,7 @@ function drawNeon(width, height) {
 }
 ;
 function setUpRasters() {
-  img = new Raster(asset_path('asoh-slide.png'));
+  img = new Raster("/assets/asoh-slide-ba9bceff084c9a4059e95cf1679ca1e02447f3d929b8682f026f8a0a3a57f8e8.png");
 
   img.onLoad = function() {
     img.visible = true;
@@ -509,8 +509,8 @@ var smokeSymbol1, smokeSymbol2;
 function setupSmokeAnim() {
   square = new Path.Rectangle(0, 0, (width * 3) / 5, (width * 3) / 5);
 
-  var smoke1 = new Raster('smoke-top.jpg');
-  var smoke2 = new Raster('smoke-bottom.jpg');
+  var smoke1 = new Raster("/assets/smoke-top-5ee73ea3ac6ce3feb4aa527caff8c101f3911c5419b47bfbf3e5831952021b9a.jpg");
+  var smoke2 = new Raster("/assets/smoke-bottom-6d2cb88b43982adc5edcbcc0bbce188255029c3cb2d77454d3c8e970dfeb5df8.jpg");
 
   smoke1.crossOrigin = 'anonymous';
   smoke2.crossOrigin = 'anonymous';

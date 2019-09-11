@@ -1,5 +1,5 @@
 function setUpRasters() {
-  img = new Raster(javascript_path('asoh-slide.png'));
+  img = new Raster("<%= asset_path('asoh-slide.png') %>");
 
   img.onLoad = function() {
     img.visible = true;
