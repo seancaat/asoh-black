@@ -127,7 +127,7 @@ const soundToAnim = {
     sound: 'beat-hats1',
     animation: function() {
       for (var i = 0; i < 20; i++) {
-        delay(randof(tiles), i);
+        delay(randof(rectTiles), i);
       }
     }
   },
@@ -176,7 +176,7 @@ const soundToAnim = {
   '16': {
     sound: '',
     animation: function() {
-      slideSquare();  // duplicate
+      slideSquare(); // duplicate
     }
   },
   '17': {
@@ -202,7 +202,7 @@ const soundToAnim = {
     animation: function() {
       // duplicate
       for (var i = 0; i < 20; i++) {
-        delay(randof(tiles), i);
+        delay(randof(rectTiles), i);
       }
     }
   },
@@ -562,7 +562,7 @@ function flash(rects) {
   }
 }
 ;
-function setupDrops(num) {
+function setupDrops(num, typeOfDots) {
   var arr = [];
   var colors = [
     'rgb(249,14,27)',
@@ -577,8 +577,11 @@ function setupDrops(num) {
 
   for (var i = 0; i < num * 1.5; i++) {
     // var pos = pointInCircle(width / 2);
-    var c = new Path.Circle(view.center, randof(fib) / 4);
-
+    var pos =
+      typeOfDots === 'scatter'
+        ? view.center
+        : pointInCircle(width) + view.center;
+    var c = new Path.Circle(pos, randof(fib) / 4);
     c.fillColor = randof(colors); // random colors or mask pic
     // c.strokeColor = 'black';
     c.strokeWidth = 1;
@@ -600,12 +603,13 @@ function dropDotsGroup(dropRects) {
   dropDots(dropRects, 100, 500, 'group');
 }
 
-function dropDots(group, point, duration, typeOfDots) {
+function dropDots(group, point, theDuration, typeOfDots) {
   for (var i = 0; i < group.length; i++) {
-    enterExit(group[i]);
+    var dots = group[i];
+    enterExit(dots, dots.bounds.width, dots.bounds.height);
   }
 
-  function enterExit(item) {
+  function enterExit(dots, width, height) {
     var fib = [55, 89, 144, 233];
     var colors = [
       'rgb(249,14,27)',
@@ -617,22 +621,22 @@ function dropDots(group, point, duration, typeOfDots) {
     ];
 
     setTimeout(function() {
-      item.tween(
+      dots.tween(
         {
           position: pointInCircle(point) + view.center,
           opacity: 1
         },
         {
           easing: 'easeOutQuint',
-          duration: duration
+          duration: theDuration
         }
       );
 
-      console.log(item.bounds.height, item.bounds._height);
+      console.log(height);
     }, 7 * i + 150);
 
     setTimeout(function() {
-      item
+      dots
         .tween(
           {
             position: '+= 10',
@@ -641,22 +645,21 @@ function dropDots(group, point, duration, typeOfDots) {
           },
           {
             easing: 'easeInQuint',
-            duration: duration
+            duration: theDuration
           }
         )
         .then(function() {
-          debugger;
-          item.bounds.width = randof(fib) / 2;
-          item.bounds.height = group[i].bounds.width;
+          dots.bounds.width = randof(fib) / 2;
+          dots.bounds.height = width;
           // group[i].scale((randof(fib) / 2) / (group[i].bounds.height / 2), group[i].position );
-          item.position =
+          dots.position =
             typeOfDots === 'scatter'
               ? view.center
               : pointInCircle(height) + view.center;
-              item.fillColor = randof(colors);
-              item.opacity = 0.0001;
+          dots.fillColor = randof(colors);
+          dots.opacity = 0.0001;
         });
-    }, duration);
+    }, theDuration);
   }
 }
 ;
@@ -684,10 +687,9 @@ function setupTiles() {
   return arr;
 }
 
-var tileX = [(width * 1) / 6, (width * 3) / 6, (width * 5) / 6];
-
 function delay(symbol, i) {
   var copy;
+  var tileX = [(width * 1) / 6, (width * 3) / 6, (width * 5) / 6];
 
   setTimeout(function() {
     copy = symbol.place(new Point(randof(tileX), Math.random() * height));
@@ -1013,7 +1015,7 @@ var img,
   imgSymbol,
   splits,
   borderRect,
-  tiles,
+  rectTiles,
   sinkRects,
   flashRectangles,
   growingRects,
@@ -1041,8 +1043,10 @@ function setUpRasters() {
 }
 
 function playSound(id) {
-  var soundName = soundToAnim[id.toString()].sound;
-  var sound = document.querySelector("audio[src*='"+ soundName + "']");
+  var matchedSound = soundToAnim[id.toString()];
+  if (!matchedSound) return;
+  var soundName = matchedSound.sound;
+  var sound = document.querySelector("audio[src*='" + soundName + "']");
   if (!sound) return;
   try {
     if (sound.paused) {
@@ -1059,7 +1063,7 @@ var previousItem = 0;
 const mouseDragHandler = function onMouseDrag(event) {
   // make sure event.item isn't an animated asset
   var item = event.item;
-  var index = item.index;
+  var index = item ? item.index : null;
   if (index && index !== previousItem.index && controlLayer.isChild(item)) {
     showButton(item);
     previousItem = item;
@@ -1072,7 +1076,7 @@ const mouseDragHandler = function onMouseDrag(event) {
 const mouseDownHandler = function onMouseDown(event) {
   // make sure event.item isn't an animated asset
   var item = event.item;
-  var index = item.index;
+  var index = item ? item.index : null;
   if (item && controlLayer.isChild(item)) {
     showButton(item);
     if (isNaN(index)) return;
@@ -1092,7 +1096,8 @@ function showButton(button) {
 
 function animate(id) {
   console.log('run animation ' + id);
-  soundToAnim[id.toString()].animation();
+  const item = soundToAnim[id.toString()];
+  if (item) item.animation();
 }
 
 function triggerRandomAnimations() {
@@ -1118,10 +1123,10 @@ function setupAnimations() {
   //to be called when loading animation is running
   flashRectangles = setupFlash();
   borderRect = setupBorder();
-  tiles = setupTiles();
+  rectTiles = setupTiles();
   hihatCircles = setupSideDots(14);
-  scatteredDrops = setupDrops(10);
-  groupedDrops = setupDrops(10);
+  scatteredDrops = setupDrops(10, 'scatter');
+  groupedDrops = setupDrops(10, 'group');
   sinkRects = setupSink(5);
   splits = setupSplit(2);
   growingRects = setupGrowingRects();
@@ -1143,7 +1148,7 @@ window.onload = function() {
   mid = { x: width / 2, y: height / 2 };
   drawControls(width, height);
   setupAnimations();
-  triggerRandomAnimations();
+  // triggerRandomAnimations();
 
   paper.view.onResize = resizeHandler;
   tool.onMouseDrag = mouseDragHandler;

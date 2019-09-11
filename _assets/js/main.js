@@ -22,7 +22,7 @@ var img,
   imgSymbol,
   splits,
   borderRect,
-  tiles,
+  rectTiles,
   sinkRects,
   flashRectangles,
   growingRects,
@@ -50,8 +50,10 @@ function setUpRasters() {
 }
 
 function playSound(id) {
-  var soundName = soundToAnim[id.toString()].sound;
-  var sound = document.querySelector("audio[src*='"+ soundName + "']");
+  var matchedSound = soundToAnim[id.toString()];
+  if (!matchedSound) return;
+  var soundName = matchedSound.sound;
+  var sound = document.querySelector("audio[src*='" + soundName + "']");
   if (!sound) return;
   try {
     if (sound.paused) {
@@ -68,7 +70,7 @@ var previousItem = 0;
 const mouseDragHandler = function onMouseDrag(event) {
   // make sure event.item isn't an animated asset
   var item = event.item;
-  var index = item.index;
+  var index = item ? item.index : null;
   if (index && index !== previousItem.index && controlLayer.isChild(item)) {
     showButton(item);
     previousItem = item;
@@ -81,7 +83,7 @@ const mouseDragHandler = function onMouseDrag(event) {
 const mouseDownHandler = function onMouseDown(event) {
   // make sure event.item isn't an animated asset
   var item = event.item;
-  var index = item.index;
+  var index = item ? item.index : null;
   if (item && controlLayer.isChild(item)) {
     showButton(item);
     if (isNaN(index)) return;
@@ -101,7 +103,8 @@ function showButton(button) {
 
 function animate(id) {
   console.log('run animation ' + id);
-  soundToAnim[id.toString()].animation();
+  const item = soundToAnim[id.toString()];
+  if (item) item.animation();
 }
 
 function triggerRandomAnimations() {
@@ -127,10 +130,10 @@ function setupAnimations() {
   //to be called when loading animation is running
   flashRectangles = setupFlash();
   borderRect = setupBorder();
-  tiles = setupTiles();
+  rectTiles = setupTiles();
   hihatCircles = setupSideDots(14);
-  scatteredDrops = setupDrops(10);
-  groupedDrops = setupDrops(10);
+  scatteredDrops = setupDrops(10, 'scatter');
+  groupedDrops = setupDrops(10, 'group');
   sinkRects = setupSink(5);
   splits = setupSplit(2);
   growingRects = setupGrowingRects();
@@ -152,7 +155,7 @@ window.onload = function() {
   mid = { x: width / 2, y: height / 2 };
   drawControls(width, height);
   setupAnimations();
-  triggerRandomAnimations();
+  // triggerRandomAnimations();
 
   paper.view.onResize = resizeHandler;
   tool.onMouseDrag = mouseDragHandler;

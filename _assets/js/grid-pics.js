@@ -22,10 +22,9 @@ function setupTiles() {
   return arr;
 }
 
-var tileX = [(width * 1) / 6, (width * 3) / 6, (width * 5) / 6];
-
 function delay(symbol, i) {
   var copy;
+  var tileX = [(width * 1) / 6, (width * 3) / 6, (width * 5) / 6];
 
   setTimeout(function() {
     copy = symbol.place(new Point(randof(tileX), Math.random() * height));

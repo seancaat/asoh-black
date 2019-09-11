@@ -1,4 +1,4 @@
-function setupDrops(num) {
+function setupDrops(num, typeOfDots) {
   var arr = [];
   var colors = [
     'rgb(249,14,27)',
@@ -13,8 +13,11 @@ function setupDrops(num) {
 
   for (var i = 0; i < num * 1.5; i++) {
     // var pos = pointInCircle(width / 2);
-    var c = new Path.Circle(view.center, randof(fib) / 4);
-
+    var pos =
+      typeOfDots === 'scatter'
+        ? view.center
+        : pointInCircle(width) + view.center;
+    var c = new Path.Circle(pos, randof(fib) / 4);
     c.fillColor = randof(colors); // random colors or mask pic
     // c.strokeColor = 'black';
     c.strokeWidth = 1;
@@ -36,12 +39,13 @@ function dropDotsGroup(dropRects) {
   dropDots(dropRects, 100, 500, 'group');
 }
 
-function dropDots(group, point, duration, typeOfDots) {
+function dropDots(group, point, theDuration, typeOfDots) {
   for (var i = 0; i < group.length; i++) {
-    enterExit(group[i]);
+    var dots = group[i];
+    enterExit(dots, dots.bounds.width, dots.bounds.height);
   }
 
-  function enterExit(item) {
+  function enterExit(dots, width, height) {
     var fib = [55, 89, 144, 233];
     var colors = [
       'rgb(249,14,27)',
@@ -53,22 +57,22 @@ function dropDots(group, point, duration, typeOfDots) {
     ];
 
     setTimeout(function() {
-      item.tween(
+      dots.tween(
         {
           position: pointInCircle(point) + view.center,
           opacity: 1
         },
         {
           easing: 'easeOutQuint',
-          duration: duration
+          duration: theDuration
         }
       );
 
-      console.log(item.bounds.height, item.bounds._height);
+      console.log(height);
     }, 7 * i + 150);
 
     setTimeout(function() {
-      item
+      dots
         .tween(
           {
             position: '+= 10',
@@ -77,21 +81,20 @@ function dropDots(group, point, duration, typeOfDots) {
           },
           {
             easing: 'easeInQuint',
-            duration: duration
+            duration: theDuration
           }
         )
         .then(function() {
-          debugger;
-          item.bounds.width = randof(fib) / 2;
-          item.bounds.height = group[i].bounds.width;
+          dots.bounds.width = randof(fib) / 2;
+          dots.bounds.height = width;
           // group[i].scale((randof(fib) / 2) / (group[i].bounds.height / 2), group[i].position );
-          item.position =
+          dots.position =
             typeOfDots === 'scatter'
               ? view.center
               : pointInCircle(height) + view.center;
-              item.fillColor = randof(colors);
-              item.opacity = 0.0001;
+          dots.fillColor = randof(colors);
+          dots.opacity = 0.0001;
         });
-    }, duration);
+    }, theDuration);
   }
 }

@@ -52,7 +52,7 @@ const soundToAnim = {
     sound: 'beat-hats1',
     animation: function() {
       for (var i = 0; i < 20; i++) {
-        delay(randof(tiles), i);
+        delay(randof(rectTiles), i);
       }
     }
   },
@@ -101,7 +101,7 @@ const soundToAnim = {
   '16': {
     sound: '',
     animation: function() {
-      slideSquare();  // duplicate
+      slideSquare(); // duplicate
     }
   },
   '17': {
@@ -127,7 +127,7 @@ const soundToAnim = {
     animation: function() {
       // duplicate
       for (var i = 0; i < 20; i++) {
-        delay(randof(tiles), i);
+        delay(randof(rectTiles), i);
       }
     }
   },
