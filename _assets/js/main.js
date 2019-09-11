@@ -92,6 +92,15 @@ const mouseDownHandler = function onMouseDown(event) {
   }
 };
 
+const keyDownHandler = function onKeyDown(event) {
+  const letterPosition = alphabet.indexOf(event.key);
+  if (letterPosition > -1) {
+    showButton(controlLayer.children[letterPosition]);
+    animate(letterPosition);
+    playSound(letterPosition);
+  }
+};
+
 function showButton(button) {
   var tween = button.tween({ opacity: 0.1 }, 50).then(function() {
     button.tween({ opacity: 0 }, 100);
@@ -160,4 +169,5 @@ window.onload = function() {
   paper.view.onResize = resizeHandler;
   tool.onMouseDrag = mouseDragHandler;
   tool.onMouseDown = mouseDownHandler;
+  tool.onKeyDown = keyDownHandler;
 };
