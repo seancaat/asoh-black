@@ -38,17 +38,6 @@ var width;
 var height;
 var mid;
 
-function setUpRasters() {
-  img = new Raster('img-temp/asoh-slide.png');
-
-  img.onLoad = function() {
-    img.visible = true;
-    img.position = new Point(mid.x * 1.25, height - img.bounds.height / 2);
-    img.selected = true;
-    imgSymbol = new SymbolDefinition(img);
-  };
-}
-
 function playSound(id) {
   var matchedSound = soundToAnim[id.toString()];
   if (!matchedSound) return;
@@ -89,6 +78,15 @@ const mouseDownHandler = function onMouseDown(event) {
     if (isNaN(index)) return;
     animate(index);
     playSound(index);
+  }
+};
+
+const keyDownHandler = function onKeyDown(event) {
+  const letterPosition = alphabet.indexOf(event.key);
+  if (letterPosition > -1) {
+    showButton(controlLayer.children[letterPosition]);
+    animate(letterPosition);
+    playSound(letterPosition);
   }
 };
 
@@ -160,4 +158,5 @@ window.onload = function() {
   paper.view.onResize = resizeHandler;
   tool.onMouseDrag = mouseDragHandler;
   tool.onMouseDown = mouseDownHandler;
+  tool.onKeyDown = keyDownHandler;
 };

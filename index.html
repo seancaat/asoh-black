@@ -9,7 +9,7 @@ layout: default
 <section class="sounds">
   {% for k in assets %}
     {% if k[1].filename contains 'audio/' %}
-      {% asset {{'k[0]'}} type="audio/mpeg" id="sound-{{forloop.index}}" crossorigin="anonymous" !controls %}
+      {% asset {{'k[0]'}} type="audio/mpeg" crossorigin="anonymous" !controls %}
     {% endif %}
   {% endfor %}
 </section>
