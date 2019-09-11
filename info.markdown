@@ -6,7 +6,7 @@ layout: default
 
 <div class="container info">
 <section class="intro">
-  {% asset about-main.jpeg %}
+  {% asset about.jpeg %}
 </section>
 <article class="bio">
   <p>
@@ -20,8 +20,8 @@ layout: default
     developed a knack for writing lyrics and crafting feel-good records.
   </p>
   <div class="img-container">
-    {% asset about-1.jpeg %}
-    {% asset about-2.jpeg %}
+    {% asset about-left.jpeg %}
+    {% asset about-right.jpeg %}
   </div>
 
   <p>
