@@ -580,7 +580,7 @@ function setupDrops(num, typeOfDots) {
     var pos =
       typeOfDots === 'scatter'
         ? view.center
-        : pointInCircle(width) + view.center;
+        : pointInCircle(width).add(view.center);
     var c = new Path.Circle(pos, randof(fib) / 4);
     c.fillColor = randof(colors); // random colors or mask pic
     // c.strokeColor = 'black';
@@ -623,7 +623,7 @@ function dropDots(group, point, theDuration, typeOfDots) {
     setTimeout(function() {
       dots.tween(
         {
-          position: pointInCircle(point) + view.center,
+          position: pointInCircle(point).add(view.center),
           opacity: 1
         },
         {
@@ -631,8 +631,6 @@ function dropDots(group, point, theDuration, typeOfDots) {
           duration: theDuration
         }
       );
-
-      console.log(height);
     }, 7 * i + 150);
 
     setTimeout(function() {
@@ -655,7 +653,7 @@ function dropDots(group, point, theDuration, typeOfDots) {
           dots.position =
             typeOfDots === 'scatter'
               ? view.center
-              : pointInCircle(height) + view.center;
+              : pointInCircle(height).add(view.center);
           dots.fillColor = randof(colors);
           dots.opacity = 0.0001;
         });
