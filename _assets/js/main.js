@@ -1,6 +1,33 @@
+//= require paper
+//= require utils
+//= require constants
+//= require controls
+//= require neon
+//= require raster-slide
+//= require rising-circles
+//= require borders
+//= require asoh-corners
+//= require background-flash
+//= require dots
+//= require grid-pics
+//= require side-dots
+//= require sink
+//= require split
+//= require rectangle-grow
+
 'use strict';
+
 //2
-var img, imgSymbol;
+var img,
+  imgSymbol,
+  splits,
+  borderRect,
+  tiles,
+  dropRects,
+  sinkRects,
+  flashRectangles,
+  growingRects,
+  hihatCircles;
 var controlLayer, animationLayer;
 var sounds = [].slice.call(
   document.querySelector('.sounds').querySelectorAll('audio')
@@ -11,9 +38,7 @@ var height;
 var mid;
 
 function setUpRasters() {
-  img = new Raster(
-    'https://cdn.glitch.com/ef3cac75-95ef-49cd-a455-eb9c81da99b8%2F2.png?v=1565156022738'
-  );
+  img = new Raster('img-temp/asoh-slide.png');
 
   img.onLoad = function() {
     img.visible = true;
@@ -24,8 +49,7 @@ function setUpRasters() {
 }
 
 function playSound(id) {
-  var shiftedId = id - 4; // because id's are indexed 4-27. id's go down then to the right.
-  var sound = sounds[shiftedId];
+  var sound = soundToAnim(id.toString()).sound();
   if (!sound) return;
   try {
     if (sound.paused) {
@@ -45,10 +69,10 @@ const mouseDragHandler = function onMouseDrag(event) {
   var item = event.item;
   var itemId = item ? item.id : null;
   if (item && itemId !== previousItem.id && controlLayer.isChild(item)) {
+    var shiftedId = mapItemId(id - 4); // because id's are indexed 4-27. id's go down then to the right.
     showButton(item);
-    animate(itemId);
-    playSound(itemId);
-
+    animate(shiftedId);
+    playSound(shiftedId);
     previousItem = item;
   }
 };
@@ -59,9 +83,10 @@ const mouseDownHandler = function onMouseDown(event) {
   var item = event.item;
   var itemId = item ? item.id : null;
   if (item && controlLayer.isChild(item)) {
+    var shiftedId = mapItemId(id - 4); // because id's are indexed 4-27. id's go down then to the right.
     showButton(item);
-    animate(itemId);
-    playSound(itemId);
+    animate(shiftedId);
+    playSound(shiftedId);
   }
 };
 
@@ -75,15 +100,8 @@ function showButton(button) {
 }
 
 function animate(id) {
-  var shiftedId = id - 4;
-  console.log('run animation ' + shiftedId);
-  if (shiftedId % 3 === 0) {
-    drawNeon(width, height);
-  } else if ((shiftedId - 1) % 3 === 0) {
-    rise(width, height);
-  } else if ((shiftedId - 2) % 3 === 0) {
-    slide(imgSymbol, mid, height);
-  }
+  console.log('run animation ' + id);
+  soundToAnim(id.toString()).animation();
 }
 
 function triggerRandomAnimations() {
@@ -103,6 +121,20 @@ function resizeHandler() {
   img.position = new Point(mid.x * 1.25, height - img.bounds.height / 2);
 }
 
+function setupAnimations() {
+  setupSmokeAnim();
+  setUpRasters();
+  //to be called when loading animation is running
+  flashRectangles = setupFlash();
+  borderRect = setupBorder();
+  tiles = setupTiles();
+  hihatCircles = setupSideDots(14);
+  dropRects = setupDrops(10);
+  sinkRects = setupSink(5);
+  splits = setupSplit(2);
+  growingRects = setupGrowingRects();
+}
+
 paper.install(window);
 
 window.onload = function() {
@@ -118,8 +150,7 @@ window.onload = function() {
   height = window.innerHeight;
   mid = { x: width / 2, y: height / 2 };
   drawControls(width, height);
-  setUpRasters();
-
+  setupAnimations();
   triggerRandomAnimations();
 
   paper.view.onResize = resizeHandler;
