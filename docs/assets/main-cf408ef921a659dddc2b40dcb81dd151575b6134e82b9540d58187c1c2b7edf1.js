@@ -362,9 +362,19 @@ function drawNeon(width, height) {
   }
 }
 ;
-var numRasters = 5;
+function setUpRasters() {
+  img = new Raster('img-temp/asoh-slide.png');
+
+  img.onLoad = function() {
+    img.visible = true;
+    img.position = new Point(mid.x * 1.25, height - img.bounds.height / 2);
+    img.selected = true;
+    imgSymbol = new SymbolDefinition(img);
+  };
+}
 
 function slide(symbol, mid, height) {
+  var numRasters = 5;
   for (var i = 0; i < numRasters; i++) {
     enterExit(symbol, i);
   }
@@ -1051,17 +1061,6 @@ var numberSounds = sounds.length;
 var width;
 var height;
 var mid;
-
-function setUpRasters() {
-  img = new Raster('img-temp/asoh-slide.png');
-
-  img.onLoad = function() {
-    img.visible = true;
-    img.position = new Point(mid.x * 1.25, height - img.bounds.height / 2);
-    img.selected = true;
-    imgSymbol = new SymbolDefinition(img);
-  };
-}
 
 function playSound(id) {
   var matchedSound = soundToAnim[id.toString()];

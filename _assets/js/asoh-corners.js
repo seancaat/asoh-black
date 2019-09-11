@@ -1,11 +1,13 @@
 var square;
 var smokeSymbol1, smokeSymbol2;
+//= require smoke-top.jpg
+//= require smoke-bottom.jpg
 
 function setupSmokeAnim() {
   square = new Path.Rectangle(0, 0, (width * 3) / 5, (width * 3) / 5);
 
-  var smoke1 = new Raster('img-temp/smoke-top.jpg');
-  var smoke2 = new Raster('img-temp/smoke-bottom.jpg');
+  var smoke1 = new Raster('smoke-top.jpg');
+  var smoke2 = new Raster('smoke-bottom.jpg');
 
   smoke1.crossOrigin = 'anonymous';
   smoke2.crossOrigin = 'anonymous';
