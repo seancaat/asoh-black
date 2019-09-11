@@ -1,6 +1,34 @@
+//= require paper
+//= require utils
+//= require constants
+//= require controls
+//= require neon
+//= require raster-slide
+//= require rising-circles
+//= require borders
+//= require asoh-corners
+//= require background-flash
+//= require dots
+//= require grid-pics
+//= require side-dots
+//= require sink
+//= require split
+//= require rectangle-grow
+
 'use strict';
+
 //2
-var img, imgSymbol;
+var img,
+  imgSymbol,
+  splits,
+  borderRect,
+  rectTiles,
+  sinkRects,
+  flashRectangles,
+  growingRects,
+  scatteredDrops,
+  groupedDrops,
+  hihatCircles;
 var controlLayer, animationLayer;
 var sounds = [].slice.call(
   document.querySelector('.sounds').querySelectorAll('audio')
@@ -11,9 +39,7 @@ var height;
 var mid;
 
 function setUpRasters() {
-  img = new Raster(
-    'https://cdn.glitch.com/ef3cac75-95ef-49cd-a455-eb9c81da99b8%2F2.png?v=1565156022738'
-  );
+  img = new Raster('img-temp/asoh-slide.png');
 
   img.onLoad = function() {
     img.visible = true;
@@ -24,8 +50,10 @@ function setUpRasters() {
 }
 
 function playSound(id) {
-  var shiftedId = id - 4; // because id's are indexed 4-27. id's go down then to the right.
-  var sound = sounds[shiftedId];
+  var matchedSound = soundToAnim[id.toString()];
+  if (!matchedSound) return;
+  var soundName = matchedSound.sound;
+  var sound = document.querySelector("audio[src*='" + soundName + "']");
   if (!sound) return;
   try {
     if (sound.paused) {
@@ -40,28 +68,27 @@ function playSound(id) {
 
 var previousItem = 0;
 const mouseDragHandler = function onMouseDrag(event) {
-  animationLayer.activate();
   // make sure event.item isn't an animated asset
   var item = event.item;
-  var itemId = item ? item.id : null;
-  if (item && itemId !== previousItem.id && controlLayer.isChild(item)) {
+  var index = item ? item.index : null;
+  if (index && index !== previousItem.index && controlLayer.isChild(item)) {
     showButton(item);
-    animate(itemId);
-    playSound(itemId);
-
     previousItem = item;
+    if (isNaN(index)) return;
+    animate(index);
+    playSound(index);
   }
 };
 
 const mouseDownHandler = function onMouseDown(event) {
-  animationLayer.activate();
   // make sure event.item isn't an animated asset
   var item = event.item;
-  var itemId = item ? item.id : null;
+  var index = item ? item.index : null;
   if (item && controlLayer.isChild(item)) {
     showButton(item);
-    animate(itemId);
-    playSound(itemId);
+    if (isNaN(index)) return;
+    animate(index);
+    playSound(index);
   }
 };
 
@@ -75,23 +102,16 @@ function showButton(button) {
 }
 
 function animate(id) {
-  var shiftedId = id - 4;
-  console.log('run animation ' + shiftedId);
-  if (shiftedId % 3 === 0) {
-    drawNeon(width, height);
-  } else if ((shiftedId - 1) % 3 === 0) {
-    rise(width, height);
-  } else if ((shiftedId - 2) % 3 === 0) {
-    slide(imgSymbol, mid, height);
-  }
+  console.log('run animation ' + id);
+  const item = soundToAnim[id.toString()];
+  if (item) item.animation();
 }
 
 function triggerRandomAnimations() {
   for (var i = 0; i < 5; i++) {
-    var itemId = Math.abs(Math.floor(Math.random() * 27));
-    console.log('id', itemId);
-    animate(itemId);
-    playSound(itemId);
+    var index = Math.abs(Math.floor(Math.random() * 25));
+    animate(index);
+    playSound(index);
   }
 }
 
@@ -101,6 +121,22 @@ function resizeHandler() {
   height = window.innerHeight;
   drawControls(width, height);
   img.position = new Point(mid.x * 1.25, height - img.bounds.height / 2);
+}
+
+function setupAnimations() {
+  animationLayer.activate();
+  setupSmokeAnim();
+  setUpRasters();
+  //to be called when loading animation is running
+  flashRectangles = setupFlash();
+  borderRect = setupBorder();
+  rectTiles = setupTiles();
+  hihatCircles = setupSideDots(14);
+  scatteredDrops = setupDrops(10, 'scatter');
+  groupedDrops = setupDrops(10, 'group');
+  sinkRects = setupSink(5);
+  splits = setupSplit(2);
+  growingRects = setupGrowingRects();
 }
 
 paper.install(window);
@@ -118,8 +154,7 @@ window.onload = function() {
   height = window.innerHeight;
   mid = { x: width / 2, y: height / 2 };
   drawControls(width, height);
-  setUpRasters();
-
+  setupAnimations();
   triggerRandomAnimations();
 
   paper.view.onResize = resizeHandler;
