@@ -1,4 +1,6 @@
 var container;
+var minControlId, maxControlId;
+
 function drawControls(width, height) {
   controlLayer.activate();
 
@@ -43,4 +45,10 @@ function drawControls(width, height) {
       buttons[i].push(copy);
     }
   }
+  console.log(buttons);
+  setControlRange();
+}
+
+function setControlRange() {
+  console.log(controlLayer.children);
 }

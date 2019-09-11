@@ -23,7 +23,6 @@ function showSplit(group) {
 
   for (var i = 0; i < group.length; i++) {
     group[i].fillColor = color;
-
     enterExit(group, i);
   }
 

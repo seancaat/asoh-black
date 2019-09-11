@@ -1,5 +1,11 @@
 // Add all constants, e.g colors, widths, used across multiple files
 const soundToAnim = {
+  '0': {
+    sound: '',
+    animation: function() {
+      rise(width, height); // duplicate
+    }
+  },
   '1': {
     sound: '',
     animation: function() {
@@ -7,13 +13,13 @@ const soundToAnim = {
     }
   },
   '2': {
-    sound: '',
+    sound: 'vox-foolie',
     animation: function() {
       slide(imgSymbol, mid, height);
     }
   },
   '3': {
-    sound: '',
+    sound: 'vox-damn',
     animation: function() {
       drawNeon(width, height);
     }
@@ -25,7 +31,7 @@ const soundToAnim = {
     }
   },
   '5': {
-    sound: '',
+    sound: 'beat-clap',
     animation: function() {
       flash(flashRectangles);
     }
@@ -33,17 +39,17 @@ const soundToAnim = {
   '6': {
     sound: '',
     animation: function() {
-      dropDotsScattered(dropRects);
+      dropDotsScattered(scatteredDrops);
     }
   },
   '7': {
     sound: '',
     animation: function() {
-      dropDotsGroup(dropRects);
+      dropDotsGroup(groupedDrops); // duplicate
     }
   },
   '8': {
-    sound: '',
+    sound: 'beat-hats1',
     animation: function() {
       for (var i = 0; i < 20; i++) {
         delay(randof(tiles), i);
@@ -51,77 +57,114 @@ const soundToAnim = {
     }
   },
   '9': {
-    sound: '',
+    sound: 'vox-hey',
     animation: function() {
       showBorder(borderRect);
     }
   },
   '10': {
-    sound: '',
+    sound: 'beat-hats2',
     animation: function() {
       dropSideDots(hihatCircles);
     }
   },
   '11': {
-    sound: '',
+    sound: 'beat-vinyl-scratch',
     animation: function() {
       sink(sinkRects);
     }
   },
   '12': {
-    sound: '',
+    sound: 'beat-kick',
     animation: function() {
       showSplit(splits);
     }
   },
   '13': {
-    sound: '',
+    sound: 'vox-damn',
     animation: function() {
       growRect(growingRects);
     }
   },
   '14': {
     sound: '',
-    animation: function() {}
+    animation: function() {
+      slide(imgSymbol, mid, height); // duplicate
+    }
   },
   '15': {
     sound: '',
-    animation: function() {}
+    animation: function() {
+      drawNeon(width, height); // duplicate
+    }
   },
   '16': {
     sound: '',
-    animation: function() {}
+    animation: function() {
+      slideSquare();  // duplicate
+    }
   },
   '17': {
     sound: '',
-    animation: function() {}
+    animation: function() {
+      flash(flashRectangles); // duplicate
+    }
   },
   '18': {
     sound: '',
-    animation: function() {}
+    animation: function() {
+      dropDotsScattered(scatteredDrops); // duplicate
+    }
   },
   '19': {
     sound: '',
-    animation: function() {}
+    animation: function() {
+      dropDotsGroup(groupedDrops); // duplicate
+    }
   },
   '20': {
     sound: '',
-    animation: function() {}
+    animation: function() {
+      // duplicate
+      for (var i = 0; i < 20; i++) {
+        delay(randof(tiles), i);
+      }
+    }
   },
   '21': {
     sound: '',
-    animation: function() {}
+    animation: function() {
+      showBorder(borderRect); // duplicate
+    }
   },
   '22': {
     sound: '',
-    animation: function() {}
+    animation: function() {
+      dropSideDots(hihatCircles); // duplicate
+    }
   },
   '23': {
     sound: '',
-    animation: function() {}
+    animation: function() {
+      showSplit(splits); // duplicate
+    }
   },
   '24': {
     sound: '',
-    animation: function() {}
+    animation: function() {
+      growRect(growingRects); // duplicate
+    }
+  },
+  '25': {
+    sound: '',
+    animation: function() {
+      sink(sinkRects); // duplicate
+    }
+  },
+  '26': {
+    sound: '',
+    animation: function() {
+      sink(sinkRects); // duplicate
+    }
   }
 };

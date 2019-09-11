@@ -23,10 +23,11 @@ var img,
   splits,
   borderRect,
   tiles,
-  dropRects,
   sinkRects,
   flashRectangles,
   growingRects,
+  scatteredDrops,
+  groupedDrops,
   hihatCircles;
 var controlLayer, animationLayer;
 var sounds = [].slice.call(
@@ -49,7 +50,8 @@ function setUpRasters() {
 }
 
 function playSound(id) {
-  var sound = soundToAnim(id.toString()).sound();
+  var soundName = soundToAnim[id.toString()].sound;
+  var sound = document.querySelector("audio[src*='"+ soundName + "']");
   if (!sound) return;
   try {
     if (sound.paused) {
@@ -64,29 +66,27 @@ function playSound(id) {
 
 var previousItem = 0;
 const mouseDragHandler = function onMouseDrag(event) {
-  animationLayer.activate();
   // make sure event.item isn't an animated asset
   var item = event.item;
-  var itemId = item ? item.id : null;
-  if (item && itemId !== previousItem.id && controlLayer.isChild(item)) {
-    var shiftedId = mapItemId(id - 4); // because id's are indexed 4-27. id's go down then to the right.
+  var index = item.index;
+  if (index && index !== previousItem.index && controlLayer.isChild(item)) {
     showButton(item);
-    animate(shiftedId);
-    playSound(shiftedId);
     previousItem = item;
+    if (isNaN(index)) return;
+    animate(index);
+    playSound(index);
   }
 };
 
 const mouseDownHandler = function onMouseDown(event) {
-  animationLayer.activate();
   // make sure event.item isn't an animated asset
   var item = event.item;
-  var itemId = item ? item.id : null;
+  var index = item.index;
   if (item && controlLayer.isChild(item)) {
-    var shiftedId = mapItemId(id - 4); // because id's are indexed 4-27. id's go down then to the right.
     showButton(item);
-    animate(shiftedId);
-    playSound(shiftedId);
+    if (isNaN(index)) return;
+    animate(index);
+    playSound(index);
   }
 };
 
@@ -101,15 +101,14 @@ function showButton(button) {
 
 function animate(id) {
   console.log('run animation ' + id);
-  soundToAnim(id.toString()).animation();
+  soundToAnim[id.toString()].animation();
 }
 
 function triggerRandomAnimations() {
   for (var i = 0; i < 5; i++) {
-    var itemId = Math.abs(Math.floor(Math.random() * 27));
-    console.log('id', itemId);
-    animate(itemId);
-    playSound(itemId);
+    var index = Math.abs(Math.floor(Math.random() * 25));
+    animate(index);
+    playSound(index);
   }
 }
 
@@ -122,6 +121,7 @@ function resizeHandler() {
 }
 
 function setupAnimations() {
+  animationLayer.activate();
   setupSmokeAnim();
   setUpRasters();
   //to be called when loading animation is running
@@ -129,7 +129,8 @@ function setupAnimations() {
   borderRect = setupBorder();
   tiles = setupTiles();
   hihatCircles = setupSideDots(14);
-  dropRects = setupDrops(10);
+  scatteredDrops = setupDrops(10);
+  groupedDrops = setupDrops(10);
   sinkRects = setupSink(5);
   splits = setupSplit(2);
   growingRects = setupGrowingRects();

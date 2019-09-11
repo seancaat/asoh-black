@@ -11,7 +11,6 @@ function setupGrowingRects() {
   ];
 
   var fib = [55, 89, 144, 233];
-
   for (var i = 0; i < colors.length * 1.5; i++) {
     var r = new Path.Rectangle(
       Math.random() * 0.9 * width,

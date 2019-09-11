@@ -1,9 +1,11 @@
 // Functions used across more than one file (or that could be)
 function randof(array) {
+  if (!array.length) return;
   return array[Math.floor(Math.random() * array.length)];
 }
 
 function shuffleArray(array) {
+  if (!array.length) return;
   for (var i = array.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
     var temp = array[i];

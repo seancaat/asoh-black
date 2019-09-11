@@ -28,20 +28,20 @@ function setupDrops(num) {
   return arr;
 }
 
-function dropDotsScattered() {
+function dropDotsScattered(dropRects) {
   dropDots(dropRects, height / 2, 300, 'scatter');
 }
 
-function dropDotsGroup() {
+function dropDotsGroup(dropRects) {
   dropDots(dropRects, 100, 500, 'group');
 }
 
 function dropDots(group, point, duration, typeOfDots) {
   for (var i = 0; i < group.length; i++) {
-    enterExit(group, i);
+    enterExit(group[i]);
   }
 
-  function enterExit(group, i) {
+  function enterExit(item) {
     var fib = [55, 89, 144, 233];
     var colors = [
       'rgb(249,14,27)',
@@ -53,7 +53,7 @@ function dropDots(group, point, duration, typeOfDots) {
     ];
 
     setTimeout(function() {
-      group[i].tween(
+      item.tween(
         {
           position: pointInCircle(point) + view.center,
           opacity: 1
@@ -64,16 +64,16 @@ function dropDots(group, point, duration, typeOfDots) {
         }
       );
 
-      console.log(group[i].bounds.height);
+      console.log(item.bounds.height, item.bounds._height);
     }, 7 * i + 150);
 
     setTimeout(function() {
-      group[i]
+      item
         .tween(
           {
             position: '+= 10',
-            'bounds.width': 0.01,
-            'bounds.height': 0.01
+            'bounds.width': parseFloat('0.01'),
+            'bounds.height': parseFloat('0.01')
           },
           {
             easing: 'easeInQuint',
@@ -81,15 +81,16 @@ function dropDots(group, point, duration, typeOfDots) {
           }
         )
         .then(function() {
-          group[i].bounds.width = randof(fib) / 2;
-          group[i].bounds.height = group[i].bounds.width;
+          debugger;
+          item.bounds.width = randof(fib) / 2;
+          item.bounds.height = group[i].bounds.width;
           // group[i].scale((randof(fib) / 2) / (group[i].bounds.height / 2), group[i].position );
-          group[i].position =
+          item.position =
             typeOfDots === 'scatter'
               ? view.center
               : pointInCircle(height) + view.center;
-          group[i].fillColor = randof(colors);
-          group[i].opacity = 0.0001;
+              item.fillColor = randof(colors);
+              item.opacity = 0.0001;
         });
     }, duration);
   }

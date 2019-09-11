@@ -18,8 +18,8 @@ function setupFlash() {
   return flashRectangles;
 }
 
-function flash(rects, colors) {
-  shuffleArray(colors);
+function flash(rects) {
+  shuffleArray(flashColors);
 
   for (var i = 0; i < flashColors.length; i++) {
     enterExit(rects, i);
