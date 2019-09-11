@@ -155,7 +155,7 @@ window.onload = function() {
   mid = { x: width / 2, y: height / 2 };
   drawControls(width, height);
   setupAnimations();
-  // triggerRandomAnimations();
+  triggerRandomAnimations();
 
   paper.view.onResize = resizeHandler;
   tool.onMouseDrag = mouseDragHandler;
