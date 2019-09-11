@@ -15,8 +15,10 @@
     }}{% else %}{{ site.description }}{% endif %}"
   />
 
-  {% asset main.css %} {% asset menu.js %}
+  {% asset menu.js %}
   {% asset favicon.ico %}
+  {% asset main.css %}
+
   <link
     rel="canonical"
     href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
