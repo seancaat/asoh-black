@@ -9,6 +9,30 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Cooper';
+  src: url(font-path('CooperBlack.eot'));
+  src: url(font-path('CooperBlack.eot?#iefix')) format('embedded-opentype'),
+      url(font-path('CooperBlack.woff2')) format('woff2'),
+      url(font-path('CooperBlack.woff')) format('woff'),
+      url(font-path('CooperBlack.ttf')) format('truetype'),
+      url(font-path('CooperBlack.svg#CooperBlack')) format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(font-path('HelveticaNeue.eot'));
+  src: url(font-path('HelveticaNeue.eot?#iefix')) format('embedded-opentype'),
+      url(font-path('HelveticaNeue.woff2')) format('woff2'),
+      url(font-path('HelveticaNeue.woff')) format('woff'),
+      url(font-path('HelveticaNeue.ttf')) format('truetype'),
+      url(font-path('HelveticaNeue.svg#HelveticaNeue')) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -18,7 +42,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   background-color: white;
 }
 
@@ -26,18 +50,6 @@ body {
 canvas[resize] {
   width: 100%;
   height: 100%;
-}
-
-::-webkit-scrollbar {
-  width: 2vmin;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #f9f04d;
-}
-
-::-webkit-scrollbar-track {
-  background: #000;
 }
 
 a {

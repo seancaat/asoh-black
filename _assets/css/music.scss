@@ -1,29 +1,58 @@
 .container.music {
-  width: 80%;
-  margin: 100px auto;
-  max-width: 800px;
+  overflow: hidden;
+  width: 100%;
 }
 
 .albums {
-  display: flex;
-  flex-direction: column;
   padding: 0;
-  justify-content: space-around;
-  align-items: center;
+  margin: 0;
 }
 
 .album {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.album:nth-of-type(1) {
+  background: #b858ba;
+}
+.album:nth-of-type(2) {
+  background: #ad4150;
+}
+.album:nth-of-type(3) {
+  background: #53327c;
+}
+.album:nth-of-type(4) {
+  background: #e09b6a;
+}
+.album:nth-of-type(5) {
+  background: #37338f;
+}
+.album:nth-of-type(6) {
+  background: #4c68da;
+}
+.album:nth-of-type(7) {
+  background: #9af3ff;
+}
+.album:nth-of-type(8) {
+  background: #4ef8ab;
+}
+
+.album-container {
+  width: 80%;
+  margin: 100px auto;
+  max-width: 750px;
   display: flex;
   flex-direction: column;
   margin: 3em;
   position: relative;
-  height: 25vh;
-  transition: 0.75s ease-out;
-  overflow: hidden;
   display: inline-block;
-  width: 100%;
 
-  img {
+  .album-image {
     width: 100%;
     height: auto;
     position: absolute;
@@ -32,36 +61,21 @@
     transform: translate(0, -50%);
   }
 
-  span {
+  .album-name {
+    font-family: 'Cooper';
     position: absolute;
-    bottom: -45px;
+    top: 20vh;
     left: 50%;
     z-index: 2;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     display: inline-block;
-    text-transform: uppercase;
-    color: #f9f04d;
-    font-size: 3.5em;
-    width: 96%;
+    color: #ffffff;
+    font-size: 8vh;
+    width: 100%;
     text-align: center;
-    padding: 2%;
-    opacity: 0.5;
-    transition: 0.75s ease-out;
+    text-shadow: 4px 4px black;
   }
-}
-
-.album:hover {
-  height: 40vh;
-  opacity: 1;
-}
-
-.video-overlay:not(.hidden) {
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }
 
 .video-overlay {
@@ -72,10 +86,45 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  visibility: hidden;
-  opacity: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #dea92c;
+  background: #000000;
+
+  .video-overlay-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    align-self: flex-end;
+  }
+}
+
+.video-overlay:not(.hidden) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.youtube-embed {
+  width: 90%;
+  height: 90%;
+  align-self: center;
+}
+
+.youtube-embed-iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .album-container {
+    .album-name {
+      top: 8vh;
+    }
+  }
 }
