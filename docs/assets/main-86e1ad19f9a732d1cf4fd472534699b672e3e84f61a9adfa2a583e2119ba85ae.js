@@ -272,6 +272,15 @@ const alphabet = [
   'y',
   'z'
 ];
+
+var colors1 = [
+  'rgb(249,14,27)',
+  'rgb(250,40,251)',
+  'rgb(11,36,250)',
+  'rgb(45,254,254)',
+  'rgb(254,253,56)',
+  'rgb(41,251,47)'
+];
 var container;
 var minControlId, maxControlId;
 
@@ -696,22 +705,24 @@ function dropDots(group, point, theDuration, typeOfDots) {
 ;
 function setupTiles() {
   var arr = [];
-
-  var colors = [
-    'rgb(249,14,27)',
-    'rgb(250,40,251)',
-    'rgb(11,36,250)',
-    'rgb(45,254,254)',
-    'rgb(254,253,56)',
-    'rgb(41,251,47)'
+  var imgs = [
+    "/assets/rect-blue-e02a9eecd5e6b4819860b6ada5e1d7d3d356b6df3b30b314c19b590eb7ae0379.png",
+    "/assets/rect-green0-cc81449e004729d0a545a33054d4d450556aa47f5e38424061fd886dcd4a2b13.png",
+    "/assets/rect-green1-8a351813b56d561f743ff455f521321431ad0f3e584753c314fee34af8e01643.png",
+    "/assets/rect-purple-ee9da5db9d9b3be4fc458f906dd6dfdf69eecf018bcbe0eac4ba323e93136fbe.png",
+    "/assets/rect-red0-8829d39e81ec726f464ff5665cccdbbe7ac58e3b79d05827ec7ac8593c7425dd.png",
+    "/assets/rect-red1-53a76f4714c37301dbe8caaf79274ac5af23fb49aae65d277d3ad06eb179f854.png"
   ];
 
-  for (var i = 0; i < colors.length; i++) {
-    var r = new Path.Rectangle(0, 0, width / 3, height / 12);
-    r.fillColor = colors[i];
-    r.strokeColor = 'rgba(0,0,0,0.2)';
+  for (var i = 0; i < imgs.length; i++) {
+    var rasterImg = new Raster({
+      source: imgs[i],
+      position: view.center,
+      width: width / 3,
+      height: height / 12
+    });
 
-    var symbol = new SymbolDefinition(r);
+    var symbol = new SymbolDefinition(rasterImg);
     arr.push(symbol);
   }
 

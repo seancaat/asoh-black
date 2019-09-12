@@ -1,0 +1,38 @@
+function setupTiles() {
+  var arr = [];
+  var imgs = [
+    "<%= asset_path('rect-blue.png') %>",
+    "<%= asset_path('rect-green0.png') %>",
+    "<%= asset_path('rect-green1.png') %>",
+    "<%= asset_path('rect-purple.png') %>",
+    "<%= asset_path('rect-red0.png') %>",
+    "<%= asset_path('rect-red1.png') %>"
+  ];
+
+  for (var i = 0; i < imgs.length; i++) {
+    var rasterImg = new Raster({
+      source: imgs[i],
+      position: view.center,
+      width: width / 3,
+      height: height / 12
+    });
+
+    var symbol = new SymbolDefinition(rasterImg);
+    arr.push(symbol);
+  }
+
+  return arr;
+}
+
+function delay(symbol, i) {
+  var copy;
+  var tileX = [(width * 1) / 6, (width * 3) / 6, (width * 5) / 6];
+
+  setTimeout(function() {
+    copy = symbol.place(new Point(randof(tileX), Math.random() * height));
+  }, i * 50);
+
+  setTimeout(function() {
+    copy.remove();
+  }, i * 75);
+}
