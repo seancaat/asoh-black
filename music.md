@@ -3,7 +3,7 @@ title: Music
 permalink: "/music/"
 albums:
 - name: 96 Styles
-  image: "/uploads/96%20styles.jpg"
+  image: "/uploads/ninetysix.jpg"
   link: https://www.youtube.com/embed/2yDlgEKLHVQ
 - name: Listen To This Instead
   image: "/uploads/Listen%20to%20This%20Instead.jpg"
