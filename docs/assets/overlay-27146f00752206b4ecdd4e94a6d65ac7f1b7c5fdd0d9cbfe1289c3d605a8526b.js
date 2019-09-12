@@ -24,7 +24,7 @@ function closeOverlay() {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('.albums').addEventListener('click', openOverlay);
+  document.querySelector('.videos').addEventListener('click', openOverlay);
   document
     .querySelector('.video-overlay-close')
     .addEventListener('click', closeOverlay);

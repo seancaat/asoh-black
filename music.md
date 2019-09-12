@@ -33,12 +33,9 @@ layout: default
   <ul class="videos">
     {% for vid in page.videos %}
     <li class="vid">
-      <div class="vid-container">
-        <button data-src="{{vid.link}}" class="video-overlay-trigger">
-          <img class="vid-image" src="{{ vid.image }}" />
-          <span class="vid-name">{{ vid.name }}</span>
-        </button>
-      </div>
+      <button class="vid-container video-overlay-trigger" style="background-image:url({{ vid.image }})" data-src="{{vid.link}}">
+        <span class="vid-name">{{ vid.name }}</span>
+      </button>
     </li>
     {% endfor %}
   </ul>
