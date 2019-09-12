@@ -1,5 +1,6 @@
 ---
 title: Asoh Black
+url: http://www.asohblack.com
 timezone: UTC
 collections:
   posts:
@@ -8,9 +9,9 @@ collections:
   uploads:
     title: Uploads
     output: true
-destination: "./docs"
+destination: './docs'
 plugins:
-- jekyll-assets
+  - jekyll-assets
 assets:
   digest: true
   compress:
