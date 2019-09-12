@@ -2,14 +2,22 @@
 title: Music
 permalink: "/music/"
 albums:
-- name: Sleepwalking Through Reality
-  image: "/uploads/artworks-000178840342-vlq6ls-t500x500.jpg"
+- name: 96 Styles
+  image: "/uploads/96%20styles.jpg"
 - name: Listen To This Instead
-  image: "/uploads/4e470be18cc832bb2fca2a18d90e2a62.300x300x1.jpg"
-- name: 20/20
-  image: "/uploads/Asoh_Black_2020-front-large.jpg"
-- name: "\\#ASOHATTACKS, Volume 1"
-  image: "/uploads/artworks-000434053146-l97zrf-t500x500.jpg"
+  image: "/uploads/Listen%20to%20This%20Instead.jpg"
+- name: Foolie
+  image: "/uploads/Foolie.jpg"
+- name: Joy
+  image: "/uploads/joy.jpg"
+- name: Sleepwalking Through Reality
+  image: "/uploads/Sleepwalking%20Through%20Reality.jpg"
+- name: Summer Playlists
+  image: "/uploads/Summer%20Playlists.jpg"
+- name: That's Not Fair
+  image: "/uploads/that's%20not%20fair.jpg"
+- name: Waste My Time
+  image: "/uploads/waste%20my%20time.jpg"
 layout: default
 ---
 
