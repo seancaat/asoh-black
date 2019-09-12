@@ -690,7 +690,7 @@ function dropDots(group, point, theDuration, typeOfDots) {
         )
         .then(function() {
           dots.bounds.width = randof(fib) / 2;
-          dots.bounds.height = width;
+          dots.bounds.height = dots.bounds.width;
           // group[i].scale((randof(fib) / 2) / (group[i].bounds.height / 2), group[i].position );
           dots.position =
             typeOfDots === 'scatter'
