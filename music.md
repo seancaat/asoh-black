@@ -50,3 +50,5 @@ layout: default
   </div>
   <span class="nivo-lightbox-title-wrap"></span>
 </div>
+
+{% asset overlay.js defer %}
