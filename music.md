@@ -43,7 +43,7 @@ layout: default
     {% endfor %}
   </ul>
   <div class="video-overlay hidden">
-    <button class="video-overlay-close">{% asset close.svg %}</button>
+    <button class="video-overlay-close">{% asset close-white.svg %}</button>
     <div class="youtube-embed">
       <iframe class="youtube-embed-iframe" frameborder="0" scrolling="auto"></iframe>
     </div>
