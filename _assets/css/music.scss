@@ -1,27 +1,36 @@
+
 .container.music {
-  width: 80%;
-  margin: 100px auto;
-  max-width: 800px;
+  overflow: hidden;
+  width: 100%;
 }
 
 .albums {
-  display: flex;
-  flex-direction: column;
   padding: 0;
-  justify-content: space-around;
-  align-items: center;
+  margin: 0;
 }
 
 .album {
+  width: 100%;
+  height: 80vh;
+  border: 2px solid #dea92c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-container {
+  width: 80%;
+  margin: 100px auto;
+  max-width: 750px;
   display: flex;
   flex-direction: column;
   margin: 3em;
   position: relative;
-  height: 25vh;
+  height: 50vh;
   transition: 0.75s ease-out;
   overflow: hidden;
   display: inline-block;
-  width: 100%;
 
   img {
     width: 100%;
@@ -33,6 +42,7 @@
   }
 
   span {
+    font-family: 'Cooper';
     position: absolute;
     bottom: -45px;
     left: 50%;
@@ -41,20 +51,15 @@
     transform: translateX(-50%);
     display: inline-block;
     text-transform: uppercase;
-    color: #f9f04d;
+    color: #FFFFFF;
     font-size: 3.5em;
     width: 96%;
     text-align: center;
     padding: 2%;
-    opacity: 0.5;
     transition: 0.75s ease-out;
   }
 }
 
-.album:hover {
-  height: 40vh;
-  opacity: 1;
-}
 
 .video-overlay:not(.hidden) {
   -webkit-transition: all 0.2s ease-in-out;

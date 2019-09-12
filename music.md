@@ -25,10 +25,12 @@ layout: default
 <ul class="albums">
   {% for album in page.albums %}
   <li class="album">
-   <a href="{{album.link}}">
-      <img class="album-image" src="{{ album.image }}" />
-      <span class="album-name">{{ album.name }}</span>
-  </a>
+    <div class="album-container">
+      <a href="{{album.link}}">
+        <img class="album-image" src="{{ album.image }}" />
+        <span class="album-name">{{ album.name }}</span>
+      </a>
+    </div>
   </li>
   {% endfor %}
 </ul>
