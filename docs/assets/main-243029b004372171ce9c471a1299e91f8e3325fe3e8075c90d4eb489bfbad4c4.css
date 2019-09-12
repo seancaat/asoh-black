@@ -322,26 +322,19 @@ article {
   .album-container span {
     font-family: 'Cooper';
     position: absolute;
-    bottom: -45px;
+    bottom: 0px;
     left: 50%;
     z-index: 2;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     display: inline-block;
     text-transform: uppercase;
-    color: #FFFFFF;
-    font-size: 3.5em;
+    color: #ffffff;
+    font-size: 12vw;
     width: 96%;
     text-align: center;
     padding: 2%;
     text-shadow: 4px 4px black; }
-
-.video-overlay:not(.hidden) {
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
 
 .video-overlay {
   position: fixed;
@@ -351,9 +344,28 @@ article {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  visibility: hidden;
-  opacity: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background: #dea92c; }
+  .video-overlay .video-overlay-close {
+    align-self: flex-end; }
+
+.video-overlay:not(.hidden) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.youtube-embed {
+  width: 90%;
+  height: 90%;
+  align-self: center; }
+
+.youtube-embed-iframe {
+  width: 100%;
+  height: 100%; }
