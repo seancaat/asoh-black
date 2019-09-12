@@ -289,11 +289,11 @@ article {
   overflow: hidden;
   width: 100%; }
 
-.albums {
+.vids {
   padding: 0;
   margin: 0; }
 
-.album {
+.vid {
   width: 100%;
   height: 80vh;
   display: flex;
@@ -301,31 +301,31 @@ article {
   justify-content: center;
   align-items: center; }
 
-.album:nth-of-type(1) {
+.vid:nth-of-type(1) {
   background: #b858ba; }
 
-.album:nth-of-type(2) {
+.vid:nth-of-type(2) {
   background: #ad4150; }
 
-.album:nth-of-type(3) {
+.vid:nth-of-type(3) {
   background: #53327c; }
 
-.album:nth-of-type(4) {
+.vid:nth-of-type(4) {
   background: #e09b6a; }
 
-.album:nth-of-type(5) {
+.vid:nth-of-type(5) {
   background: #37338f; }
 
-.album:nth-of-type(6) {
+.vid:nth-of-type(6) {
   background: #4c68da; }
 
-.album:nth-of-type(7) {
+.vid:nth-of-type(7) {
   background: #9af3ff; }
 
-.album:nth-of-type(8) {
+.vid:nth-of-type(8) {
   background: #4ef8ab; }
 
-.album-container {
+.vid-container {
   width: 80%;
   margin: 100px auto;
   max-width: 750px;
@@ -334,14 +334,14 @@ article {
   margin: 3em;
   position: relative;
   display: inline-block; }
-  .album-container .album-image {
+  .vid-container .vid-image {
     width: 100%;
     height: auto;
     position: absolute;
     top: 50%;
     left: 0%;
     transform: translate(0, -50%); }
-  .album-container .album-name {
+  .vid-container .vid-name {
     font-family: 'Cooper';
     position: absolute;
     top: 20vh;
@@ -394,5 +394,5 @@ article {
   height: 100%; }
 
 @media screen and (max-width: 600px) {
-  .album-container .album-name {
+  .vid-container .vid-name {
     top: 8vh; } }
