@@ -23,8 +23,14 @@
 
 @font-face {
   font-family: 'Helvetica Neue';
-  src: url(font-path('HelveticaNeue.ttf'));
-  src: url(font-path('HelveticaNeue.otf'));
+  src: url(font-path('HelveticaNeue.eot'));
+  src: url(font-path('HelveticaNeue.eot?#iefix')) format('embedded-opentype'),
+      url(font-path('HelveticaNeue.woff2')) format('woff2'),
+      url(font-path('HelveticaNeue.woff')) format('woff'),
+      url(font-path('HelveticaNeue.ttf')) format('truetype'),
+      url(font-path('HelveticaNeue.svg#HelveticaNeue')) format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 html {
