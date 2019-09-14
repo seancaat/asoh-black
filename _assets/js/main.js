@@ -46,7 +46,16 @@ function playSound(id) {
   if (!sound) return;
   try {
     if (sound.paused) {
-      sound.play();
+      var playPromise = sound.play();
+      if (playPromise !== undefined) {
+        playPromise.then(_ => {
+          // Automatic playback started!
+          // Show playing UI.
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      }
     } else {
       sound.currentTime = 0;
     }
@@ -100,7 +109,6 @@ function showButton(button) {
 }
 
 function animate(id) {
-  console.log('run animation ' + id);
   const item = soundToAnim[id.toString()];
   if (item) item.animation();
 }

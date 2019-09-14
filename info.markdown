@@ -1,12 +1,12 @@
 ---
 title: Info
-permalink: "/info/"
+permalink: '/info/'
 layout: default
 ---
 
 <div class="container info">
 <section class="intro">
-  {% asset about.jpeg %}
+  {% asset about.jpeg alt="Asoh Black in a yellow shirt, singing into a mic" %}
 </section>
 <article class="bio">
   <p>
@@ -20,8 +20,8 @@ layout: default
     developed a knack for writing lyrics and crafting feel-good records.
   </p>
   <div class="img-container">
-    {% asset about-left.jpeg %}
-    {% asset about-right.jpeg %}
+    {% asset about-left.jpeg alt="Asoh Black sitting in a blue light" %}
+    {% asset about-right.jpeg alt="Asoh Black squatting against a purple background" %}
   </div>
 
   <p>
