@@ -17,6 +17,7 @@ assets:
   digest: true
   compression: true
   gzip: true
+  img: { optim: { jpegoptim: { strip: all } }, gifsicle: { level: 1 } }
 webp:
   enabled: true
   quality: 75
