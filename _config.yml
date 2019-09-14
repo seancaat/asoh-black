@@ -15,12 +15,9 @@ plugins:
   - jekyll-assets
 assets:
   digest: true
-  compress:
-    css: true
-    js: true
 webp:
   enabled: true
   quality: 75
-  img_dir: ["/_uploads"]
+  img_dir: ["/_uploads", "_assets/images"]
   formats: [".jpeg", ".jpg", ".png", ".tiff"]
   gifs: [".gif"]
