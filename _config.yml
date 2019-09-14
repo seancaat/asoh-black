@@ -1,5 +1,7 @@
 ---
 title: Asoh Black
+description: Asoh Black! One of F.A.M\$' prominent musical artists.
+url: "http://www.asohblack.com"
 timezone: UTC
 collections:
   posts:
@@ -8,12 +10,17 @@ collections:
   uploads:
     title: Uploads
     output: true
-url: http://www.asohblack.com
-destination: "./docs"
+destination: './docs'
 plugins:
-- jekyll-assets
+  - jekyll-assets
 assets:
   digest: true
   compress:
-    css: sass
-    js: uglifier
+    css: true
+    js: true
+webp:
+  enabled: true
+  quality: 75
+  img_dir: ["/_uploads"]
+  formats: [".jpeg", ".jpg", ".png", ".tiff"]
+  gifs: [".gif"]
