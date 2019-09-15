@@ -42,10 +42,10 @@ function dropDotsGroup(dropRects) {
 function dropDots(group, point, theDuration, typeOfDots) {
   for (var i = 0; i < group.length; i++) {
     var dots = group[i];
-    enterExit(dots, dots.bounds.width, dots.bounds.height);
+    enterExit(dots);
   }
 
-  function enterExit(dots, width, height) {
+  function enterExit(dots) {
     var fib = [55, 89, 144, 233];
     var colors = [
       'rgb(249,14,27)',
