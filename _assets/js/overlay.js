@@ -24,8 +24,10 @@ function closeOverlay() {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('.videos').addEventListener('click', openOverlay);
+  document
+    .querySelector('.videos')
+    .addEventListener('click', openOverlay, { passive: true });
   document
     .querySelector('.video-overlay-close')
-    .addEventListener('click', closeOverlay);
+    .addEventListener('click', closeOverlay, { passive: true });
 });

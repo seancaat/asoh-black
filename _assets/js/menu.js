@@ -22,11 +22,11 @@ function toggleEmailModal(e) {
 window.addEventListener('DOMContentLoaded', function() {
   document
     .querySelector('.menu-controls')
-    .addEventListener('click', toggleMenu);
+    .addEventListener('click', toggleMenu, { passive: true });
   document.querySelectorAll('.get-updates').forEach(element => {
-    element.addEventListener('click', toggleEmailModal);
+    element.addEventListener('click', toggleEmailModal, { passive: true });
   });
   document.querySelectorAll('.email-modal .close').forEach(element => {
-    element.addEventListener('click', toggleEmailModal);
+    element.addEventListener('click', toggleEmailModal, { passive: true });
   });
 });
