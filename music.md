@@ -35,7 +35,7 @@ videos:
   link: https://www.youtube.com/embed/Mb9FP27Hd8E
   bgcolor: "#37338f"
 - name: 20/20
-  image: 
+  image: "/uploads/image%203.png"
   link: https://www.youtube.com/embed/JiqXn0_M-4E
   bgcolor: "#F4D26F"
 layout: default
