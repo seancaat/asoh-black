@@ -1,13 +1,13 @@
 // Add all constants, e.g colors, widths, used across multiple files
 const soundToAnim = {
   '0': {
-    sound: '',
+    sound: 'vox-uhh',
     animation: function() {
       rise(width, height); // duplicate
     }
   },
   '1': {
-    sound: '',
+    sound: 'beat-808',
     animation: function() {
       rise(width, height);
     }
@@ -25,7 +25,7 @@ const soundToAnim = {
     }
   },
   '4': {
-    sound: '',
+    sound: 'vox-smack',
     animation: function() {
       slideSquare();
     }
@@ -37,13 +37,13 @@ const soundToAnim = {
     }
   },
   '6': {
-    sound: '',
+    sound: 'vox-run',
     animation: function() {
       dropDotsScattered(scatteredDrops);
     }
   },
   '7': {
-    sound: '',
+    sound: 'vox-mygod',
     animation: function() {
       dropDotsGroup(groupedDrops); // duplicate
     }
@@ -87,43 +87,43 @@ const soundToAnim = {
     }
   },
   '14': {
-    sound: '',
+    sound: 'beat-vinyl-scratch',
     animation: function() {
       slide(imgSymbol, mid, height); // duplicate
     }
   },
   '15': {
-    sound: '',
+    sound: 'beat-vocalA',
     animation: function() {
       drawNeon(width, height); // duplicate
     }
   },
   '16': {
-    sound: '',
+    sound: 'beat-vocalB',
     animation: function() {
       slideSquare(); // duplicate
     }
   },
   '17': {
-    sound: '',
+    sound: 'beat-snare',
     animation: function() {
       flash(flashRectangles); // duplicate
     }
   },
   '18': {
-    sound: '',
+    sound: 'beat-sample-lo',
     animation: function() {
       dropDotsScattered(scatteredDrops); // duplicate
     }
   },
   '19': {
-    sound: '',
+    sound: 'vox-ohh-dist',
     animation: function() {
       dropDotsGroup(groupedDrops); // duplicate
     }
   },
   '20': {
-    sound: '',
+    sound: 'vox-mf',
     animation: function() {
       // duplicate
       for (var i = 0; i < 20; i++) {
@@ -132,37 +132,37 @@ const soundToAnim = {
     }
   },
   '21': {
-    sound: '',
+    sound: 'beat-sample-lo',
     animation: function() {
       showBorder(borderRect); // duplicate
     }
   },
   '22': {
-    sound: '',
+    sound: 'beat-sample-hi',
     animation: function() {
       dropSideDots(hihatCircles); // duplicate
     }
   },
   '23': {
-    sound: '',
+    sound: 'vox-fastlife',
     animation: function() {
       showSplit(splits); // duplicate
     }
   },
   '24': {
-    sound: '',
+    sound: 'vox-black',
     animation: function() {
       growRect(growingRects); // duplicate
     }
   },
   '25': {
-    sound: '',
+    sound: 'vox-cheese',
     animation: function() {
       sink(sinkRects); // duplicate
     }
   },
   '26': {
-    sound: '',
+    sound: 'vox-asoh',
     animation: function() {
       sink(sinkRects); // duplicate
     }
