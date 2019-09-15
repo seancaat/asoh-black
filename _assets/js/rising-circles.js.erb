@@ -3,18 +3,18 @@
 function rise(width, height) {
   var minRadius = width / 20;
   var maxRadius = width / 4;
-  var colors = ['#2AD4BD', '#F9F04D', '#FF6F55', '#2A40D4']; // teal, yellow, red, purple
-
+  // var colors = ['#2AD4BD', '#F9F04D', '#FF6F55', '#2A40D4']; // teal, yellow, red, purple
+  var imgs = [
+    "<%= asset_path('cloud-circle0.png') %>",
+    "<%= asset_path('cloud-circle1.png') %>",
+    "<%= asset_path('cloud-circle2.png') %>",
+  ];
   for (var i = 0; i < 5; i++) {
-    var c = new Path.Circle(
-      new Point(Math.random() * width, height + minRadius + maxRadius),
-      minRadius + Math.random() * maxRadius
-    );
-    c.fillColor = colors[Math.floor(Math.random() * colors.length)];
-    c.shadowColor = new Color(0, 0, 0, 0.25);
-    c.shadowBlur = '4';
-    c.shadowOffset = new Point(0, 4);
-    // c = riseCircles[i]
+    var c = new Raster({
+      source: imgs[i % imgs.length],
+      position: new Point(Math.random() * width, height + minRadius + maxRadius),
+    });
+    c.scale((minRadius + Math.random() * maxRadius) / 100);
     enterExit(c, i + c.bounds.width / 5);
 
     function enterExit(path, offset) {

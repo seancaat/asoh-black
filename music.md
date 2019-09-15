@@ -26,6 +26,10 @@ videos:
     image: '/uploads/thatsnotfair.jpg'
     link: https://www.youtube.com/embed/ZjnxnaEV-qU
     bgcolor: '#9af3ff'
+  - name: 20/20
+    image: '/uploads/20-20.png'
+    link: https://www.youtube.com/embed/JiqXn0_M-4E
+    bgcolor: '#F4D26F'
   - name: Listen To This Instead
     image: '/uploads/Listen%20to%20This%20Instead.jpg'
     link: https://www.youtube.com/embed/UBhC56OUxq0
@@ -34,10 +38,6 @@ videos:
     image: '/uploads/Sleepwalking%20Through%20Reality.jpg'
     link: https://www.youtube.com/embed/Mb9FP27Hd8E
     bgcolor: '#37338f'
-  - name: 20/20
-    image: '/uploads/20-20.png'
-    link: https://www.youtube.com/embed/JiqXn0_M-4E
-    bgcolor: '#F4D26F'
 layout: default
 ---
 
