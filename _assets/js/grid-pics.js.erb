@@ -12,11 +12,11 @@ function setupTiles() {
   for (var i = 0; i < imgs.length; i++) {
     var rasterImg = new Raster({
       source: imgs[i],
-      position: view.center,
-      width: width / 3,
-      height: height / 12
+      position: view.center
     });
-    rasterImg.scale(0.8);
+    if (width < height) {
+      rasterImg.scale(0.5);
+    }
     var symbol = new SymbolDefinition(rasterImg);
     arr.push(symbol);
   }
