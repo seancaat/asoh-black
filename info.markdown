@@ -5,9 +5,7 @@ layout: default
 ---
 
 <div class="container info">
-<section class="intro">
-  {% asset about.jpeg alt="Asoh Black in a yellow shirt, singing into a mic" %}
-</section>
+<section class="intro"></section>
 <article class="bio">
   <p>
     Asoh Black! is one of F.A.M\$' prominent musical artists. He's had a passion

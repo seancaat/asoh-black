@@ -1,16 +1,4 @@
 @font-face {
-  font-family: 'Chicago';
-  font-display: swap;
-  src: url(font-path('PixChicago.eot'));
-  src: url(font-path('PixChicago.eot#iefix')) format('embedded-opentype'),
-    url(font-path('PixChicago.woff2')) format('woff2'),
-    url(font-path('PixChicago.woff')) format('woff'),
-    url(font-path('PixChicago.ttf')) format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Cooper';
   font-display: swap;
   src: url(font-path('CooperBlack.eot'));
@@ -24,15 +12,50 @@
 }
 
 @font-face {
-  font-family: 'Helvetica Neue';
-  font-display: fallback;
-  src: url(font-path('HelveticaNeue.eot'));
-  src: url(font-path('HelveticaNeue.eot?#iefix')) format('embedded-opentype'),
-      url(font-path('HelveticaNeue.woff2')) format('woff2'),
-      url(font-path('HelveticaNeue.woff')) format('woff'),
-      url(font-path('HelveticaNeue.ttf')) format('truetype'),
-      url(font-path('HelveticaNeue.svg#HelveticaNeue')) format('svg');
-  font-weight: normal;
+  font-family: 'SFProText Bold';
+  src: url(font-path('SFProText-Ultralight.eot'));
+  src: url(font-path('SFProText-Ultralight.eot?#iefix')) format('embedded-opentype'),
+      url(font-path('SFProText-Ultralight.woff2')) format('woff2'),
+      url(font-path('SFProText-Ultralight.woff')) format('woff'),
+      url(font-path('SFProText-Ultralight.ttf')) format('truetype'),
+      url(font-path('SFProText-Ultralight.svg#SFProText-Ultralight')) format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProText Bold Italic';
+  src: url(font-path('SFProText-UltralightItalic.eot'));
+  src: url(font-path('SFProText-UltralightItalic.eot?#iefix')) format('embedded-opentype'),
+      url(font-path('SFProText-UltralightItalic.woff2')) format('woff2'),
+      url(font-path('SFProText-UltralightItalic.woff')) format('woff'),
+      url(font-path('SFProText-UltralightItalic.ttf')) format('truetype'),
+      url(font-path('SFProText-UltralightItalic.svg#SFProText-UltralightItalic')) format('svg');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SFProText Medium';
+  src: url(font-path('SFProText-Ultralight_1.eot'));
+  src: url(font-path('SFProText-Ultralight_1.eot?#iefix')) format('embedded-opentype'),
+      url(font-path('SFProText-Ultralight_1.woff2')) format('woff2'),
+      url(font-path('SFProText-Ultralight_1.woff')) format('woff'),
+      url(font-path('SFProText-Ultralight_1.ttf')) format('truetype'),
+      url(font-path('SFProText-Ultralight_1.svg#SFProText-Ultralight')) format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProText Regular';
+  src: url(font-path('SFProText-Ultralight_2.eot'));
+  src: url(font-path('SFProText-Ultralight_2.eot?#iefix')) format('embedded-opentype'),
+      url(font-path('SFProText-Ultralight_2.woff2')) format('woff2'),
+      url(font-path('SFProText-Ultralight_2.woff')) format('woff'),
+      url(font-path('SFProText-Ultralight_2.ttf')) format('truetype'),
+      url(font-path('SFProText-Ultralight_2.svg#SFProText-Ultralight')) format('svg');
+  font-weight: 200;
   font-style: normal;
 }
 
@@ -45,14 +68,14 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'SFProText Regular', sans-serif;
   background-color: white;
 }
 
 /* Scale canvas with resize attribute to full size */
 canvas[resize] {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 69px);
 }
 
 a {
@@ -70,7 +93,6 @@ header {
   background: white;
   position: fixed;
   top: 0;
-  border-bottom: 1px solid black;
   z-index: 999;
 }
 
@@ -78,6 +100,7 @@ button,
 input {
   background: transparent;
   border: none;
+  font-family: inherit;
 }
 
 button,
@@ -92,22 +115,10 @@ canvas {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  background-image: asset_url('background.gif');
-  background-repeat: repeat;
+  height: calc(100% - 69px);
+  background-image: asset_url('background.JPG');
+  background-size: cover;
   background-position: center;
-}
-
-/* blinking text on large */
-marquee {
-  white-space: nowrap;
-  width: 90%;
-}
-
-.logo,
-.announcement {
-  font-size: 24px;
-  font-family: 'Chicago';
 }
 
 .hidden {
@@ -129,12 +140,12 @@ marquee {
 }
 
 .header-container {
-  margin: 0 auto;
   height: inherit;
   display: flex;
   align-items: center;
   width: inherit;
 }
+
 @import '_mixins.scss';
 @import 'info.scss';
 @import 'menu.scss';

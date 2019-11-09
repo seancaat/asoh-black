@@ -60,6 +60,7 @@
 .site-nav li {
   width: 100%;
   display: inline-block;
+  font-family: 'SFProText Medium';
 
   a {
     font-size: 1.2em;
@@ -74,9 +75,25 @@
   }
 }
 
+.logo {
+  margin: auto;
+}
+
+.logo, .menu-controls > button {
+  font-size: 1.5em;
+  font-family: 'Cooper';
+  color: white;
+  text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
 .menu-controls {
-  align-self: center;
-  margin-left: auto;
+  padding: 0;
+  margin: 0;
 
   .menu-button {
     padding: 0 15px;

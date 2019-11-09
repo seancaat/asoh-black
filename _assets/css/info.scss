@@ -8,6 +8,13 @@ article {
   display: flex;
 }
 
+.intro {
+  background-image: asset_url('about.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+}
+
 .bio {
   display: grid;
   grid-template-areas:
@@ -47,7 +54,6 @@ article {
 
 .intro {
   justify-content: center;
-  margin-top: 8%;
   max-width: 100%;
   overflow: hidden;
 }
