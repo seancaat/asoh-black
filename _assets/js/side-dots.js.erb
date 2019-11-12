@@ -1,15 +1,27 @@
 function setupSideDots(num) {
-  var circle = new Path.Circle(0, 0, width / 4.25);
-  circle.fillColor = 'beige'; // random colors or mask pic
-  circle.strokeColor = 'black';
-  circle.strokeWidth = 1;
-  circle.shadowColor = 'rgb(0,0,0,0.5)';
-  circle.shadowBlur = 1;
+   var imgs = [
+    "<%= asset_path('side-circle-1.png') %>",
+    "<%= asset_path('side-circle-2.png') %>",
+    "<%= asset_path('side-circle-3.png') %>",
+    "<%= asset_path('side-circle-4.png') %>",
+    "<%= asset_path('side-circle-5.png') %>",
+    "<%= asset_path('side-circle-6.png') %>",
+    "<%= asset_path('side-circle-7.png') %>",
+    "<%= asset_path('side-circle-8.png') %>",
+    "<%= asset_path('side-circle-9.png') %>",
+    "<%= asset_path('side-circle-10.png') %>",
+    "<%= asset_path('side-circle-11.png') %>",
+    "<%= asset_path('side-circle.png') %>"
+  ];
 
-  var circleSymbol = new SymbolDefinition(circle);
   var arr = [];
 
-  for (var i = 0; i <= num + 1; i++) {
+  for (var i = 0; i <= imgs.length; i++) {
+    var circle = new Raster(imgs[i]);
+    circle.shadowColor = 'rgb(0,0,0,0.5)';
+    circle.shadowBlur = 1;
+
+    var circleSymbol = new SymbolDefinition(circle);
     if (i % 2 === 0) {
       var c = circleSymbol.place(
         new Point(width + width / 3.5, ((i - 1) * height) / num)
