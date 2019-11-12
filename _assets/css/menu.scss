@@ -16,6 +16,7 @@
   overflow: auto;
   justify-content: space-evenly;
   align-items: center;
+  box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.25);
 
   ul,
   section {
@@ -41,10 +42,10 @@
   content: "";
   position: fixed;
   right: 0;
-  z-index: -1;
   display: block;
   background-image: asset_url('background2.JPG');
-  filter: blur(40px);
+  filter: blur(10px);
+
   background-size: cover;
   background-position: 40%;
   width: 40%;
