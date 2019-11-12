@@ -4,6 +4,8 @@
 }
 
 .menu:not(.hidden) {
+  background-image: asset_url('background.JPG');
+  filter: blur(40px);
   position: fixed;
   height: 100vh;
   width: 40%;

@@ -3,17 +3,9 @@
 function setupRisingCircle(src, minRadius, maxRadius) {
   var rasterImg = new Raster({
     source: src,
+    position: new Point(Math.random() * width, height + minRadius + maxRadius)
   });
-  rasterImg.onLoad = function() {
-    rasterImg.position = new Point(Math.random() * width, height + minRadius + maxRadius);
-    if (width < height) {
-      rasterImg.scale(0.5);
-    }
-    rasterImg.shadowColor = new Color(0, 0, 0, 0.25);
-    rasterImg.shadowBlur = '4';
-    rasterImg.shadowOffset = new Point(0, 4);
-    return new SymbolDefinition(rasterImg).place();
-  }
+  return new SymbolDefinition(rasterImg).place();
 }
 
 function rise(width, height) {
@@ -38,21 +30,21 @@ function rise(width, height) {
   }
 
   function enterExit(path, offset) {
-    // setTimeout(function() {
-    //   path.tween(
-    //     { 'position.y': Math.random() * height },
-    //     {
-    //       easing: 'easeOutCubic',
-    //       duration: 400 - (10 * path.bounds.width) / offset
-    //     }
-    //   );
-    // }, offset);
+    setTimeout(function() {
+      path.tween(
+        { 'position.y': Math.random() * height },
+        {
+          easing: 'easeOutCubic',
+          duration: 400 - (10 * path.bounds.width) / offset
+        }
+      );
+    }, offset);
 
-    // setTimeout(function() {
-    //   path.tween(
-    //     { 'position.y': height + minRadius + maxRadius },
-    //     { easing: 'easeInQuad', duration: 400 - path.bounds.width / offset }
-    //   );
-    // }, offset + 50 + 5 * 75);
+    setTimeout(function() {
+      path.tween(
+        { 'position.y': height + minRadius + maxRadius },
+        { easing: 'easeInQuad', duration: 400 - path.bounds.width / offset }
+      );
+    }, offset + 50 + 5 * 75);
   }
 }
