@@ -1,39 +1,58 @@
 //1 to preserve memory, should maybe do 2, three sets of symbols and cycle through
 // or if press during
+function setupRisingCircle(src, minRadius, maxRadius) {
+  var rasterImg = new Raster({
+    source: src,
+  });
+  rasterImg.onLoad = function() {
+    rasterImg.position = new Point(Math.random() * width, height + minRadius + maxRadius);
+    if (width < height) {
+      rasterImg.scale(0.5);
+    }
+    rasterImg.shadowColor = new Color(0, 0, 0, 0.25);
+    rasterImg.shadowBlur = '4';
+    rasterImg.shadowOffset = new Point(0, 4);
+    return new SymbolDefinition(rasterImg).place();
+  }
+}
+
 function rise(width, height) {
+  var imgs = [
+    "<%= asset_path('Mask-Group-1.png') %>",
+    "<%= asset_path('Mask-Group-2.png') %>",
+    "<%= asset_path('Mask-Group-3.png') %>",
+    "<%= asset_path('Mask-Group-4.png') %>",
+    "<%= asset_path('Mask-Group-5.png') %>",
+    "<%= asset_path('Mask-Group-6.png') %>",
+    "<%= asset_path('Mask-Group-7.png') %>",
+    "<%= asset_path('Mask-Group-8.png') %>",
+    "<%= asset_path('Mask-Group-9.png') %>",
+    "<%= asset_path('Mask-Group.png') %>"
+  ];
   var minRadius = width / 20;
   var maxRadius = width / 4;
-  var colors = ['#2AD4BD', '#F9F04D', '#FF6F55', '#2A40D4']; // teal, yellow, red, purple
 
-  for (var i = 0; i < 5; i++) {
-    var c = new Path.Circle(
-      new Point(Math.random() * width, height + minRadius + maxRadius),
-      minRadius + Math.random() * maxRadius
-    );
-    c.fillColor = colors[Math.floor(Math.random() * colors.length)];
-    c.shadowColor = new Color(0, 0, 0, 0.25);
-    c.shadowBlur = '4';
-    c.shadowOffset = new Point(0, 4);
-    // c = riseCircles[i]
-    enterExit(c, i + c.bounds.width / 5);
+  for (var i = 0; i < imgs.length; i++) {
+    let rasterCircle = setupRisingCircle(imgs[i], minRadius, maxRadius);
+    enterExit(rasterCircle, i + rasterCircle.bounds.width / 5);
+  }
 
-    function enterExit(path, offset) {
-      setTimeout(function() {
-        path.tween(
-          { 'position.y': Math.random() * height },
-          {
-            easing: 'easeOutCubic',
-            duration: 400 - (10 * path.bounds.width) / offset
-          }
-        );
-      }, offset);
+  function enterExit(path, offset) {
+    // setTimeout(function() {
+    //   path.tween(
+    //     { 'position.y': Math.random() * height },
+    //     {
+    //       easing: 'easeOutCubic',
+    //       duration: 400 - (10 * path.bounds.width) / offset
+    //     }
+    //   );
+    // }, offset);
 
-      setTimeout(function() {
-        path.tween(
-          { 'position.y': height + minRadius + maxRadius },
-          { easing: 'easeInQuad', duration: 400 - path.bounds.width / offset }
-        );
-      }, offset + 50 + 5 * 75);
-    }
+    // setTimeout(function() {
+    //   path.tween(
+    //     { 'position.y': height + minRadius + maxRadius },
+    //     { easing: 'easeInQuad', duration: 400 - path.bounds.width / offset }
+    //   );
+    // }, offset + 50 + 5 * 75);
   }
 }
