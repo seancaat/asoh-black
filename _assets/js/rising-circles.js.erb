@@ -1,11 +1,8 @@
 //1 to preserve memory, should maybe do 2, three sets of symbols and cycle through
 // or if press during
 function setupRisingCircle(src, minRadius, maxRadius) {
-  var rasterImg = new Raster({
-    source: src,
-    position: new Point(Math.random() * width, height + minRadius + maxRadius)
-  });
-  return new SymbolDefinition(rasterImg).place();
+  var rasterImg = new Raster(src);
+  return new SymbolDefinition(rasterImg).place(new Point(Math.random() * width, height + minRadius + maxRadius));
 }
 
 function rise(width, height) {
@@ -26,25 +23,25 @@ function rise(width, height) {
 
   for (var i = 0; i < imgs.length; i++) {
     let rasterCircle = setupRisingCircle(imgs[i], minRadius, maxRadius);
-    enterExit(rasterCircle, i + rasterCircle.bounds.width / 5);
-  }
+    enterExit(rasterCircle, i + rasterCircle.bounds.width/5);
 
-  function enterExit(path, offset) {
-    setTimeout(function() {
-      path.tween(
-        { 'position.y': Math.random() * height },
-        {
-          easing: 'easeOutCubic',
-          duration: 400 - (10 * path.bounds.width) / offset
-        }
-      );
-    }, offset);
+    function enterExit(path, offset) {
+      setTimeout(function() {
+        path.tween(
+          { 'position.y': Math.random() * height },
+          {
+            easing: 'easeOutCubic',
+            duration: 400 - (10 * path.bounds.width) / offset
+          }
+        );
+      }, offset);
 
-    setTimeout(function() {
-      path.tween(
-        { 'position.y': height + minRadius + maxRadius },
-        { easing: 'easeInQuad', duration: 400 - path.bounds.width / offset }
-      );
-    }, offset + 50 + 5 * 75);
+      setTimeout(function() {
+        path.tween(
+          { 'position.y': height + minRadius + maxRadius },
+          { easing: 'easeInQuad', duration: 400 - path.bounds.width / offset }
+        );
+      }, offset + 50 + 5 * 75);
+    }
   }
 }

@@ -4,12 +4,9 @@
 }
 
 .menu:not(.hidden) {
-  background-image: asset_url('background.JPG');
-  filter: blur(40px);
   position: fixed;
   height: 100vh;
   width: 40%;
-  background: #ffffff;
   display: flex;
   flex-direction: column;
   transition-delay: 0s;
@@ -34,9 +31,24 @@
     height: fit-content;
   }
 
-  button {
+  .get-updates {
+    color: white;
     text-transform: uppercase;
   }
+}
+
+.menu:not(.hidden):before {
+  content: "";
+  position: fixed;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: asset_url('background2.JPG');
+  filter: blur(40px);
+  background-size: cover;
+  background-position: 40%;
+  width: 40%;
+  height: 100vh;
 }
 
 .music-icons,
@@ -105,13 +117,13 @@
 }
 
 @media screen and (max-width: 800px) {
-  .menu:not(.hidden) {
+  .menu:not(.hidden), .menu:not(.hidden):before {
     width: 50%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .menu:not(.hidden) {
+  .menu:not(.hidden), .menu:not(.hidden):before {
     width: 100%;
   }
 }
