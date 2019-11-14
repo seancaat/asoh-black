@@ -1,5 +1,5 @@
 ---
-title: Watch
+title: Videos
 permalink: "/watch/"
 videos:
 - name: Foolie
