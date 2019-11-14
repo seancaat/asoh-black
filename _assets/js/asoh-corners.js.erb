@@ -4,8 +4,8 @@ var smokeSymbol1, smokeSymbol2;
 function setupSmokeAnim() {
   square = new Path.Rectangle(0, 0, (width * 3) / 5, (width * 3) / 5);
 
-  var smoke1 = new Raster("<%= asset_path('smoke-top.jpg') %>");
-  var smoke2 = new Raster("<%= asset_path('smoke-bottom.jpg') %>");
+  var smoke1 = new Raster("<%= asset_path('slide.JPG') %>");
+  var smoke2 = new Raster("<%= asset_path('slide.JPG') %>").rotate(-90);
 
   smoke1.crossOrigin = 'anonymous';
   smoke2.crossOrigin = 'anonymous';
@@ -17,7 +17,8 @@ function setupSmokeAnim() {
   smoke2.shadowColor = 'rgba(0, 0, 0, 0.25)';
   smoke2.shadowBlur = '4';
   smoke2.shadowOffset = 0;
-
+  smoke1.scale(0.1);
+  smoke2.scale(0.1);
   smokeSymbol1 = new Symbol(smoke1);
   smokeSymbol2 = new Symbol(smoke2);
 }
@@ -42,7 +43,7 @@ function slideSquare() {
 
     setTimeout(function() {
       copy1 = smokeSymbol1.place(topPoint);
-      copy2 = smokeSymbol2.place(bottomPoint);
+      copy2 = smokeSymbol2.place(bottomPoint).rotate(-90);
     }, offset * 80);
 
     setTimeout(function() {

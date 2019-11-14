@@ -43,14 +43,13 @@
   position: fixed;
   right: 0;
   display: block;
-  background-image: asset_url('background2.JPG');
-  filter: blur(10px);
-
+  background-image: asset_url('menu-bg.png');
   background-size: cover;
   background-position: 40%;
   width: 40%;
   z-index: -3;
-  height: 100vh;
+  height: 105%;
+  overflow: hidden;
 }
 
 .music-icons,
@@ -75,7 +74,7 @@
 .site-nav li {
   width: 100%;
   display: inline-block;
-  font-family: 'SFProText Medium';
+  font-family: 'SFProText Regular';
 
   a {
     font-size: 1.2em;
@@ -95,7 +94,7 @@
 }
 
 .logo, .menu-controls > button {
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-family: 'Cooper';
   color: white;
   text-shadow:
@@ -125,7 +124,17 @@
 }
 
 @media screen and (max-width: 600px) {
+  .menu:not(.hidden) {
+    .music-icons {
+      padding-top: 68px;
+    }
+  }
+
   .menu:not(.hidden), .menu:not(.hidden):before {
     width: 100%;
+  }
+
+  .logo, .menu-controls > button {
+    font-size: 1.5em;
   }
 }
