@@ -15,7 +15,7 @@
 //= require split
 //= require rectangle-grow
 
-'use strict';
+"use strict";
 
 //2
 var img,
@@ -31,7 +31,7 @@ var img,
   hihatCircles;
 var controlLayer, animationLayer;
 var sounds = [].slice.call(
-  document.querySelector('.sounds').querySelectorAll('audio')
+  document.querySelector(".sounds").querySelectorAll("audio")
 );
 var numberSounds = sounds.length;
 var width;
@@ -48,13 +48,14 @@ function playSound(id) {
     if (sound.paused) {
       var playPromise = sound.play();
       if (playPromise !== undefined) {
-        playPromise.then(_ => {
-          // Automatic playback started!
-          // Show playing UI.
-        })
-        .catch(error => {
-          console.log(error);
-        });
+        playPromise
+          .then(_ => {
+            // Automatic playback started!
+            // Show playing UI.
+          })
+          .catch(error => {
+            console.log(error);
+          });
       }
     } else {
       sound.currentTime = 0;
@@ -100,10 +101,10 @@ const keyDownHandler = function onKeyDown(event) {
 };
 
 function showButton(button) {
-  var tween = button.tween({ opacity: 0.1 }, 50).then(function() {
+  var tween = button.tween({ opacity: 0.1 }, 50).then(function () {
     button.tween({ opacity: 0 }, 100);
   });
-  setTimeout(function() {
+  setTimeout(function () {
     tween.stop();
   }, 105);
 }
@@ -137,9 +138,10 @@ function setupAnimations() {
   flashRectangles = setupFlash();
   borderRect = setupBorder();
   rectTiles = setupTiles();
+  // risingCircles = setupRisingCircles();
   hihatCircles = setupSideDots(14);
-  scatteredDrops = setupDrops(10, 'scatter');
-  groupedDrops = setupDrops(10, 'group');
+  scatteredDrops = setupDrops(10, "scatter");
+  groupedDrops = setupDrops(10, "group");
   sinkRects = setupSink(5);
   splits = setupSplit(2);
   growingRects = setupGrowingRects();
@@ -147,14 +149,14 @@ function setupAnimations() {
 
 paper.install(window);
 
-window.onload = function() {
-  paper.setup('myCanvas');
+window.onload = function () {
+  paper.setup("myCanvas");
   var tool = new Tool();
   controlLayer = new paper.Layer();
   animationLayer = new paper.Layer();
   controlLayer.moveAbove(animationLayer);
-  controlLayer.setName('Controls');
-  animationLayer.setName('Animations');
+  controlLayer.setName("Controls");
+  animationLayer.setName("Animations");
 
   width = window.innerWidth;
   height = window.innerHeight;

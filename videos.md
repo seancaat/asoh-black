@@ -1,6 +1,6 @@
 ---
 title: Videos
-permalink: "/watch/"
+permalink: "/videos/"
 videos:
 - name: Foolie
   image: "/uploads/Foolie.jpg"
