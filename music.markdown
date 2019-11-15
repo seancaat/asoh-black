@@ -7,11 +7,11 @@ songs:
 layout: default
 ---
 
-<div class="container">
+<div class="container music">
   <ul class="songs">
     {% for song in page.songs %}
     <li>
-     <iframe width="300" height="250" frameborder="0" src="{{ song.url}} | remove: 'owe'/widget?width=300&height=250&note="></iframe>
+     <iframe frameborder="0" src="{{ song.url}} | remove: 'owe'/widget?width=400&height=400&note="></iframe>
     </li>
     {% endfor %}
   </ul>

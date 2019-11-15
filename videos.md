@@ -41,7 +41,7 @@ videos:
 layout: default
 ---
 
-<div class="container music">
+<div class="container video">
   <ul class="videos">
     {% for vid in page.videos %}
     <li class="vid" style="background-color:{{ vid.bgcolor }}">
