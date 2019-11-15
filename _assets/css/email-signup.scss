@@ -2,9 +2,9 @@
   border: 1px solid black;
   border-radius: 3px;
   padding: 0.5em;
+  max-width: 80%;
 
   form {
-    padding: 2em;
     text-align: center;
   }
 
@@ -23,5 +23,9 @@
   .close {
     float: right;
     padding: 5px;
+  }
+
+  .mc-field-group {
+    display: inline-block;
   }
 }

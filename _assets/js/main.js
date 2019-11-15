@@ -38,7 +38,13 @@ var width;
 var height;
 var mid;
 
+function disableAnimation() {
+  if (menu && !menu.classList.contains('hidden')) return true;
+  return false;
+}
+
 function playSound(id) {
+  if (disableAnimation()) return;
   var matchedSound = soundToAnim[id.toString()];
   if (!matchedSound) return;
   var soundName = matchedSound.sound;
@@ -101,6 +107,7 @@ const keyDownHandler = function onKeyDown(event) {
 };
 
 function showButton(button) {
+  if (disableAnimation()) return;
   var tween = button.tween({ opacity: 0.1 }, 50).then(function () {
     button.tween({ opacity: 0 }, 100);
   });
@@ -110,6 +117,7 @@ function showButton(button) {
 }
 
 function animate(id) {
+  if (disableAnimation()) return;
   const item = soundToAnim[id.toString()];
   if (item) item.animation();
 }
