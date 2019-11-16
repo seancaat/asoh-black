@@ -11,7 +11,7 @@ layout: default
   <ul class="songs">
     {% for song in page.songs %}
     <li>
-     <iframe frameborder="0" src="{{ song.url}} | remove: 'owe'/widget?width=400&height=400&note="></iframe>
+     <iframe frameborder="0" src="{{ song.url}} | remove: 'owe'/widget?height=400&note="></iframe>
     </li>
     {% endfor %}
   </ul>
