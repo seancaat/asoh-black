@@ -10,14 +10,15 @@
 
   input {
     border-bottom: 1px solid black;
-    margin: 1em;
+    margin: 0.5em 0;
     font-size: 1em;
   }
 
   input[type='submit'] {
     background: black;
     color: white;
-    padding: 1em;
+    padding: 0.5em;
+    margin-top: 1em;
   }
 
   .close {
