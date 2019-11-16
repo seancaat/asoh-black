@@ -2,22 +2,30 @@
   border: 1px solid black;
   border-radius: 3px;
   padding: 0.5em;
-  max-width: 80%;
+  max-width: 60%;
+  min-height: 20vh;
 
   form {
     text-align: center;
+    display: flex;
+  }
+
+  form, #mc_embed_signup_scroll {
+    width: 100%;
   }
 
   input {
     border-bottom: 1px solid black;
-    margin: 1em;
+    margin: 0.5em 0;
     font-size: 1em;
+    max-width: 80%;
   }
 
   input[type='submit'] {
     background: black;
     color: white;
-    padding: 1em;
+    padding: 0.5em;
+    margin-top: 1em;
   }
 
   .close {
@@ -26,6 +34,14 @@
   }
 
   .mc-field-group {
+    max-width: 80%;
     display: inline-block;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .email-modal {
+    max-width: 80%;
+  }
+}
+
