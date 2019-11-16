@@ -12,9 +12,17 @@
 }
 
 iframe {
-  width: 400px;
+  width: 600px;
   height: 400px;
   border: 2px solid black;
   border-radius: 2px;
   box-shadow: 0.5rem 0.5rem 0 rgba(0,0,0,0.3);
+}
+
+@media screen and (max-width: 600px) {
+  iframe {
+    margin: 0 auto;
+    max-width: 90%;
+    display: block;
+  }
 }

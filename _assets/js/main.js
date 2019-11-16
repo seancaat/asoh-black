@@ -1,3 +1,4 @@
+//= require load-image
 //= require paper
 //= require utils
 //= require constants
