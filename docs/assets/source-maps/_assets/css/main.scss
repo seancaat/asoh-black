@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'Cooper';
+  font-display: swap;
+  src: url(font-path('CooperBlack.eot'));
+  src: url(font-path('CooperBlack.eot?#iefix')) format('embedded-opentype'),
+      url(font-path('CooperBlack.woff2')) format('woff2'),
+      url(font-path('CooperBlack.woff')) format('woff'),
+      url(font-path('CooperBlack.ttf')) format('truetype'),
+      url(font-path('CooperBlack.svg#CooperBlack')) format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProText Bold';
+  src: url(font-path('SFProText-Ultralight.eot'));
+  src: url(font-path('SFProText-Ultralight.eot?#iefix')) format('embedded-opentype'),
+      url(font-path('SFProText-Ultralight.woff2')) format('woff2'),
+      url(font-path('SFProText-Ultralight.woff')) format('woff'),
+      url(font-path('SFProText-Ultralight.ttf')) format('truetype'),
+      url(font-path('SFProText-Ultralight.svg#SFProText-Ultralight')) format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProText Bold Italic';
+  src: url(font-path('SFProText-UltralightItalic.eot'));
+  src: url(font-path('SFProText-UltralightItalic.eot?#iefix')) format('embedded-opentype'),
+      url(font-path('SFProText-UltralightItalic.woff2')) format('woff2'),
+      url(font-path('SFProText-UltralightItalic.woff')) format('woff'),
+      url(font-path('SFProText-UltralightItalic.ttf')) format('truetype'),
+      url(font-path('SFProText-UltralightItalic.svg#SFProText-UltralightItalic')) format('svg');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SFProText Medium';
+  src: url(font-path('SFProText-Ultralight_1.eot'));
+  src: url(font-path('SFProText-Ultralight_1.eot?#iefix')) format('embedded-opentype'),
+      url(font-path('SFProText-Ultralight_1.woff2')) format('woff2'),
+      url(font-path('SFProText-Ultralight_1.woff')) format('woff'),
+      url(font-path('SFProText-Ultralight_1.ttf')) format('truetype'),
+      url(font-path('SFProText-Ultralight_1.svg#SFProText-Ultralight')) format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProText Regular';
+  src: url(font-path('SFProText-Ultralight_2.eot'));
+  src: url(font-path('SFProText-Ultralight_2.eot?#iefix')) format('embedded-opentype'),
+      url(font-path('SFProText-Ultralight_2.woff2')) format('woff2'),
+      url(font-path('SFProText-Ultralight_2.woff')) format('woff'),
+      url(font-path('SFProText-Ultralight_2.ttf')) format('truetype'),
+      url(font-path('SFProText-Ultralight_2.svg#SFProText-Ultralight')) format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'SFProText Regular', sans-serif;
+  background-color: white;
+}
+
+/* Scale canvas with resize attribute to full size */
+canvas[resize] {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  height: 68px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+button,
+input {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+}
+
+button,
+a,
+input {
+  cursor: pointer;
+}
+
+canvas {
+  z-index: 0;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background-image: asset_url('bg.JPG');
+  background-size: cover;
+  background-position: 40%;
+}
+
+.hidden {
+  display: none; /* can't animate with this */
+  opacity: 0;
+  visibility: hidden;
+}
+
+.get-updates {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  width: 100%;
+  height: 100%;
+  font-size:.8em;
+}
+
+.header-container {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  width: inherit;
+}
+
+@import '_mixins.scss';
+@import 'info.scss';
+@import 'menu.scss';
+@import 'email-signup.scss';
+@import 'videos.scss';
+@import 'music.scss';
