@@ -92,10 +92,14 @@
 
 .logo {
   margin: auto;
+  font-size: var(--f6);
 }
 
-.logo, .menu-controls > button {
+.menu-controls > button {
   font-size: 2em;
+}
+
+.text-shadow {
   font-family: 'Cooper';
   color: white;
   text-shadow:
@@ -113,8 +117,9 @@
   right: 0;
 
   .menu-button {
-    padding: 0 15px;
+    padding: 0 15px; 
     height: 100%;
+    letter-spacing: -0.2em;
   }
 }
 

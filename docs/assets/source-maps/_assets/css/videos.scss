@@ -1,6 +1,12 @@
 .container.video {
-  overflow: hidden;
-  width: 100%;
+  padding: var(--f9) var(--f4);
+  margin: 0 auto;
+  background-image: asset_url('bg-blur01.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 30% 50%;
+  // filter: blur(40px);
+  // -webkit-filter: blur(8px);
 }
 
 .videos {
@@ -8,80 +14,31 @@
   margin: 0;
 }
 
-.aspect-ratio {
-  height: 0;
-  position: relative;
-}
-
-.aspect-ratio--16x9 {
-  padding-bottom: 56.25%;
-}
-
-.aspect-ratio--object {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-}
-
-.vid {
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
-}
-
-.vid-container {
-  width: 100%;
-  margin: auto;
-}
-
-.cover {
-  background-size: cover !important;
-}
-
 .vid-container {
   max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: var(--f7);
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 8px 6px 0px black;
 }
 
-.vid-name {
-  font-family: 'Cooper';
+.embed-container {
   position: relative;
-  left: 50%;
-  z-index: 2;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  display: inline-block;
-  color: #ffffff;
-  font-size: 8vh;
-  width: 100%;
-  text-align: center;
-  text-shadow: 4px 4px black;
-  margin-top: 50%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
 }
 
-.video-overlay {
-  position: fixed;
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 99998;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: #000000;
-
-  .video-overlay-close {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    align-self: flex-end;
-  }
 }
 
 .video-overlay:not(.hidden) {
@@ -93,15 +50,4 @@
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
-
-.youtube-embed {
-  width: 90%;
-  height: 90%;
-  align-self: center;
-}
-
-.youtube-embed-iframe {
-  width: 100%;
-  height: 100%;
 }
