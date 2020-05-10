@@ -1,5 +1,5 @@
 ---
-title: Videos
+title: Asoh Black! Videos
 permalink: "/videos/"
 videos:
 - name: Staying Sober

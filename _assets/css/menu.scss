@@ -4,7 +4,7 @@
 }
 
 .menu:not(.hidden) {
-  width: 40%;
+  width: 50%;
   position: fixed;
   height: 100vh;
   box-sizing: border-box;
@@ -16,6 +16,7 @@
   visibility: visible;
   opacity: 1;
   right: 0;
+  top: 0;
   overflow: auto;
   box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -105,8 +106,7 @@
   right: 0;
 
   .menu-button {
-    // waht's up with the magic number
-    padding: 0 15px; 
+    padding: 0 var(--f3); 
     height: 100%;
     letter-spacing: -0.25em;
   }

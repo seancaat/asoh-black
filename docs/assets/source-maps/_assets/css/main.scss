@@ -75,12 +75,13 @@
   --black: #0B0A0F;
 }
 
-h1 {font-size: var(--f6);}
-h2 {font-size: var(--f5);}
-h3 {font-size: var(--f4);}
-h4 {font-size: var(--f3);}
-h5 {font-size: var(--f2);}
+h1 {font-size: var(--f6); margin-top: 0; margin-bottom: var(--f4);}
+h2 {font-size: var(--f5); margin-top: 0; margin-bottom: var(--f3);}
+h3 {font-size: var(--f4); margin-top: 0; margin-bottom: var(--f2);}
+h4 {font-size: var(--f3); margin-top: 0; margin-bottom: var(--f1);}
+h5 {font-size: var(--f2); margin-top: 0; margin-bottom: var(--f0);}
 h6, p {font-size: var(--f1);}
+p {line-height: var(--f3);}
 small {font-size: 0.8em;}
 .tracked-tight { letter-spacing:  -.05em; }
 .ttu { text-transform: uppercase; }
@@ -159,8 +160,7 @@ canvas {
   text-align: center;
   text-transform: uppercase;
   text-decoration: underline;
-  width: 100%;
-  height: 100%;
+  width: 100%; 
   font-size: var(--f0);
 }
 

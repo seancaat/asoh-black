@@ -9,9 +9,10 @@
 }
 
 .songs {
-  border: 1px solid black;
+  max-width: 900px;
+  margin: 0 auto;
   display: grid;
-  gap: var(--f2);
+  gap: var(--f4);
   grid-template-columns: repeat(5, 1fr);
   padding: 0;
 }
@@ -20,6 +21,10 @@
   height: 0;
   position: relative;
   padding-bottom: 100%;
+
+  a {
+    cursor: ne-resize;
+  }
 }
 
 div.song {
@@ -38,4 +43,20 @@ div.song {
 
 p.song-title {
   text-align: center;
+}
+
+
+@media screen and (max-width: 800px) {
+  .songs {
+    gap: var(--f3);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .songs {
+    gap: var(--f2);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
 }
