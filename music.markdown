@@ -1,5 +1,5 @@
 ---
-title: Music
+title: Asoh Black! | Music
 date: 2019-11-12 19:44:00 Z
 permalink: "/music/"
 songs:
