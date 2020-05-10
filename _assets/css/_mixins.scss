@@ -1,33 +1,4 @@
-@mixin stacked-rect {
-  &::before {
-    transform: translateX(5px) translateY(5px);
-    z-index: -1;
-  }
-
-  &::after {
-    transform: translateX(10px) translateY(10px);
-    z-index: -3;
-  }
-
-  &::after, &::before {
-    border-radius: 3px;
-    display: inline-block;
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
-    border: 1px solid black;
-    content: "";
-    background: white;
-    position: absolute;
-    transition: -webkit-transform .4s cubic-bezier(.65,0,.076,1);
-    transition: transform .4s cubic-bezier(.65,0,.076,1);
-    transition: transform .4s cubic-bezier(.65,0,.076,1),-webkit-transform .4s cubic-bezier(.65,0,.076,1);
-  }
-}
-
-.site-nav li, .email-modal {
+.email-modal {
   position: relative;
   background: white;
-  @include stacked-rect;
 }

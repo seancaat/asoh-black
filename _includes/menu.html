@@ -22,22 +22,26 @@
   <ul class="site-nav">
     <li><a href="/music">Music</a></li>
     <li><a href="/videos">Videos</a></li>
-    <li><a href="/info">Information</a></li>
+    <li><a href="#">Shop</a></li>
+    <li><a href="/info">Info</a></li>
   </ul>
   {% include get-updates.html %}
-  <ul class="social-icons">
-    <li><a href="https://www.facebook.com/asohblack">{% asset icon-facebook.svg alt="Asoh Black facebook" %}</a></li>
-    <li>
-      <a href="https://www.instagram.com/asohblack">{% asset icon-instagram.svg alt="Asoh Black instagram" %}</a>
-    </li>
-    <li><a href="https://twitter.com/asohblack">{% asset icon-twitter.svg alt="Asoh Black twitter" %}</a></li>
-    <li>
-      <a href="https://www.youtube.com/channel/UCysyFq-CQ7bVUcb1lAI0fFw"
-        >{% asset icon-youtube.svg alt="Asoh Black youtube" %}</a
-      >
-    </li>
-  </ul>
-  <section class="bottom">
-    {% include get-updates-link.html %}
-  </section>
+  <footer>
+    <ul class="social-icons">
+      <li><a href="https://www.facebook.com/asohblack">{% asset icon-facebook.svg alt="Asoh Black facebook" %}</a></li>
+      <li>
+        <a href="https://www.instagram.com/asohblack">{% asset icon-instagram.svg alt="Asoh Black instagram" %}</a>
+      </li>
+      <li><a href="https://twitter.com/asohblack">{% asset icon-twitter.svg alt="Asoh Black twitter" %}</a></li>
+      <li>
+        <a href="https://www.youtube.com/channel/UCysyFq-CQ7bVUcb1lAI0fFw"
+          >{% asset icon-youtube.svg alt="Asoh Black youtube" %}</a
+        >
+      </li>
+    </ul>
+    <section class="subscribe">
+      {% include get-updates-link.html %}
+    </section>
+  </footer>
+  
 </div>
