@@ -52,7 +52,7 @@
 }
 
 .site-nav li:not(:last-child) {
-  margin-bottom: var(--f3);
+  margin-bottom: var(--f1);
 }
 
 .site-nav li {
@@ -131,6 +131,11 @@
 
   .site-nav li a {
     font-size: var(--f5);
+  }
+
+  .site-nav:not(.hidden) {
+    padding: var(--f2) 0;
+    margin: 0;
   }
 
   .logo, .menu-controls > button {
