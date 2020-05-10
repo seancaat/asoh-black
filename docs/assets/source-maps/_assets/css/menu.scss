@@ -129,6 +129,11 @@
     width: 100%;
   }
 
+  .site-nav li {
+    padding: 0.41rem;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+  }
+
   .site-nav li a {
     font-size: var(--f5);
     padding: 0 20%;
