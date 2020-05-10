@@ -26,7 +26,6 @@ article {
   box-shadow: 8px 6px 0px black;
   box-sizing: border-box;
   background: white;
-  // height: 64vh;
 
   p {
     font-weight: 400;
@@ -63,7 +62,26 @@ article {
 }
 
 @media screen and (max-width: 600px) {
+  article {
+    width: 90%;
+  }
+
+  .bio {
+    padding: var(--f3) var(--f2);
+
+    img {
+      height: 17.086em;
+    }
+
+  }
+
   .intro {
     height: 100vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: var(--f5);
   }
 }
