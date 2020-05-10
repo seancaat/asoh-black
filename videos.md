@@ -33,11 +33,8 @@ videos:
 layout: default
 ---
 
-<div class="bg"></div>
 <div class="container video">
-  <!-- <h1 class="tracked-tight">
-    {{ page.title }}
-  </h1> -->
+  <section class="intro"></section>
   <ul class="videos">
     {% for vid in page.videos %}
     <li class="vid">

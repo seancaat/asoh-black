@@ -11,6 +11,7 @@ layout: default
 ---
 
 <div class="container music">
+  <section class="intro"></section>
   <ul class="songs">
     {% for song in page.songs %}
     <li>
