@@ -1,8 +1,7 @@
 .email-modal {
   border: 1px solid black;
   border-radius: 3px;
-  padding: 0.5em;
-  max-width: 60%;
+  padding: var(--f);
   min-height: 20vh;
 
   form {
@@ -16,32 +15,27 @@
 
   input {
     border-bottom: 1px solid black;
-    margin: 0.5em 0;
+    padding: var(--f);
     font-size: 1em;
-    max-width: 80%;
+  }
+
+  input:not([type='submit']) {
+    width: 80%;
   }
 
   input[type='submit'] {
     background: black;
     color: white;
-    padding: 0.5em;
-    margin-top: 1em;
+    margin: 1em;
   }
 
   .close {
     float: right;
-    padding: 5px;
+    padding: var(--f);
   }
 
   .mc-field-group {
-    max-width: 80%;
-    display: inline-block;
+    display: block;
+    padding: var(--f2);
   }
 }
-
-@media screen and (max-width: 600px) {
-  .email-modal {
-    max-width: 80%;
-  }
-}
-

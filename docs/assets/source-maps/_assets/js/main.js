@@ -103,7 +103,6 @@ const mouseDownHandler = function onMouseDown(event) {
 };
 
 const keyDownHandler = function onKeyDown(event) {
-  debugger;
   if (!toast.classList.contains('toast-hidden')) {
     toast.classList.add('toast-hidden');
   }
