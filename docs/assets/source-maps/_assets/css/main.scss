@@ -8,38 +8,6 @@
   font-weight: 900;
   font-style: normal;
 }
-@font-face {
-  font-family: 'SFProText Bold';
-  src: url(font-path('SFProText-Ultralight.woff2')) format('woff2'),
-    url(font-path('SFProText-Ultralight.woff')) format('woff'),
-    url(font-path('SFProText-Ultralight.ttf')) format('truetype');
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'SFProText Bold Italic';
-  src: url(font-path('SFProText-UltralightItalic.woff2')) format('woff2'),
-    url(font-path('SFProText-UltralightItalic.woff')) format('woff'),
-    url(font-path('SFProText-UltralightItalic.ttf')) format('truetype');
-  font-weight: 200;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'SFProText Medium';
-  src: url(font-path('SFProText-Ultralight_1.woff2')) format('woff2'),
-      url(font-path('SFProText-Ultralight_1.woff')) format('woff'),
-      url(font-path('SFProText-Ultralight_1.ttf')) format('truetype');
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'SFProText Regular';
-  src: url(font-path('SFProText-Ultralight_2.woff2')) format('woff2'),
-    url(font-path('SFProText-Ultralight_2.woff')) format('woff'),
-    url(font-path('SFProText-Ultralight_2.ttf')) format('truetype');
-  font-weight: 200;
-  font-style: normal;
-}
 
 :root {
   font-size: 16px;
