@@ -57,7 +57,7 @@
 
 :root {
   font-size: 16px;
-  
+
   /* scale for 1.25 */
   --f: 0.64rem;   /* 10.24 */
   --f0: 0.8rem;   /* 12.8 */
@@ -160,7 +160,7 @@ canvas {
   text-align: center;
   text-transform: uppercase;
   text-decoration: underline;
-  width: 100%; 
+  width: 100%;
   font-size: var(--f0);
 }
 
@@ -169,6 +169,30 @@ canvas {
   display: flex;
   align-items: center;
   width: inherit;
+}
+
+.toast {
+  font-size: var(--f0);
+  font-weight: 500;
+  margin: 0 auto;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: var(--f2);
+  transition: all 0.4s ease;
+}
+
+.toast-hidden {
+  bottom: -10px;
+  opacity: 0;
+}
+
+.dark {
+  border: 1px solid white;
+  color: white;
+  background: var(--black);
+  padding: 0 var(--f0);
+  border-radius: var(--f);
 }
 
 @import '_mixins.scss';

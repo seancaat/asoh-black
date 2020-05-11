@@ -29,4 +29,5 @@ window.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.email-modal .close').forEach(element => {
     element.addEventListener('click', toggleEmailModal, { passive: true });
   });
+  document.querySelector('.toast').classList.remove('toast-hidden');
 });

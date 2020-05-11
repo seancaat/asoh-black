@@ -34,6 +34,7 @@ var controlLayer, animationLayer;
 var sounds = [].slice.call(
   document.querySelector(".sounds").querySelectorAll("audio")
 );
+var toast = document.querySelector('.toast');
 var numberSounds = sounds.length;
 var width;
 var height;
@@ -87,6 +88,9 @@ const mouseDragHandler = function onMouseDrag(event) {
 };
 
 const mouseDownHandler = function onMouseDown(event) {
+  if (!toast.classList.contains('toast-hidden')) {
+    toast.classList.add('toast-hidden');
+  }
   // make sure event.item isn't an animated asset
   var item = event.item;
   var index = item ? item.index : null;
@@ -99,6 +103,9 @@ const mouseDownHandler = function onMouseDown(event) {
 };
 
 const keyDownHandler = function onKeyDown(event) {
+  if (!toast.classList.contains('toast-hidden')) {
+    toast.classList.add('toast-hidden');
+  }
   const letterPosition = alphabet.indexOf(event.key);
   if (letterPosition > -1) {
     showButton(controlLayer.children[letterPosition]);
