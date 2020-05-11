@@ -144,6 +144,9 @@
   }
 
   .logo, .menu-controls > button {
-    font-size: var(--f3);
+    font-size: var(--f4);
+  }
+  .menu-controls .menu-button{
+    padding: 0 var(--f1);
   }
 }
