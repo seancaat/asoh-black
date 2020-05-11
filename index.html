@@ -11,7 +11,7 @@ layout: default
 
 <section class="sounds">
   {% for audio in site.data.audio %}
-    <audio src={{audio.url}} type="audio/mpeg" crossorigin="anonymous">
+    <audio src="{{audio.url}}" type="audio/mpeg" crossorigin="anonymous">
   {% endfor %}
 </section>
 {% asset main.js canvas="myCanvas" defer %}
