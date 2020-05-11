@@ -9,10 +9,8 @@ layout: default
 </div>
 
 <section class="sounds">
-  {% for k in assets %}
-    {% if k[1].filename contains 'audio/' %}
-      {% asset {{'k[0]'}} type="audio/mpeg" crossorigin="anonymous" !controls %}
-    {% endif %}
+  {% for audio in site.data.audio %}
+    <audio src={{audio.url}} type="audio/mpeg" crossorigin="anonymous">
   {% endfor %}
 </section>
 {% asset main.js canvas="myCanvas" defer %}
