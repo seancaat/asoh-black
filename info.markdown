@@ -1,6 +1,7 @@
 ---
 title: Asoh Black! | Info
 permalink: "/info/"
+bio-image: "/uploads/about.jpeg"
 layout: default
 ---
 
@@ -9,7 +10,7 @@ layout: default
 <article class="bio">
   <h1 class="tracked-tight">About Asoh</h1>
 
-  {% asset about.jpg alt="Asoh Black standing in an alley" class="bio-image" %}
+  <img src={{bio-image}} alt="Asoh Black standing in an alley" class="bio-image"/>
 
   <p>
     Asoh Black! is one of F.A.M\$' prominent musical artists. He's had a passion
