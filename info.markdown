@@ -18,13 +18,12 @@ layout: default
 <section class="intro"></section>
 <article class="bio">
   <h1 class="tracked-tight">About Asoh</h1>
-
-  <img src={{bio-image}} alt="Asoh Black standing in an alley" class="bio-image"/>
- {% for paragraph in page.bio %}
-  <p>
-    {{paragraph}}
-  </p>
-
+  <img src="{{page.bio-image}}" alt="Asoh Black standing in an alley" class="bio-image"/>
+  {% for paragraph in page.bio %}
+    <p>
+      {{paragraph}}
+    </p>
+  {% endfor %}
   {% include get-updates-link.html %}
   <div class="modal-container">
     {% include get-updates.html %}
