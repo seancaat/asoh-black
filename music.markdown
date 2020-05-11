@@ -4,9 +4,8 @@ date: 2019-11-12 19:44:00 Z
 permalink: "/music/"
 songs:
 - name: Black Ocean
-  image: "background-image: asset_url('music03.jpg');"
+  image: 'background-image: asset_url(''music03.jpg'');'
   url: https://ffm.to/jjov2w7.owe
- 
 layout: default
 ---
 

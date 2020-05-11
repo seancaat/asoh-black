@@ -3,7 +3,7 @@ title: Asoh Black! Videos
 permalink: "/videos/"
 videos:
 - name: Staying Sober
-  url:  https://www.youtube.com/embed/znfSaln_5KA
+  url: https://www.youtube.com/embed/znfSaln_5KA
 - name: Debut Title + Date Announcement Short FIlm
   url: https://www.youtube.com/embed/DYo_JL6kj3I
 - name: Coffee Beans (blackm!x)
@@ -11,7 +11,7 @@ videos:
 - name: Foolie
   url: https://www.youtube.com/embed/R02Cq-Xs0b8
 - name: 96 Styles
-  url:  https://www.youtube.com/embed/2yDlgEKLHVQ
+  url: https://www.youtube.com/embed/2yDlgEKLHVQ
 - name: Waste My Time
   url: https://www.youtube.com/embed/z1O3t9x91W8
 - name: Joy
@@ -19,7 +19,7 @@ videos:
 - name: Thats Not Fair ft Limbo
   url: https://www.youtube.com/embed/ZjnxnaEV-qU
 - name: Chill, Vibe
-  url:  https://www.youtube.com/embed/uR1PAqJZUHY
+  url: https://www.youtube.com/embed/uR1PAqJZUHY
 - name: My Bounce
   url: https://www.youtube.com/embed/zbf-obfwKNA
 - name: HITS
