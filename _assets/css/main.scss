@@ -36,7 +36,7 @@ h4 {font-size: var(--f3); margin-top: 0; margin-bottom: var(--f1);}
 h5 {font-size: var(--f2); margin-top: 0; margin-bottom: var(--f0);}
 h6, p {font-size: var(--f1);}
 p {line-height: var(--f3);}
-small {font-size: 0.8em;}
+small {font-size: var(--f0); margin-top: 0; margin-bottom: var(--f); }
 .tracked-tight { letter-spacing:  -.05em; }
 .ttu { text-transform: uppercase; }
 
@@ -134,6 +134,7 @@ canvas {
   left: 50%;
   bottom: var(--f2);
   transition: all 0.4s ease;
+  white-space: nowrap;
 }
 
 .toast-hidden {
@@ -145,7 +146,7 @@ canvas {
   border: 1px solid white;
   color: white;
   background: var(--black);
-  padding: 0 var(--f0);
+  padding: 0.262em var(--f0);
   border-radius: var(--f);
 }
 
