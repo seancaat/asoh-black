@@ -40,13 +40,13 @@ songs:
   url: www.fanlink.to/wordofnowledge 
 - name: 3 Million
   image: "/uploads/music15.jpg"
-  url: https://soundcloud.com/asohblack/3million?in=asohblack/sets/asohattacks-volume-1 
+  url: https://soundcloud.com/asohblack/3million?in=asohblack/sets/asohattacks-volume-1
 - name: Hits
   image: "/uploads/music16.jpg"
   url: https://soundcloud.com/asohblack/hits?in=asohblack/sets/asohattacks-volume-1
 - name: Zen Gems
   image: "/uploads/music17.jpg"
-  url: https://open.spotify.com/album/6pG7f5qLxMW1S3e2LCRQxo?si=wDo6pRgaRa6c-ERwFOrWCg 
+  url: https://open.spotify.com/album/6pG7f5qLxMW1S3e2LCRQxo?si=wDo6pRgaRa6c-ERwFOrWCg
 - name: Economics (Bricks)
   image: "/uploads/music18.jpg"
   url: www.fanlink.to/economics 
@@ -61,23 +61,22 @@ songs:
   url: www.fanlink.to/listentothisinstead 
 - name: Summer Playlists
   image: "/uploads/music22.jpg"
-  url: https://soundcloud.com/zensupremacy/asoh-black-summer-playlists-prod-by-swell 
+  url: https://soundcloud.com/zensupremacy/asoh-black-summer-playlists-prod-by-swell
 - name: 96' Styles
   image: "/uploads/music23.jpg"
-  url:  www.fanlink.to/96styles 
+  url: www.fanlink.to/96styles 
 - name: House Party
   image: "/uploads/music24.jpg"
-  url: https://open.spotify.com/track/2PzLZ786Kg73lHdbZM4fq1 
+  url: https://open.spotify.com/track/2PzLZ786Kg73lHdbZM4fq1
 - name: No Games
   image: "/uploads/music25.jpg"
   url: www.fanlink.to/nogames 
 - name: DWDA
   image: "/uploads/music26.jpg"
-  url: https://www.youtube.com/watch?v=OCpsGi7qH20 
+  url: https://www.youtube.com/watch?v=OCpsGi7qH20
 - name: Bump
   image: "/uploads/music27.jpg"
   url: www.fanlink.to/bumpmyshit
-
 layout: default
 ---
 
