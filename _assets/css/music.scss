@@ -19,7 +19,7 @@
   max-width: 900px;
   margin: 0 auto;
   display: grid;
-  gap: var(--f4);
+  gap: var(--f7) var(--f4);
   grid-template-columns: repeat(5, 1fr);
   padding: 0;
 }
@@ -49,27 +49,34 @@ div.song {
   box-shadow: 8px 6px 0px black;
   background-position: center;
   background-size: contain;
+  transition: 0.2s ease all;
 }
 
-p.song-title {
+div.song:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+small.song-title {
+  display: block;
   text-align: center;
   margin-top: calc(100% + var(--f0));
   color: white;
   text-shadow: 1px 1px 0px #000000;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 
 @media screen and (max-width: 800px) {
   .songs {
-    gap: var(--f3);
+    gap: var(--f7) var(--f3);
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 600px) {
   .songs {
-    gap: var(--f2);
+    gap: var(--f6) var(--f2);
     grid-template-columns: repeat(2, 1fr);
     padding: 0;
   }
