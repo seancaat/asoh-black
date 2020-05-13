@@ -1,7 +1,7 @@
 ---
 title: Asoh Black! | Info
 permalink: "/info/"
-bio-image: "/uploads/about.jpeg"
+bio-image: "/uploads/pasted%20image%200.jpg"
 bio:
 - Asoh Black! is one of F.A.M\$' prominent musical artists. He's had a passion for
   hip-hop since high school when he discovered artists like Kanye West, Big Sean,
