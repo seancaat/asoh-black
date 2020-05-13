@@ -32,6 +32,7 @@
   a {
     cursor: ne-resize;
   }
+
 }
 
 div.song {
@@ -52,6 +53,10 @@ div.song {
 
 p.song-title {
   text-align: center;
+  margin-top: calc(100% + var(--f0));
+  color: white;
+  text-shadow: 1px 1px 0px #000000;
+  font-weight: 400;
 }
 
 

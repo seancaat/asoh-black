@@ -15,8 +15,9 @@ layout: default
     {% for song in page.songs %}
     <li>
       <a target= "_blank" href="{{ song.url }}">
-        <div class="song" style='background-image: url({% asset "{{ song.image }}" @path %});'></div>
-        <p class="song-title">{{song.name}}</p>
+        <div class="song" style='background-image: url({% asset "{{ song.image }}" @path %});'>
+          <p class="song-title">{{song.name}}</p>
+        </div>
       </a>
     </li>
     {% endfor %}
