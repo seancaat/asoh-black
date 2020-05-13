@@ -6,6 +6,27 @@ songs:
 - name: Black Ocean
   image: music03.jpg
   url: https://ffm.to/jjov2w7.owe
+- name: AP Watch
+  image: "/uploads/music02.jpg"
+  url: www.ffm.to/apwatch 
+- name: Foolie
+  image: "/uploads/music01.jpg"
+  url: https://www.fanlink.to/foolie 
+- name: 'Coffee Beans Remix '
+  image: "/uploads/music04.jpg"
+  url: https://audiomack.com/song/asoh-black/coffeebeans
+- name: Wasted Lullabies
+  image: "/uploads/music05.jpg"
+  url: www.fanlink.to/wastedlullabies
+- name: Chill, Vibe
+  image: "/uploads/music07.jpg"
+  url: www.fanlink.to/chill_vibe 
+- name: Trailblazer
+  image: "/uploads/music08.jpg"
+  url: www.fanlink.to/trailblazer 
+- name: That's Not Fair
+  image: "/uploads/music09.jpg"
+  url: www.fanlink.to/thatsnotfair 
 layout: default
 ---
 
