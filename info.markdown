@@ -3,8 +3,18 @@ title: Asoh Black! | Info
 permalink: "/info/"
 bio-image: "/uploads/pasted%20image%200.jpg"
 bio:
-- NYC native, Asoh Black!, is one of Free.All.Mind$ most prominent musical artists. He's had a passion for hip-hop since high school when he discovered artists like Kanye West, Lil Wayne, Childish Gambino, Big Sean, and many more. After getting more into the music, Asoh developed a knack for writing lyrics and crafting feel-good records himself.
-- 'In February 2020, he released his debut mixtape “Black Ocean: Season One” and has since been following his vision with the hopes of inspiring others to do the same. Asoh was named one of Pigeons and Plane’s “Best New Artists” in March 2020 and has been featured and interviewed in publications like Lyrical Lemonade, Hip Hop DX, DJ Booth, Flaunt Magazine and more. He’s also been featured as the playlist cover for Spotify’s “Fresh Finds: Hip Hop” and TIDAL’s “Rising” playlist. Be sure to look out for this hungry hitmaker.'
+- NYC native, Asoh Black!, is one of Free.All.Mind$ most prominent musical artists.
+  He's had a passion for hip-hop since high school when he discovered artists like
+  Kanye West, Lil Wayne, Childish Gambino, Big Sean, and many more. After getting
+  more into the music, Asoh developed a knack for writing lyrics and crafting feel-good
+  records himself.
+- 'In February 2020, he released his debut mixtape “Black Ocean: Season One” and has
+  since been following his vision with the hopes of inspiring others to do the same.
+  Asoh was named one of Pigeons and Plane’s “Best New Artists” in March 2020 and has
+  been featured and interviewed in publications like Lyrical Lemonade, Hip Hop DX,
+  DJ Booth, Flaunt Magazine and more. He’s also been featured as the playlist cover
+  for Spotify’s “Fresh Finds: Hip Hop” and TIDAL’s “Rising” playlist. Be sure to look
+  out for this hungry hitmaker.'
 layout: default
 ---
 
