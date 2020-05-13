@@ -4,7 +4,7 @@ date: 2019-11-12 19:44:00 Z
 permalink: "/music/"
 songs:
 - name: Black Ocean
-  image: music03.jpg
+  image: "/uploads/music03.jpg"
   url: https://ffm.to/jjov2w7.owe
 - name: AP Watch
   image: "/uploads/music02.jpg"
@@ -27,6 +27,9 @@ songs:
 - name: That's Not Fair
   image: "/uploads/music09.jpg"
   url: www.fanlink.to/thatsnotfair 
+- name: Dat My Baby
+  image: "/uploads/music10.jpg"
+  url: http://www.fanlink.to/datmybaby
 layout: default
 ---
 
