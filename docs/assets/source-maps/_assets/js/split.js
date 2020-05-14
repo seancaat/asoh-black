@@ -3,6 +3,7 @@ function setupSplit(num) {
   for (var i = 0; i < num; i++) {
     var r = new Path.Rectangle(view.bounds.topCenter, 1, height);
     r.opacity = 0.0001;
+    r.blendMode = "difference";
     r.strokeColor = 'black';
     arr.push(r);
   }

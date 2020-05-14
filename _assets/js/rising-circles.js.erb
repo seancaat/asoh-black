@@ -38,7 +38,7 @@ function rise(width, height) {
 
       setTimeout(function() {
         path.tween(
-          { 'position.y': height + minRadius + maxRadius },
+          { 'position.y': height + minRadius + 2 * maxRadius },
           { easing: 'easeInQuad', duration: 400 - path.bounds.width / offset }
         );
       }, offset + 50 + 5 * 75);
