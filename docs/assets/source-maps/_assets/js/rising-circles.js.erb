@@ -19,7 +19,7 @@ function rise(width, height) {
     "<%= asset_path('Mask-Group.png') %>"
   ];
   var minRadius = width / 20;
-  var maxRadius = width / 4;
+  var maxRadius = width / 8;
 
   for (var i = 0; i < imgs.length; i++) {
     let rasterCircle = setupRisingCircle(imgs[i], minRadius, maxRadius);
@@ -28,7 +28,7 @@ function rise(width, height) {
     function enterExit(path, offset) {
       setTimeout(function() {
         path.tween(
-          { 'position.y': Math.random() * height },
+          { 'position.y': Math.random() * height, rotation: "+=96" },
           {
             easing: 'easeOutCubic',
             duration: 400 - (10 * path.bounds.width) / offset
@@ -38,7 +38,7 @@ function rise(width, height) {
 
       setTimeout(function() {
         path.tween(
-          { 'position.y': height + minRadius + 2 * maxRadius },
+          { 'position.y': height + minRadius + 2 * maxRadius, rotation: "+=45" },
           { easing: 'easeInQuad', duration: 400 - path.bounds.width / offset }
         );
       }, offset + 50 + 5 * 75);
