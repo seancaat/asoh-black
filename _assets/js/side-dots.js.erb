@@ -24,11 +24,11 @@ function setupSideDots(num) {
     var circleSymbol = new SymbolDefinition(circle);
     if (i % 2 === 0) {
       var c = circleSymbol.place(
-        new Point(width + width / 3.5, ((i - 1) * height) / num)
+        new Point(width + width / 3.5, ((i - 1) * 1.5 * height) / num)
       );
     } else {
       var c = circleSymbol.place(
-        new Point(0 - width / 3.5, (i * height) / num)
+        new Point(0 - width / 3.5, (i * 1.5 * height) / num)
       );
     }
 
@@ -58,7 +58,8 @@ function dropSideDots(group) {
       group[group.length - 1 - i]
         .tween(
           {
-            'position.x': dest
+            'position.x': dest,
+            rotation: "+=315"
           },
           {
             easing: 'easeOutQuint',

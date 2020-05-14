@@ -21,6 +21,7 @@ function setupGrowingRects() {
 
     r.fillColor = randof(colors); // random colors or mask pic
     r.opacity = 0;
+    r.blendMode = "difference";
     r.shadowColor = 'rgb(0,0,0,0.5)';
     r.shadowBlur = 3;
 
