@@ -4,7 +4,7 @@ permalink: "/music/"
 songs:
 - name: Black Ocean
   image: "/uploads/music03.jpg"
-  url:  http://ffm.to/blackocean 
+  url: http://ffm.to/blackocean
 - name: AP Watch
   image: "/uploads/music02.jpg"
   url: http://ffm.to/apwatch
