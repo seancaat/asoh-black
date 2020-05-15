@@ -39,6 +39,13 @@ var numberSounds = sounds.length;
 var width;
 var height;
 var mid;
+var intro = document.querySelector(".intro");
+var enter = document.querySelector("a.enter");
+
+enter.onclick = function toggleIntro() {
+  intro.classList.toggle('hidden');
+  triggerRandomAnimations();
+}
 
 function disableAnimation() {
   if (menu && !menu.classList.contains('hidden')) return true;
@@ -179,7 +186,6 @@ window.onload = function () {
   mid = { x: width / 2, y: height / 2 };
   drawControls(width, height);
   setupAnimations();
-  triggerRandomAnimations();
 
   paper.view.onResize = resizeHandler;
   tool.onMouseDrag = mouseDragHandler;
