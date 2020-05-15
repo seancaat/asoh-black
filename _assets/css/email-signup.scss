@@ -1,5 +1,7 @@
 .email-modal {
   border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 8px 6px 0px black;
   border-radius: 3px;
   padding: var(--f);
   min-height: 20vh;
@@ -14,19 +16,20 @@
   }
 
   input {
-    border-bottom: 1px solid black;
-    padding: var(--f);
+    border-bottom: 1px solid rgb(48, 46, 46);
     font-size: 1em;
   }
 
   input:not([type='submit']) {
-    width: 80%;
+    width: 100%;
   }
 
   input[type='submit'] {
     background: black;
+    padding: var(--f) var(--f2);
+    border-radius: 999px;
     color: white;
-    margin: 1em;
+    margin: var(--f2);
   }
 
   .close {
