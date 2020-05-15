@@ -19,7 +19,7 @@ layout: default
 ---
 
 <div class="container info">
-<section class="intro"></section>
+<section class="bg"></section>
 <article class="bio">
   <h1 class="tracked-tight">About Asoh</h1>
   <img src="{{page.bio-image}}" alt="Asoh Black standing in an alley" class="bio-image"/>

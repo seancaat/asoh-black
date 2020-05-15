@@ -1,0 +1,89 @@
+.intro {
+    position: fixed;
+    background-image: asset_url('bg-blur01.jpg');
+    background-position: 30% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--f5) var(--f4);
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    right: 0;
+    top: 0;
+    transition: 0.2s ease all;
+    z-index: 2;
+
+    main {
+        margin: var(--f9) auto;
+        font-size: var(--f2);
+        max-width: 20em;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid black;
+            box-shadow: 8px 6px 0px black;
+        }
+
+        ul {
+            padding: 0;
+            margin: var(--f3) 0;
+
+            li {
+                text-align: center;
+                padding-bottom: var(--f3);
+
+                a {
+                    font-weight: 300;
+                    border-radius: 999px;
+                    padding-bottom: 0.328em;
+                    padding-top: 0.41em;
+                    padding-left: var(--f2);
+                    padding-right: var(--f2);
+                }
+
+                a.light {
+                    background: white;
+                    border: 1px solid var(--black);
+                    padding-left: var(--f6);
+                    padding-right: var(--f6);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .intro {
+        main {
+
+            ul {
+                li {
+                    a {
+                        font-size: var(--f1);
+                        padding-left: var(--f1);
+                        padding-right: var(--f1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .intro {
+        main {
+            ul {
+                li {
+                    padding-bottom: var(--f1);
+                    a {
+                        font-size: var(--f0);
+                        padding-left: var(--f1);
+                        padding-right: var(--f1);
+                    }
+                }
+            }
+        }
+    }
+}

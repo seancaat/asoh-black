@@ -3,7 +3,7 @@ article {
   width: 80%;
 }
 
-.intro {
+.bg {
   position: fixed;
   background-image: asset_url('bg-blur01.jpg');
   background-position: 30% 50%;
@@ -39,12 +39,6 @@ article {
     border-radius: 3px;
     border: 1px solid var(--black);
   }
-}
-
-.intro {
-  justify-content: center;
-  max-width: 100%;
-  overflow: hidden;
 }
 
 .container.info {
