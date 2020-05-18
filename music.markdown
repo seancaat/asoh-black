@@ -10,7 +10,7 @@ songs:
   url: http://ffm.to/apwatch
 - name: Foolie
   image: "/uploads/music01.jpg"
-  url: https://www.fanlink.to/foolie 
+  url: https://fanlink.to/foolie 
 - name: 'Coffee Beans Remix '
   image: "/uploads/music04.jpg"
   url: https://audiomack.com/song/asoh-black/coffeebeans
