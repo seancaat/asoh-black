@@ -25,7 +25,7 @@ songs:
   url: http://fanlink.to/trailblazer 
 - name: That's Not Fair ft. Limbo
   image: "/uploads/music09.jpg"
-  url: htttp://fanlink.to/thatsnotfair
+  url: http://fanlink.to/thatsnotfair
 - name: Dat My Baby ft. Waju
   image: "/uploads/music10.jpg"
   url: http://www.fanlink.to/datmybaby
