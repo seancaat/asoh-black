@@ -7,7 +7,7 @@ songs:
   url: http://ffm.to/blackocean
 - name: AP Watch (Pop)
   image: "/uploads/music02.jpg"
-  url: http://ffm.to/apwatch
+  url: www.ffm.to/apwatch
 - name: Foolie
   image: "/uploads/music01.jpg"
   url: https://fanlink.to/foolie 
