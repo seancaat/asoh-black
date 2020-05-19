@@ -20,7 +20,7 @@ songs:
 - name: Chill, Vibe
   image: "/uploads/music07.jpg"
   url: http://fanlink.to/chill_vibe 
-- name: Trailblazer ft. Lexii Alijai
+- name: "Trailblazer ft. Lexii Alijai \U0001F54A"
   image: "/uploads/music08.jpg"
   url: http://fanlink.to/trailblazer 
 - name: That's Not Fair ft. Limbo
