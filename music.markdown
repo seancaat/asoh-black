@@ -19,10 +19,10 @@ songs:
   url: http://fanlink.to/wastedlullabies
 - name: Chill, Vibe
   image: "/uploads/music07.jpg"
-  url: http://fanlink.to/chill_vibe 
+  url: http://fanlink.to/chill_vibe
 - name: "Trailblazer ft. Lexii Alijai \U0001F54A"
   image: "/uploads/music08.jpg"
-  url: http://fanlink.to/trailblazer 
+  url: http://fanlink.to/trailblazer
 - name: That's Not Fair ft. Limbo
   image: "/uploads/music09.jpg"
   url: http://fanlink.to/thatsnotfair
