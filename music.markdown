@@ -58,7 +58,7 @@ songs:
   url: http://www.fanlink.to/fridaynight 
 - name: Listen to this Instead EP
   image: "/uploads/music21.jpg"
-  url: http://www.fanlink.to/listentothisinstead 
+  url: http://www.fanlink.to/listentothisinstead
 - name: Summer Playlists
   image: "/uploads/music22.jpg"
   url: https://soundcloud.com/zensupremacy/asoh-black-summer-playlists-prod-by-swell
