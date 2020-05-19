@@ -7,7 +7,7 @@ songs:
   url: http://ffm.to/blackocean
 - name: AP Watch (Pop)
   image: "/uploads/music02.jpg"
-  url: www.ffm.to/apwatch
+  url: http://www.ffm.to/apwatch
 - name: Foolie
   image: "/uploads/music01.jpg"
   url: https://fanlink.to/foolie 
@@ -25,7 +25,7 @@ songs:
   url: http://fanlink.to/trailblazer 
 - name: That's Not Fair ft. Limbo
   image: "/uploads/music09.jpg"
-  url: htttp://fanlink.to/thatsnotfair 
+  url: htttp://fanlink.to/thatsnotfair
 - name: Dat My Baby ft. Waju
   image: "/uploads/music10.jpg"
   url: http://www.fanlink.to/datmybaby
@@ -37,7 +37,7 @@ songs:
   url: https://soundcloud.com/asohblack/joy?in=asohblack/sets/asohattacks-volume-1
 - name: Word of Nowledge
   image: "/uploads/music13.jpg"
-  url: http://www.fanlink.to/wordofnowledge 
+  url: http://www.fanlink.to/wordofnowledge
 - name: 3 Million
   image: "/uploads/music15.jpg"
   url: https://soundcloud.com/asohblack/3million?in=asohblack/sets/asohattacks-volume-1
@@ -49,13 +49,13 @@ songs:
   url: https://open.spotify.com/album/6pG7f5qLxMW1S3e2LCRQxo?si=wDo6pRgaRa6c-ERwFOrWCg
 - name: Economics (Bricks)
   image: "/uploads/music18.jpg"
-  url: http://www.fanlink.to/economics 
+  url: http://www.fanlink.to/economics
 - name: Rayven (unmastered)
   image: "/uploads/music19.jpg"
   url: http://www.fanlink.to/rayven
 - name: Friday Night
   image: "/uploads/music20.jpg"
-  url: http://www.fanlink.to/fridaynight 
+  url: http://www.fanlink.to/fridaynight
 - name: Listen to this Instead EP
   image: "/uploads/music21.jpg"
   url: http://www.fanlink.to/listentothisinstead
@@ -64,13 +64,13 @@ songs:
   url: https://soundcloud.com/zensupremacy/asoh-black-summer-playlists-prod-by-swell
 - name: 96' Styles
   image: "/uploads/music23.jpg"
-  url: http://www.fanlink.to/96styles 
+  url: http://www.fanlink.to/96styles
 - name: House Party
   image: "/uploads/music24.jpg"
   url: https://open.spotify.com/track/2PzLZ786Kg73lHdbZM4fq1
 - name: No Games
   image: "/uploads/music25.jpg"
-  url: http://www.fanlink.to/nogames 
+  url: http://www.fanlink.to/nogames
 - name: DWDA
   image: "/uploads/music26.jpg"
   url: https://www.youtube.com/watch?v=OCpsGi7qH20
