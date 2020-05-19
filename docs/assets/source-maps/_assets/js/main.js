@@ -44,6 +44,10 @@ var enter = document.querySelector("a.enter");
 
 enter.onclick = function toggleIntro() {
   intro.classList.toggle('hidden');
+  var toast = document.querySelector('.toast');
+  if (toast) {
+    toast.classList.remove('toast-hidden');
+  }
   triggerRandomAnimations();
 }
 

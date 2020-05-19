@@ -50,4 +50,3 @@ layout: default
     </li>
     {% endfor %}
   </ul>
-{% asset overlay.js defer %}

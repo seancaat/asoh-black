@@ -33,7 +33,5 @@ layout: default
     {% include get-updates.html %}
   </div>
 </article>
-
-
-
 </div>
+{% asset email-modal.js defer %}
