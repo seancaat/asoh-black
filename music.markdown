@@ -93,5 +93,5 @@ layout: default
     </li>
     {% endfor %}
   </ul>
-
 </div>
+{% asset email-modal.js defer %}

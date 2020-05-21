@@ -11,4 +11,3 @@ window.addEventListener('DOMContentLoaded', function () {
     .querySelector('.menu-controls')
     .addEventListener('click', toggleMenu, { passive: true });
 });
-
