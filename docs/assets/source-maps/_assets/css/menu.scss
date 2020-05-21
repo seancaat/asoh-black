@@ -1,6 +1,10 @@
 .menu {
   z-index: 998;
   transition: visibility 0s linear 0.7s, opacity 0.7s ease-in-out;
+
+  .email-modal {
+    margin: var(--f2) auto;
+  }
 }
 
 .menu:not(.hidden) {

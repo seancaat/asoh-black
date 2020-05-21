@@ -20,7 +20,7 @@
         font-size: var(--f2);
         max-width: 20em;
 
-        img {
+        img.intro-album {
             width: 100%;
             height: auto;
             border-radius: 5px;
@@ -33,7 +33,6 @@
         }
 
         .email-modal:not(.hidden) {
-            position: absolute;
             width: auto;
 
             img {
