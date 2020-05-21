@@ -12,6 +12,7 @@ function toggleEmailModal(e) {
   if (document.querySelector('.intro .email-modal')) {
     document.querySelector('.intro-album').classList.toggle('hidden'); 
   }
+
   modal.classList.toggle('hidden');
 }
 
