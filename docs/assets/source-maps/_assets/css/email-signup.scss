@@ -5,6 +5,7 @@
   border-radius: 3px;
   padding: var(--f);
   min-height: 20vh;
+  
 
   form {
     text-align: center;
@@ -18,6 +19,7 @@
   input {
     border-bottom: 1px solid rgb(48, 46, 46);
     font-size: 1em;
+    font-weight: 300;
   }
 
   input:not([type='submit']) {
@@ -29,7 +31,7 @@
     padding: var(--f) var(--f2);
     border-radius: 999px;
     color: white;
-    margin: var(--f2);
+    margin: var(--f1);
   }
 
   .close {

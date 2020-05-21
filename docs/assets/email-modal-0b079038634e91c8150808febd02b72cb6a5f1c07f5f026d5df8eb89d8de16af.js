@@ -1,0 +1,3 @@
+function toggleEmailModal(e){e.target;var l=document.querySelector(".container.info .email-modal")||document.querySelector(".intro .email-modal"),o=document.querySelector(".menu .email-modal");l.classList.toggle("hidden"),o&&(console.log("there is a menu modal"),o.classList.toggle("hidden"))}document.querySelectorAll(".get-updates").forEach(e=>{e.addEventListener("click",toggleEmailModal,{passive:!0})}),document.querySelectorAll(".email-modal .close").forEach(e=>{e.addEventListener("click",toggleEmailModal,{passive:!0})});
+//# sourceMappingURL=/assets/source-maps/email-modal.js.map
+//# sourceURL=_assets/js/email-modal.js

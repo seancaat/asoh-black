@@ -15,6 +15,7 @@
     overflow: auto;
 
     main {
+        position: relative;
         margin: var(--f7) auto;
         font-size: var(--f2);
         max-width: 20em;
@@ -29,6 +30,16 @@
         
         .get-updates {
             color: white;
+        }
+
+        .email-modal:not(.hidden) {
+            position: absolute;
+            width: auto;
+
+            img {
+                border: none;
+                box-shadow: none;
+            }
         }
 
         ul {
@@ -59,10 +70,10 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
     .intro {
+        padding: var(--f4) var(--f4);
         main {
-
             ul {
                 li {
                     a {
@@ -78,6 +89,7 @@
 
 @media screen and (max-width: 370px) {
     .intro {
+        padding: var(--f4) var(--f4);
         main {
             ul {
                 li {

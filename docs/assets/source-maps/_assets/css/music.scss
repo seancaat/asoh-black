@@ -76,7 +76,7 @@ small.song-title {
 
 @media screen and (max-width: 600px) {
   .songs {
-    gap: var(--f6) var(--f2);
+    gap: var(--f7) var(--f2);
     grid-template-columns: repeat(2, 1fr);
     padding: 0;
   }
