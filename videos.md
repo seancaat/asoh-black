@@ -3,11 +3,11 @@ title: Asoh Black! | Videos
 permalink: "/videos/"
 videos:
 - name: 'ASOH''S ANTICS: EP 001 (6 SONGS IN 6 HOURS)'
-  url: https://youtu.be/embed/mH1N6bNqJ_g
+  url: https://youtube.comembed/mH1N6bNqJ_g
 - name: '"No More Parties" - Coi Leray (Asoh Black! freestyle)'
-  url: https://youtu.be/embed/q7AecFHQeRo
+  url: https://youtube.com/embed/q7AecFHQeRo
 - name: 'Breakfast n'' Rewind" feat. Zoey Dollaz '
-  url: https://youtu.be/embed/RWsiFU5l1Gc
+  url: https://youtube.com/embed/RWsiFU5l1Gc
 - name: Staying Sober
   url: https://www.youtube.com/embed/znfSaln_5KA
 - name: Debut Title + Date Announcement Short FIlm
