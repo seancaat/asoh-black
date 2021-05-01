@@ -3,7 +3,7 @@ title: Asoh Black! | Videos
 permalink: "/videos/"
 videos:
 - name: 'ASOH''S ANTICS: EP 001 (6 SONGS IN 6 HOURS)'
-  url: https://youtube.comembed/mH1N6bNqJ_g
+  url: https://youtube.com/embed/mH1N6bNqJ_g
 - name: '"No More Parties" - Coi Leray (Asoh Black! freestyle)'
   url: https://youtube.com/embed/q7AecFHQeRo
 - name: 'Breakfast n'' Rewind" feat. Zoey Dollaz '
