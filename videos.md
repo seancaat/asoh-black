@@ -7,7 +7,9 @@ videos:
 - name: '"No More Parties" - Coi Leray (Asoh Black! freestyle)'
   url: https://youtube.com/embed/q7AecFHQeRo
 - name: 'Breakfast n'' Rewind" feat. Zoey Dollaz '
-  url: https://youtube.com/embed/RWsiFU5l1Gc
+  url: <iframe width="560" height="315" src="https://www.youtube.com/embed/RWsiFU5l1Gc"
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 - name: Staying Sober
   url: https://www.youtube.com/embed/znfSaln_5KA
 - name: Debut Title + Date Announcement Short FIlm
