@@ -2,6 +2,8 @@
 title: Asoh Black! | Videos
 permalink: "/videos/"
 videos:
+- name: 'ASOH''S ANTICS: EP 002 (STUDIO, ROLLING LOUD TICKET, FIFA)'
+  url: https://youtube.com/embed/ZFtuX1cQcJ0
 - name: 'ASOH''S ANTICS: EP 001 (6 SONGS IN 6 HOURS)'
   url: https://youtube.com/embed/mH1N6bNqJ_g
 - name: '"No More Parties" - Coi Leray (Asoh Black! freestyle)'
